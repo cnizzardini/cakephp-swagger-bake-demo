@@ -1,56 +1,21 @@
-# CakePHP Sakila
+# Demo Application for Swagger Bake
 
-This is a vanilla CakePHP 4.0.6 install that comes with a snapshot and data seeds for the
-[MySQL Sakila Sample Data](https://dev.mysql.com/doc/sakila/en/). I found myself needing test data when I am creating
-new plugins and wanted something with complex enough relations for realistic development.
+Demo Site: http://cakephpswaggerbake.cnizz.com/
+
+Project: https://github.com/cnizzardini/cakephp-swagger-bake
 
 ## Installation
 
-- Clone the repository `git clone git@github.com:cnizzardini/cakephp-sakila.git`
+1. Clone repository `git clone git@github.com:cnizzardini/cakephp-swagger-bake-demo.git`
 
-- Install via composer `composer install`
+2. Install via composer `composer install`
 
-- Create your database using your favorite tool
+3. Configure the application for database access
 
-- Update `.env` with your DSN for connecting to your database
+4. Run database migration `bin/cake migrations migrate -p Sakila`
 
-- Build your schema and seed data
+5. Import database seeds `bin/cake migrations seed -p Sakila`
 
-```bash
-bin/cake migrations migrate
-bin/cake migrations seed
-```
+6. Configure web server or run `bin/cake server`
 
-- Run a web server
-
-```bash
-bin/cake server -p 8765
-```
-
-Then visit `http://localhost:8765` to see the welcome page.
-
-## Baking
-
-No assumptions were made about how you'd like to use this project. So nothing has been pre-baked.
-You may run the following to bake everything:
-
-```bash
-bin/cake bake all Actors
-bin/cake bake all Addresses
-bin/cake bake all Categories
-bin/cake bake all Cities
-bin/cake bake all Countries
-bin/cake bake all Customers
-bin/cake bake all Employees
-bin/cake bake all FilmActors
-bin/cake bake all FilmCategories
-bin/cake bake all FilmTexts
-bin/cake bake all Films
-bin/cake bake all Inventories
-bin/cake bake all Languages
-bin/cake bake all Payments
-bin/cake bake all Rentals
-bin/cake bake all Stores
-```
-
-You should now be able to browse to /actors etc...
+Done.
