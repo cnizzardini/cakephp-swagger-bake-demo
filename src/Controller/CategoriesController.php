@@ -57,12 +57,16 @@ class CategoriesController extends AppController
         $this->request->allowMethod('post');
         $category = $this->Categories->newEmptyEntity();
         $category = $this->Categories->patchEntity($category, $this->request->getData());
+        $this->set(compact('category'));
+        $this->viewBuilder()->setOption('serialize', 'category');
+        /*
         if ($this->Categories->save($category)) {
             $this->set(compact('category'));
             $this->viewBuilder()->setOption('serialize', 'category');
             return;
         }
         return $this->response->withStatus(422);
+        */
     }
 
     /**
@@ -80,12 +84,16 @@ class CategoriesController extends AppController
             'contain' => [],
         ]);
         $category = $this->Categories->patchEntity($category, $this->request->getData());
+        $this->set(compact('category'));
+        $this->viewBuilder()->setOption('serialize', 'category');
+        /*
         if ($this->Categories->save($category)) {
             $this->set(compact('category'));
             $this->viewBuilder()->setOption('serialize', 'category');
             return;
         }
         return $this->response->withStatus(422);
+        */
     }
 
     /**
@@ -99,10 +107,13 @@ class CategoriesController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['delete']);
+        return $this->response->withStatus(204);
+        /*
         $category = $this->Categories->get($id);
         if ($this->Categories->delete($category)) {
             return $this->response->withStatus(204);
         }
         return $this->response->withStatus(422);
+        */
     }
 }

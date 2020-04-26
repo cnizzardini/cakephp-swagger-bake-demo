@@ -75,7 +75,6 @@ class ActorsController extends AppController
         $actor = $this->Actors->patchEntity($actor, $this->request->getData());
         $this->set(compact('actor'));
         $this->viewBuilder()->setOption('serialize', 'actor');
-        return;
         /*
         if ($this->Actors->save($actor)) {
             $this->set(compact('actor'));
@@ -106,7 +105,6 @@ class ActorsController extends AppController
         $actor = $this->Actors->patchEntity($actor, $this->request->getData());
         $this->set(compact('actor'));
         $this->viewBuilder()->setOption('serialize', 'actor');
-        return;
         /*
         $actor = $this->Actors->patchEntity($actor, $this->request->getData());
         if ($this->Actors->save($actor)) {

@@ -57,12 +57,16 @@ class LanguagesController extends AppController
         $this->request->allowMethod('post');
         $language = $this->Languages->newEmptyEntity();
         $language = $this->Languages->patchEntity($language, $this->request->getData());
+        $this->set(compact('language'));
+        $this->viewBuilder()->setOption('serialize', 'language');
+        /*
         if ($this->Languages->save($language)) {
             $this->set(compact('language'));
             $this->viewBuilder()->setOption('serialize', 'language');
             return;
         }
         return $this->response->withStatus(422);
+        */
     }
 
     /**
@@ -80,12 +84,16 @@ class LanguagesController extends AppController
             'contain' => [],
         ]);
         $language = $this->Languages->patchEntity($language, $this->request->getData());
+        $this->set(compact('language'));
+        $this->viewBuilder()->setOption('serialize', 'language');
+        /*
         if ($this->Languages->save($language)) {
             $this->set(compact('language'));
             $this->viewBuilder()->setOption('serialize', 'language');
             return;
         }
         return $this->response->withStatus(422);
+        */
     }
 
     /**
@@ -99,10 +107,13 @@ class LanguagesController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['delete']);
+        return $this->response->withStatus(204);
+        /*
         $language = $this->Languages->get($id);
         if ($this->Languages->delete($language)) {
             return $this->response->withStatus(204);
         }
         return $this->response->withStatus(422);
+        */
     }
 }

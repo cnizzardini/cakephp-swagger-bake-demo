@@ -60,6 +60,9 @@ class FilmsController extends AppController
         $this->request->allowMethod('post');
         $film = $this->Films->newEmptyEntity();
         $film = $this->Films->patchEntity($film, $this->request->getData());
+        $this->set(compact('film', 'languages'));
+        $this->viewBuilder()->setOption('serialize', 'film', 'languages');
+        /*
         if ($this->Films->save($film)) {
             $languages = $this->Films->Languages->find('list', ['limit' => 200]);
             $this->set(compact('film', 'languages'));
@@ -67,6 +70,7 @@ class FilmsController extends AppController
             return;
         }
         return $this->response->withStatus(422);
+        */
     }
 
     /**
@@ -84,6 +88,9 @@ class FilmsController extends AppController
             'contain' => [],
         ]);
         $film = $this->Films->patchEntity($film, $this->request->getData());
+        $this->set(compact('film', 'languages'));
+        $this->viewBuilder()->setOption('serialize', 'film', 'languages');
+        /*
         if ($this->Films->save($film)) {
             $languages = $this->Films->Languages->find('list', ['limit' => 200]);
             $this->set(compact('film', 'languages'));
@@ -91,6 +98,7 @@ class FilmsController extends AppController
             return;
         }
         return $this->response->withStatus(422);
+        */
     }
 
     /**
@@ -104,10 +112,13 @@ class FilmsController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['delete']);
+        return $this->response->withStatus(422);
+        /*
         $film = $this->Films->get($id);
         if ($this->Films->delete($film)) {
             return $this->response->withStatus(204);
         }
         return $this->response->withStatus(422);
+        */
     }
 }
