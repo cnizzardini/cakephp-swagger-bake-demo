@@ -5,6 +5,8 @@ namespace App\Controller;
 
 use Cake\ORM\TableRegistry;
 
+use SwaggerBake\Lib\Annotation as Swag;
+
 /**
  * FilmActors Controller
  *
@@ -30,5 +32,41 @@ class FilmActorsController extends AppController
 
         $this->set(compact('filmActors'));
         $this->viewBuilder()->setOption('serialize', 'filmActors');
+    }
+
+    /**
+     * Add method
+     *
+     * @Swag\SwagRequestBody(required=true, ignoreCakeSchema=true)
+     * @Swag\SwagForm(name="actor_id", required=true)
+     *
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     * @throws MethodNotAllowedException
+     * @throws Exception
+     */
+    public function add()
+    {
+        $this->request->allowMethod('post');
+        $filmActor = $this->FilmActors->newEntity([
+            'film_id' => $this->request->getParam('film_id'),
+            'actor_id' => $this->request->getData('actor_id'),
+        ]);
+        $this->set(compact('filmActor'));
+        $this->viewBuilder()->setOption('serialize', 'filmActor');
+    }
+
+    /**
+     * Delete method
+     *
+     * @Swag\SwagResponseSchema(refEntity="", description="Success", httpCode=204)
+     * @return \Cake\Http\Response|null|void Redirects to index.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     * @throw MethodNotAllowedException
+     * @throw Exception
+     */
+    public function delete()
+    {
+        $this->request->allowMethod(['delete']);
+        return $this->response->withStatus(204);
     }
 }
