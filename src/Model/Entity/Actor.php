@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use SwaggerBake\Lib\Annotation\SwagEntityAttribute;
 
 /**
  * Actor Entity
@@ -12,8 +13,9 @@ use Cake\ORM\Entity;
  * @property string $first_name
  * @property string $last_name
  * @property \Cake\I18n\FrozenTime $modified
- *
  * @property \App\Model\Entity\FilmActor[] $film_actors
+ *
+ * @SwagEntityAttribute(name="first_name", type="string", description="You can add a description here!")
  */
 class Actor extends Entity
 {

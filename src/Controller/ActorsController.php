@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Cake\Http\Exception\MethodNotAllowedException;
+use Cake\Http\Exception\NotImplementedException;
 use Exception;
 use SwaggerBake\Lib\Annotation as Swag;
 
@@ -160,5 +161,114 @@ class ActorsController extends AppController
 
         $this->set('actor', $actor);
         $this->viewBuilder()->setOption('serialize', 'actor');
+    }
+
+    /**
+     * Add Actor JSON
+     *
+     * Same as Add Actor Form, but accepts JSON body
+     *
+     * @Swag\SwagRequestBodyContent(refEntity="#/components/schemas/Actor", mimeType="application/json")
+     *
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     * @throws MethodNotAllowedException
+     * @throws Exception
+     */
+    public function addJson()
+    {
+        $this->request->allowMethod('post');
+        $actor = $this->Actors->newEmptyEntity();
+        $actor->id = 10001;
+        $actor = $this->Actors->patchEntity($actor, json_decode((string) $this->request->getBody(), TRUE));
+        $this->set(compact('actor'));
+        $this->viewBuilder()->setOption('serialize', 'actor');
+        /*
+        if ($this->Actors->save($actor)) {
+            $this->set(compact('actor'));
+            $this->viewBuilder()->setOption('serialize', 'actor');
+            return;
+        }
+        throw new Exception('Unable to save');
+        */
+    }
+
+    /**
+     * Add Actor XML
+     *
+     * Same as Add Actor Form, but accepts XML body
+     *
+     * @Swag\SwagRequestBodyContent(refEntity="#/components/schemas/Actor", content={{ "a" : "beijing", "b" : "Tian’anmen"}})
+     *
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     * @throws MethodNotAllowedException
+     * @throws Exception
+     */
+    public function addXml()
+    {
+        $this->request->allowMethod('post');
+        $obj = simplexml_load_string((string) $this->request->getBody());
+        $var = get_object_vars($obj);
+        $actor = $this->Actors->newEmptyEntity();
+        $actor->id = 10001;
+        $actor = $this->Actors->patchEntity($actor, $var);
+        $this->set(compact('actor'));
+        $this->viewBuilder()->setOption('serialize', 'actor');
+        /*
+        if ($this->Actors->save($actor)) {
+            $this->set(compact('actor'));
+            $this->viewBuilder()->setOption('serialize', 'actor');
+            return;
+        }
+        throw new Exception('Unable to save');
+        */
+    }
+
+    /**
+     * Form Example
+     *
+     * @Swag\SwagRequestBody(ignoreCakeSchema=true)
+     * @Swag\SwagForm(name="my_input", description="a custom input", required=true)
+     *
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     * @throws MethodNotAllowedException
+     */
+    public function formExample()
+    {
+        $this->request->allowMethod('post');
+        $data = $this->getRequest()->getData('my_input');
+        $this->set(compact('data'));
+        $this->viewBuilder()->setOption('serialize', 'data');
+    }
+
+    /**
+     * Query Example
+     *
+     * @Swag\SwagQuery(name="my_param", description="a custom parameter", required=true)
+     *
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     * @throws MethodNotAllowedException
+     */
+    public function queryExample()
+    {
+        $this->request->allowMethod('get');
+        $data = $this->getRequest()->getQuery('my_param');
+        $this->set(compact('data'));
+        $this->viewBuilder()->setOption('serialize', 'data');
+    }
+
+    /**
+     * Header Example
+     *
+     * @Swag\SwagHeader(name="my_header", description="a custom header", required=true)
+     *
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     * @throws MethodNotAllowedException
+     */
+    public function headerExample()
+    {
+        $this->request->allowMethod('get');
+        $data = $this->getRequest()->getHeader('my_header');
+        $this->set(compact('data'));
+        $this->viewBuilder()->setOption('serialize', 'data');
     }
 }

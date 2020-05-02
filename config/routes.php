@@ -82,15 +82,40 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * routes you want in your application.
      */
     $builder->fallbacks();
-    $builder->setExtensions(['json']);
+    $builder->setExtensions(['json','xml']);
     $builder->connect('/', ['controller' => 'Swagger', 'action' => 'index', 'plugin' => 'SwaggerBake']);
 
     $builder->resources('Actors', [
         'map' => [
+            'addJson' => [
+                'method' => 'post',
+                'action' => 'addJson',
+                'path' => 'add-json'
+            ],
+            'addXml' => [
+                'method' => 'post',
+                'action' => 'addXml',
+                'path' => 'add-xml'
+            ],
             'randomActor' => [
                 'method' => 'get',
-                'action' => 'randomActor',
-                'path' => 'random-actor'
+                'action' => 'formExample',
+                'path' => 'form-example'
+            ],
+            'formExample' => [
+                'method' => 'post',
+                'action' => 'formExample',
+                'path' => 'form-example'
+            ],
+            'queryExample' => [
+                'method' => 'get',
+                'action' => 'queryExample',
+                'path' => 'query-example'
+            ],
+            'headerExample' => [
+                'method' => 'get',
+                'action' => 'headerExample',
+                'path' => 'header-example'
             ]
         ]
     ]);
