@@ -10,7 +10,7 @@
         "cakephp/migrations": "^3.0",
         "cakephp/plugin-installer": "^1.2",
         "cnizzardini/cakephp-sakila-plugin": "^1.0",
-        "cnizzardini/cakephp-swagger-bake": "^1.*",
+        "cnizzardini/cakephp-swagger-bake": "^1.0",
         "mobiledetect/mobiledetectlib": "^2.8"
     },
     "require-dev": {
