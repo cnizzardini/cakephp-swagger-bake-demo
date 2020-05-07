@@ -87,11 +87,6 @@ $routes->scope('/', function (RouteBuilder $builder) {
 
     $builder->resources('Actors', [
         'map' => [
-            'addJson' => [
-                'method' => 'post',
-                'action' => 'addJson',
-                'path' => 'add-json'
-            ],
             'addXml' => [
                 'method' => 'post',
                 'action' => 'addXml',
@@ -116,6 +111,11 @@ $routes->scope('/', function (RouteBuilder $builder) {
                 'method' => 'get',
                 'action' => 'headerExample',
                 'path' => 'header-example'
+            ],
+            'dto' => [
+                'method' => 'get',
+                'action' => 'dto',
+                'path' => 'dto'
             ]
         ]
     ]);
@@ -145,6 +145,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
             ],
         ]
     ]);
+
     $builder->resources('Languages');
 });
 

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Cake\Http\Exception\BadRequestException;
 use Cake\Http\Exception\MethodNotAllowedException;
 use Cake\Http\Exception\NotImplementedException;
 use Exception;
@@ -164,53 +165,36 @@ class ActorsController extends AppController
     }
 
     /**
-     * Add Actor JSON
+     * Add Actor (xml,json,form example)
      *
-     * Same as Add Actor Form, but accepts JSON body
+     * Same as Add Actor Form, but accepts XML
      *
-     * @Swag\SwagRequestBodyContent(refEntity="#/components/schemas/Actor", mimeType="application/json")
-     *
-     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
-     * @throws Exception
-     */
-    public function addJson()
-    {
-        $this->request->allowMethod('post');
-        $actor = $this->Actors->newEmptyEntity();
-        $actor->id = 10001;
-        $actor = $this->Actors->patchEntity($actor, json_decode((string) $this->request->getBody(), TRUE));
-        $this->set(compact('actor'));
-        $this->viewBuilder()->setOption('serialize', 'actor');
-        /*
-        if ($this->Actors->save($actor)) {
-            $this->set(compact('actor'));
-            $this->viewBuilder()->setOption('serialize', 'actor');
-            return;
-        }
-        throw new Exception('Unable to save');
-        */
-    }
-
-    /**
-     * Add Actor XML
-     *
-     * Same as Add Actor Form, but accepts XML body
-     *
-     * @Swag\SwagRequestBodyContent(refEntity="#/components/schemas/Actor", content={{ "a" : "beijing", "b" : "Tian’anmen"}})
+     * @Swag\SwagRequestBodyContent(refEntity="#/components/schemas/Actor", mimeType="application/xml")
+     * @Swag\SwagResponseSchema(refEntity="#/components/schemas/Actor", mimeType="application/xml")
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException
+     * @throws BadRequestException
      * @throws Exception
      */
     public function addXml()
     {
         $this->request->allowMethod('post');
-        $obj = simplexml_load_string((string) $this->request->getBody());
-        $var = get_object_vars($obj);
-        $actor = $this->Actors->newEmptyEntity();
-        $actor->id = 10001;
-        $actor = $this->Actors->patchEntity($actor, $var);
+
+        if ($this->request->is('json')) {
+            $arr = json_decode($this->request->input(), true);
+        } else if ($this->request->is('xml')) {
+            $arr = get_object_vars(simplexml_load_string($this->request->input()));
+        }
+
+        if (!isset($arr) || !is_array($arr)) {
+            throw new BadRequestException('Request could not be parsed. Must be valid XML or JSON.');
+        }
+
+        $actor = [
+            'actor' => $this->Actors->patchEntity($this->Actors->newEmptyEntity(), $arr)->toArray()
+        ];
+
         $this->set(compact('actor'));
         $this->viewBuilder()->setOption('serialize', 'actor');
         /*
@@ -252,6 +236,31 @@ class ActorsController extends AppController
     {
         $this->request->allowMethod('get');
         $data = $this->getRequest()->getQuery('my_param');
+        $this->set(compact('data'));
+        $this->viewBuilder()->setOption('serialize', 'data');
+    }
+
+    /**
+     * Dto Example
+     *
+     * This is an example of a Data Transfer Object. This works for either GET or POST and parses the doc blocks of
+     * your DTO. It works with any DTO as long as you can define the class attributes in your doc block. In this
+     * example I've used spatie/data-transfer-object
+     *
+     * @Swag\SwagDto(class="\App\Dto\QueryData")
+     * @Swag\SwagResponseSchema(refEntity="", description="Success", httpCode=200)
+     *
+     * @see https://github.com/spatie/data-transfer-object
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     * @throws MethodNotAllowedException
+     */
+    public function dto()
+    {
+        $this->request->allowMethod('get');
+        $data = [
+            'firstName' => $this->getRequest()->getQuery('firstName'),
+            'lastName' => $this->getRequest()->getQuery('lastName'),
+        ];
         $this->set(compact('data'));
         $this->viewBuilder()->setOption('serialize', 'data');
     }
