@@ -7,7 +7,37 @@ info:
 servers:
   - url: /
 paths:
-
+  '/films/{film_id}/film-texts':
+    get:
+      summary: Index method
+      description: 'This shows using the definitions from YML instead of reading from your cake routes and models.
+      YML definitions take precedence over cake routes and models.'
+      tags:
+        - Film Texts
+      operationId: 'filmtexts:index'
+      parameters:
+        - name: film_id
+          in: path
+          required: true
+          schema:
+            description: ''
+            type: string
+          deprecated: false
+          allowEmptyValue: false
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FilmTexts'
+        '500':
+          description: Unknown Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Exception'
+      deprecated: false
 components:
   schemas:
     Exception:
