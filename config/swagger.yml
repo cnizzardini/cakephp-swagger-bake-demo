@@ -40,6 +40,38 @@ paths:
       deprecated: false
 components:
   schemas:
+    FilmTexts:
+      description: 'Model loaded from YML instead'
+      type: array
+      items:
+        $ref: '#/components/schemas/FilmText'
+    FilmText:
+      description: 'Model loaded from YML instead'
+      type: object
+      required:
+        - film_id
+        - title
+      properties:
+        uuid:
+          type: string
+          format: ''
+          readOnly: true
+          writeOnly: false
+        film_id:
+          type: integer
+          format: ''
+          readOnly: false
+          writeOnly: false
+        title:
+          type: string
+          format: ''
+          readOnly: false
+          writeOnly: false
+        description:
+          type: string
+          format: ''
+          readOnly: false
+          writeOnly: false
     Exception:
       type: object
       properties:
