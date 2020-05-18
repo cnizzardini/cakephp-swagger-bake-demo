@@ -150,7 +150,7 @@ class ActorsController extends AppController
      *
      * This is a custom endpoint, it returns a random actor
      *
-     * @Swag\SwagResponseSchema(refEntity="#/components/schemas/Actor", description="Actor")
+     * @Swag\SwagResponseSchema(refEntity="#/components/schemas/Actor", description="Actor", mimeType="application/json")
      */
     public function randomActor()
     {
@@ -210,8 +210,8 @@ class ActorsController extends AppController
     /**
      * Form Example
      *
-     * @Swag\SwagRequestBody(ignoreCakeSchema=true)
      * @Swag\SwagForm(name="my_input", description="a custom input", required=true)
+     * @Swag\SwagResponseSchema(refEntity="", mimeType="application/json")
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException
@@ -228,6 +228,7 @@ class ActorsController extends AppController
      * Query Example
      *
      * @Swag\SwagQuery(name="my_param", description="a custom parameter", required=true)
+     * @Swag\SwagResponseSchema(refEntity="", mimeType="application/json")
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException
@@ -244,11 +245,10 @@ class ActorsController extends AppController
      * Dto Example
      *
      * This is an example of a Data Transfer Object. This works for either GET or POST and parses the doc blocks of
-     * your DTO. It works with any DTO as long as you can define the class attributes in your doc block. In this
-     * example I've used spatie/data-transfer-object
+     * your DTO. It works with any DTO as long as you can define the class attributes (properties) in your doc block.
      *
      * @Swag\SwagDto(class="\App\Dto\QueryData")
-     * @Swag\SwagResponseSchema(refEntity="", description="Success", httpCode=200)
+     * @Swag\SwagResponseSchema(refEntity="", mimeType="application/json")
      *
      * @see https://github.com/spatie/data-transfer-object
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
@@ -269,6 +269,7 @@ class ActorsController extends AppController
      * Header Example
      *
      * @Swag\SwagHeader(name="my_header", description="a custom header", required=true)
+     * @Swag\SwagResponseSchema(refEntity="", mimeType="application/json")
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException

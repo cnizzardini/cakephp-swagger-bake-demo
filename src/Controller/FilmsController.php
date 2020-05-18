@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use SwaggerBake\Lib\Annotation as Swag;
+
 /**
  * Films Controller
  *
@@ -103,6 +105,8 @@ class FilmsController extends AppController
 
     /**
      * Delete method
+     *
+     * @Swag\SwagResponseSchema(refEntity="", httpCode=204)
      *
      * @param string|null $id Film id.
      * @return \Cake\Http\Response|null|void HTTP 204 on success, HTTP 422 on error.

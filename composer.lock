@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1308c37eb07c1c71ab0de597904308d",
+    "content-hash": "e48eee3a53ead89b7126714cbf679399",
     "packages": [
         {
             "name": "aura/intl",
@@ -205,16 +205,16 @@
         },
         {
             "name": "cakephp/migrations",
-            "version": "3.0.0-RC",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/migrations.git",
-                "reference": "f986bc690e27e081607fdddb655723a5c8cc545b"
+                "reference": "a41a44e726dcc3634db0c2ac6bc4e158e416d103"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/migrations/zipball/f986bc690e27e081607fdddb655723a5c8cc545b",
-                "reference": "f986bc690e27e081607fdddb655723a5c8cc545b",
+                "url": "https://api.github.com/repos/cakephp/migrations/zipball/a41a44e726dcc3634db0c2ac6bc4e158e416d103",
+                "reference": "a41a44e726dcc3634db0c2ac6bc4e158e416d103",
                 "shasum": ""
             },
             "require": {
@@ -255,7 +255,7 @@
                 "cakephp",
                 "migrations"
             ],
-            "time": "2020-04-24T22:20:05+00:00"
+            "time": "2020-05-10T22:26:04+00:00"
         },
         {
             "name": "cakephp/plugin-installer",
@@ -345,16 +345,16 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v1.0.4",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "0c7fdc87a14f3ebe89020bbb45e484d3f9855ba6"
+                "reference": "f2ee3a1b4df1b5991bc4c3c013e7a6916ae1c8a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/0c7fdc87a14f3ebe89020bbb45e484d3f9855ba6",
-                "reference": "0c7fdc87a14f3ebe89020bbb45e484d3f9855ba6",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/f2ee3a1b4df1b5991bc4c3c013e7a6916ae1c8a8",
+                "reference": "f2ee3a1b4df1b5991bc4c3c013e7a6916ae1c8a8",
                 "shasum": ""
             },
             "require": {
@@ -391,7 +391,7 @@
                 "cakephp swagger",
                 "cakephp4 swagger"
             ],
-            "time": "2020-05-10T15:25:20+00:00"
+            "time": "2020-05-18T22:06:43+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -1700,16 +1700,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.16.0",
+            "version": "v1.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "1aab00e39cebaef4d8652497f46c15c1b7e45294"
+                "reference": "e94c8b1bbe2bc77507a1056cdb06451c75b427f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/1aab00e39cebaef4d8652497f46c15c1b7e45294",
-                "reference": "1aab00e39cebaef4d8652497f46c15c1b7e45294",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e94c8b1bbe2bc77507a1056cdb06451c75b427f9",
+                "reference": "e94c8b1bbe2bc77507a1056cdb06451c75b427f9",
                 "shasum": ""
             },
             "require": {
@@ -1721,7 +1721,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.16-dev"
+                    "dev-master": "1.17-dev"
                 }
             },
             "autoload": {
@@ -1754,20 +1754,20 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2020-05-08T16:50:20+00:00"
+            "time": "2020-05-12T16:14:59+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.16.0",
+            "version": "v1.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "a54881ec0ab3b2005c406aed0023c062879031e7"
+                "reference": "fa79b11539418b02fc5e1897267673ba2c19419c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/a54881ec0ab3b2005c406aed0023c062879031e7",
-                "reference": "a54881ec0ab3b2005c406aed0023c062879031e7",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fa79b11539418b02fc5e1897267673ba2c19419c",
+                "reference": "fa79b11539418b02fc5e1897267673ba2c19419c",
                 "shasum": ""
             },
             "require": {
@@ -1779,7 +1779,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.16-dev"
+                    "dev-master": "1.17-dev"
                 }
             },
             "autoload": {
@@ -1813,20 +1813,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-05-08T16:50:20+00:00"
+            "time": "2020-05-12T16:47:27+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.16.0",
+            "version": "v1.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
-                "reference": "7e95fe59d12169fcf4041487e4bf34fca37ee0ed"
+                "reference": "a760d8964ff79ab9bf057613a5808284ec852ccc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/7e95fe59d12169fcf4041487e4bf34fca37ee0ed",
-                "reference": "7e95fe59d12169fcf4041487e4bf34fca37ee0ed",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/a760d8964ff79ab9bf057613a5808284ec852ccc",
+                "reference": "a760d8964ff79ab9bf057613a5808284ec852ccc",
                 "shasum": ""
             },
             "require": {
@@ -1835,7 +1835,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.16-dev"
+                    "dev-master": "1.17-dev"
                 }
             },
             "autoload": {
@@ -1871,7 +1871,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-05-02T14:56:09+00:00"
+            "time": "2020-05-12T16:47:27+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -2042,16 +2042,16 @@
     "packages-dev": [
         {
             "name": "cakephp/bake",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/bake.git",
-                "reference": "51742303e0033a8612ab08b9a723bc84fb5a2210"
+                "reference": "afa97aa97d5575d5937b9ffd0d4e42a982500beb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/bake/zipball/51742303e0033a8612ab08b9a723bc84fb5a2210",
-                "reference": "51742303e0033a8612ab08b9a723bc84fb5a2210",
+                "url": "https://api.github.com/repos/cakephp/bake/zipball/afa97aa97d5575d5937b9ffd0d4e42a982500beb",
+                "reference": "afa97aa97d5575d5937b9ffd0d4e42a982500beb",
                 "shasum": ""
             },
             "require": {
@@ -2061,6 +2061,7 @@
             },
             "require-dev": {
                 "cakephp/cakephp-codesniffer": "^4.0",
+                "cakephp/debug_kit": "^4.1",
                 "phpunit/phpunit": "~8.5.0"
             },
             "type": "cakephp-plugin",
@@ -2085,7 +2086,7 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2020-04-18T00:06:41+00:00"
+            "time": "2020-05-10T21:37:40+00:00"
         },
         {
             "name": "cakephp/cakephp-codesniffer",
@@ -4302,16 +4303,16 @@
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "6.3.3",
+            "version": "6.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "b905a82255749de847fd4de607c7a4c8163f058d"
+                "reference": "29995403896ff25fe08c44a60e2921ac0e6a419c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/b905a82255749de847fd4de607c7a4c8163f058d",
-                "reference": "b905a82255749de847fd4de607c7a4c8163f058d",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/29995403896ff25fe08c44a60e2921ac0e6a419c",
+                "reference": "29995403896ff25fe08c44a60e2921ac0e6a419c",
                 "shasum": ""
             },
             "require": {
@@ -4345,7 +4346,7 @@
                 "MIT"
             ],
             "description": "Slevomat Coding Standard for PHP_CodeSniffer complements Consistence Coding Standard by providing sniffs with additional checks.",
-            "time": "2020-04-28T07:15:08+00:00"
+            "time": "2020-05-13T14:59:55+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

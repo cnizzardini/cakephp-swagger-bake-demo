@@ -94,8 +94,8 @@ $routes->scope('/', function (RouteBuilder $builder) {
             ],
             'randomActor' => [
                 'method' => 'get',
-                'action' => 'formExample',
-                'path' => 'form-example'
+                'action' => 'randomActor',
+                'path' => 'random-actor'
             ],
             'formExample' => [
                 'method' => 'post',
