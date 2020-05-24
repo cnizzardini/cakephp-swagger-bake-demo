@@ -27,14 +27,14 @@ class FilmsCollection extends FilterCollection
                 'wildcardOne' => '?',
                 'fields' => ['rating'],
             ])
-            ->add('language', 'Search.Value', [
+/*            ->add('language', 'Search.Value', [
                 'before' => true,
                 'after' => true,
                 'mode' => 'or',
                 'wildcardAny' => '*',
                 'wildcardOne' => '?',
                 'fields' => ['Language.name'],
-            ])
+            ])*/
         ;
 
 
