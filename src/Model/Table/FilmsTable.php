@@ -50,6 +50,7 @@ class FilmsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Search.Search');
 
         $this->belongsTo('Languages', [
             'foreignKey' => 'language_id',

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e48eee3a53ead89b7126714cbf679399",
+    "content-hash": "6ad8a175115f0946d063bea60e36b0d6",
     "packages": [
         {
             "name": "aura/intl",
@@ -345,16 +345,16 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v1.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "f2ee3a1b4df1b5991bc4c3c013e7a6916ae1c8a8"
+                "reference": "d22a6ca5f736c30a3abbf5163758dad02f0c2e78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/f2ee3a1b4df1b5991bc4c3c013e7a6916ae1c8a8",
-                "reference": "f2ee3a1b4df1b5991bc4c3c013e7a6916ae1c8a8",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/d22a6ca5f736c30a3abbf5163758dad02f0c2e78",
+                "reference": "d22a6ca5f736c30a3abbf5163758dad02f0c2e78",
                 "shasum": ""
             },
             "require": {
@@ -366,6 +366,7 @@
                 "symfony/yaml": "^5.0"
             },
             "require-dev": {
+                "friendsofcake/search": "^6.0",
                 "phpunit/phpunit": "^8.0"
             },
             "type": "cakephp-plugin",
@@ -391,7 +392,7 @@
                 "cakephp swagger",
                 "cakephp4 swagger"
             ],
-            "time": "2020-05-18T22:06:43+00:00"
+            "time": "2020-05-24T17:05:49+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -579,6 +580,59 @@
                 "php"
             ],
             "time": "2019-10-30T14:39:59+00:00"
+        },
+        {
+            "name": "friendsofcake/search",
+            "version": "6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfCake/search.git",
+                "reference": "1d13d9f7cdba791dc19d497488eb8cb3920bab43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfCake/search/zipball/1d13d9f7cdba791dc19d497488eb8cb3920bab43",
+                "reference": "1d13d9f7cdba791dc19d497488eb8cb3920bab43",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "^4.0"
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "^4.0",
+                "muffin/webservice": "^3.0",
+                "phpunit/phpunit": "~8.5.0"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Search\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Winther",
+                    "role": "Author"
+                },
+                {
+                    "name": "ADmad",
+                    "homepage": "https://github.com/admad",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "CakePHP Search plugin using PRG pattern",
+            "homepage": "https://github.com/FriendsOfCake/search",
+            "keywords": [
+                "cakephp",
+                "filter",
+                "prg",
+                "search"
+            ],
+            "time": "2020-04-18T07:24:13+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -4735,6 +4789,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "cnizzardini/cakephp-swagger-bake": 20,
         "cakephp/bake": 20,
         "psy/psysh": 0
     },

@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use SwaggerBake\Lib\Annotation as Swag;
+use SwaggerBake\Lib\Extension\CakeSearch\Annotation\SwagSearch;
 
 /**
  * Films Controller
@@ -13,19 +14,36 @@ use SwaggerBake\Lib\Annotation as Swag;
  */
 class FilmsController extends AppController
 {
+    public function initialize() : void
+    {
+        parent::initialize();
+
+        $this->loadComponent('Search.Search', [
+            'actions' => ['index'],
+        ]);
+    }
+
     /**
-     * Index method
+     * Search plugin
+     *
+     * Support for the friendsofcake/search plugin
      *
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @see https://github.com/FriendsOfCake/search friendsofcake/search extension
+     *
+     * @SwagSearch(tableClass="\App\Model\Table\FilmsTable", collection="default")
      */
     public function index()
     {
         $this->request->allowMethod('get');
-        $this->paginate = [
-            'contain' => ['Languages'],
-        ];
-        $films = $this->paginate($this->Films);
+        $query = $this->Films
+            ->find('search', [
+                'search' => $this->request->getQueryParams(),
+                'collection' => 'default'
+            ])
+            ->contain(['Languages']);
+        $films = $this->paginate($query);
 
         $this->set(compact('films'));
         $this->viewBuilder()->setOption('serialize', 'films');
