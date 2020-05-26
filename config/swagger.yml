@@ -39,6 +39,11 @@ paths:
                 $ref: '#/components/schemas/Exception'
       deprecated: false
 components:
+  securitySchemes:
+    ApiKey:
+      type: apiKey
+      in: header
+      name: API-KEY
   schemas:
     FilmTexts:
       description: 'Model loaded from YML instead'
@@ -91,3 +96,11 @@ components:
           type: boolean
         message:
           type: string
+    CityExtended:
+      allOf:
+        - $ref: '#/components/schemas/City'
+        - type: object
+          properties:
+            country:
+              $ref: '#/components/schemas/Country'
+

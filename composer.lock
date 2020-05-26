@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ad8a175115f0946d063bea60e36b0d6",
+    "content-hash": "96b87f496dd1ba95b899e3c167744e37",
     "packages": [
         {
             "name": "aura/intl",
@@ -51,6 +51,67 @@
                 "localization"
             ],
             "time": "2017-01-20T05:00:11+00:00"
+        },
+        {
+            "name": "cakephp/authentication",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/authentication.git",
+                "reference": "0ee1b4341e3ff69d120f3c46b41a93a26b777125"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/authentication/zipball/0ee1b4341e3ff69d120f3c46b41a93a26b777125",
+                "reference": "0ee1b4341e3ff69d120f3c46b41a93a26b777125",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/core": "^4.0",
+                "psr/http-client": "^1.0",
+                "psr/http-message": "^1.0",
+                "psr/http-server-handler": "^1.0",
+                "psr/http-server-middleware": "^1.0",
+                "zendframework/zend-diactoros": "^2.0"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "^4.0",
+                "cakephp/cakephp-codesniffer": "^4.0",
+                "firebase/php-jwt": "^5.0",
+                "phpunit/phpunit": "^8.0"
+            },
+            "suggest": {
+                "cakephp/cakephp": "Install full core to use \"CookieAuthenticator\".",
+                "cakephp/orm": "To use \"OrmResolver\" (Not needed separately if using full CakePHP framework).",
+                "cakephp/utility": "Provides CakePHP security methods. Required for the JWT adapter and Legacy password hasher.",
+                "ext-ldap": "Make sure this php extension is installed and enabled on your system if you want to use the built-in LDAP adapter for \"LdapIdentifier\".",
+                "firebase/php-jwt": "If you want to use the JWT adapter add this dependency"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Authentication\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/authentication/graphs/contributors"
+                }
+            ],
+            "description": "Authentication plugin for CakePHP",
+            "homepage": "https://cakephp.org",
+            "keywords": [
+                "Authentication",
+                "auth",
+                "cakephp",
+                "middleware"
+            ],
+            "time": "2020-05-17T02:27:25+00:00"
         },
         {
             "name": "cakephp/cakephp",
@@ -345,17 +406,17 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "dev-master",
+            "version": "9999999-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "d22a6ca5f736c30a3abbf5163758dad02f0c2e78"
+                "reference": "ac66585cb99d227c958f9c2289bc9ce6fce59788"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/d22a6ca5f736c30a3abbf5163758dad02f0c2e78",
-                "reference": "d22a6ca5f736c30a3abbf5163758dad02f0c2e78",
-                "shasum": ""
+                "type": "path",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/ac66585cb99d227c958f9c2289bc9ce6fce59788",
+                "reference": "ac66585cb99d227c958f9c2289bc9ce6fce59788",
+                "shasum": null
             },
             "require": {
                 "cakephp/cakephp": "^4.0",
@@ -375,7 +436,13 @@
                     "SwaggerBake\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "SwaggerBake\\Test\\": "tests/",
+                    "SwaggerBakeTest\\App\\": "tests/test_app/src/",
+                    "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -392,7 +459,14 @@
                 "cakephp swagger",
                 "cakephp4 swagger"
             ],
-            "time": "2020-05-24T17:05:49+00:00"
+            "support": {
+                "issues": "https://github.com/cnizzardini/cakephp-swagger-bake/issues",
+                "wiki": "https://github.com/cnizzardini/cakephp-swagger-bake/wiki",
+                "source": "https://github.com/cnizzardini/cakephp-swagger-bake"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "composer/ca-bundle",
