@@ -66,7 +66,7 @@ class ActorsController extends AppController
      * additional annotations! All batteries were included in this example.
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
+     * @throws MethodNotAllowedException Method Not Allowed, use HTTP POST
      * @throws Exception
      */
     public function add()
@@ -126,7 +126,6 @@ class ActorsController extends AppController
      * then SwaggerBack will default to 200 with the routes model as its schema in the response example.
      *
      * @param string|null $id Actor id.
-     * @Swag\SwagResponseSchema(refEntity="", description="Success", httpCode=204)
      * @return \Cake\Http\Response|null|void Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      * @throw MethodNotAllowedException
@@ -150,7 +149,9 @@ class ActorsController extends AppController
      *
      * This is a custom endpoint, it returns a random actor
      *
-     * @Swag\SwagResponseSchema(refEntity="#/components/schemas/Actor", description="Actor", mimeType="application/json")
+     * @Swag\SwagResponseSchema(
+     *     refEntity="#/components/schemas/Actor", description="Actor", mimeType="application/json"
+     * )
      */
     public function randomActor()
     {
@@ -227,7 +228,7 @@ class ActorsController extends AppController
     /**
      * Query Example
      *
-     * @Swag\SwagQuery(name="my_param", description="a custom parameter", required=true)
+     * @Swag\SwagQuery(name="my_param", description="", required=true, enum={"a","b"})
      * @Swag\SwagResponseSchema(refEntity="", mimeType="application/json")
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.

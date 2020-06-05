@@ -101,7 +101,7 @@ class LanguagesController extends AppController
     /**
      * Delete method
      *
-     * @Swag\SwagResponseSchema(refEntity="", httpCode=204)
+     * @Swag\SwagResponseSchema(refEntity="", statusCode="204")
      *
      * @param string|null $id Language id.
      * @return \Cake\Http\Response|null|void HTTP 204 on success, HTTP 422 on error.

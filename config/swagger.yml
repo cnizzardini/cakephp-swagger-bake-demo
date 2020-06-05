@@ -1,6 +1,6 @@
 openapi: "3.0.0"
 info:
-  version: 1.2.0
+  version: 1.3.0
   title: SwaggerBake Demo
   license:
     name: MIT
@@ -97,6 +97,8 @@ components:
         message:
           type: string
     CityExtended:
+      description: 'City with extended information including Country'
+      type: object
       allOf:
         - $ref: '#/components/schemas/City'
         - type: object
