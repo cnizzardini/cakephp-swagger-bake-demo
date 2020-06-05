@@ -147,6 +147,8 @@ $routes->scope('/', function (RouteBuilder $builder) {
     ]);
 
     $builder->resources('Languages');
+    $builder->resources('Cities');
+    $builder->resources('Employees', ['only' => ['index','view']]);
 });
 
 /*

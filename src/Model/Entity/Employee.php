@@ -59,6 +59,6 @@ class Employee extends Entity
      * @var array
      */
     protected $_hidden = [
-        'password',
+        'password','picture'
     ];
 }

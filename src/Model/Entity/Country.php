@@ -4,10 +4,12 @@ declare(strict_types=1);
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use SwaggerBake\Lib\Annotation as Swag;
 
 /**
  * Country Entity
  *
+ * @Swag\SwagEntity(isVisible=true)
  * @property int $id
  * @property string $name
  *
