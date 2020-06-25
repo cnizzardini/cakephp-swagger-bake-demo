@@ -94,7 +94,8 @@ class FilmsTable extends Table
 
         $validator
             ->scalar('release_year')
-            ->maxLength('release_year', 255)
+            ->minLength('release_year', 4)
+            ->maxLength('release_year', 4)
             ->allowEmptyString('release_year');
 
         $validator
@@ -106,11 +107,8 @@ class FilmsTable extends Table
             ->notEmptyString('rental_rate');
 
         $validator
-            ->nonNegativeInteger('length')
-            ->allowEmptyString('length');
-
-        $validator
             ->decimal('replacement_cost')
+            ->regex('replacement_cost', '/\D/')
             ->notEmptyString('replacement_cost');
 
         $validator
