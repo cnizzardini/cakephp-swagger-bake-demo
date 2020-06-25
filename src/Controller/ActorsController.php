@@ -228,7 +228,11 @@ class ActorsController extends AppController
     /**
      * Query Example
      *
-     * @Swag\SwagQuery(name="my_param", description="", required=true, enum={"a","b"})
+     * @Swag\SwagQuery(name="my_enum", description="a description", required=true, enum={"a","b"})
+     * @Swag\SwagQuery(name="format_datetime", format="date-time")
+     * @Swag\SwagQuery(name="explode", explode=true)
+     * @Swag\SwagQuery(name="example", allowReserved=true, example="example of example")
+     * @Swag\SwagQuery(name="deprecated", deprecated=true, allowEmptyValue=true)
      * @Swag\SwagResponseSchema(refEntity="", mimeType="application/json")
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
@@ -237,7 +241,7 @@ class ActorsController extends AppController
     public function queryExample()
     {
         $this->request->allowMethod('get');
-        $data = $this->getRequest()->getQuery('my_param');
+        $data = 'just an example for SwagQuery';
         $this->set(compact('data'));
         $this->viewBuilder()->setOption('serialize', 'data');
     }
