@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "96b87f496dd1ba95b899e3c167744e37",
+    "content-hash": "ac055c88b432a7cbcccfb935fdf31d9a",
     "packages": [
         {
             "name": "aura/intl",
@@ -407,12 +407,17 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "dev-develop",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
+                "reference": "3077ad0fa2473ca6c18c5f18eaefdade1a9d8d19"
+            },
             "dist": {
-                "type": "path",
-                "url": "/var/www/personal/cakephp-swagger-bake",
-                "reference": "3bec5064230c089d5b16d2aba678a372fe23143b",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/3077ad0fa2473ca6c18c5f18eaefdade1a9d8d19",
+                "reference": "3077ad0fa2473ca6c18c5f18eaefdade1a9d8d19",
+                "shasum": ""
             },
             "require": {
                 "cakephp/cakephp": "^4.0",
@@ -437,13 +442,7 @@
                     "SwaggerBake\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "SwaggerBake\\Test\\": "tests/",
-                    "SwaggerBakeTest\\App\\": "tests/test_app/src/",
-                    "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -460,14 +459,7 @@
                 "cakephp swagger",
                 "cakephp4 swagger"
             ],
-            "support": {
-                "issues": "https://github.com/cnizzardini/cakephp-swagger-bake/issues",
-                "wiki": "https://github.com/cnizzardini/cakephp-swagger-bake/wiki",
-                "source": "https://github.com/cnizzardini/cakephp-swagger-bake"
-            },
-            "transport-options": {
-                "symlink": true
-            }
+            "time": "2020-07-02T21:06:33+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -5201,7 +5193,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "cnizzardini/cakephp-swagger-bake": 20,
         "cakephp/bake": 20,
         "psy/psysh": 0
     },
