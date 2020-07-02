@@ -3,9 +3,13 @@
 namespace App\Dto;
 
 use Spatie\DataTransferObject\DataTransferObject;
+use SwaggerBake\Lib\Annotation as Swag;
 
 class QueryData extends DataTransferObject
 {
+    /** @var string */
+    private $firstName;
+
     /**
      * Last name required
      * @var string
@@ -13,8 +17,20 @@ class QueryData extends DataTransferObject
      */
     private $lastName;
 
-    /** @var string */
-    private $firstName;
+    /**
+     * @Swag\SwagDtoQuery(name="title", type="string", description="testing")
+     */
+    private $title;
+
+    /**
+     * @Swag\SwagDtoQuery(name="age", type="integer", format="int32" description="testing")
+     */
+    private $age;
+
+    /**
+     * @Swag\SwagDtoQuery(name="date", type="string", format="date", description="testing")
+     */
+    private $date;
 
     /**
      * @return string
@@ -49,6 +65,60 @@ class QueryData extends DataTransferObject
     public function setLastName(string $lastName): QueryData
     {
         $this->lastName = $lastName;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param mixed $title
+     * @return QueryData
+     */
+    public function setTitle($title): QueryData
+    {
+        $this->title = $title;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    /**
+     * @param mixed $age
+     * @return QueryData
+     */
+    public function setAge($age): QueryData
+    {
+        $this->age = $age;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param mixed $date
+     * @return QueryData
+     */
+    public function setDate($date): QueryData
+    {
+        $this->date = $date;
         return $this;
     }
 }
