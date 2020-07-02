@@ -19,16 +19,19 @@ class QueryData extends DataTransferObject
 
     /**
      * @Swag\SwagDtoQuery(name="title", type="string", description="testing")
+     * @var string
      */
     private $title;
 
     /**
      * @Swag\SwagDtoQuery(name="age", type="integer", format="int32" description="testing")
+     * @var integer
      */
     private $age;
 
     /**
      * @Swag\SwagDtoQuery(name="date", type="string", format="date", description="testing")
+     * @var string
      */
     private $date;
 

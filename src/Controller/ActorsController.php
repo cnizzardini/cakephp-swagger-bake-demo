@@ -190,6 +190,7 @@ class ActorsController extends AppController
      * @Swag\SwagQuery(name="explode", explode=true)
      * @Swag\SwagQuery(name="example", allowReserved=true, example="example of example")
      * @Swag\SwagQuery(name="deprecated", deprecated=true, allowEmptyValue=true)
+     * @Swag\SwagResponseSchema(refEntity="", statusCode="200")
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException
@@ -230,7 +231,7 @@ class ActorsController extends AppController
      * Header Example
      *
      * @Swag\SwagHeader(name="my_header", description="a custom header", required=true)
-     *
+     * @Swag\SwagResponseSchema(refEntity="", statusCode="200")
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException
      */

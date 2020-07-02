@@ -87,11 +87,6 @@ $routes->scope('/', function (RouteBuilder $builder) {
 
     $builder->resources('Actors', [
         'map' => [
-            'addXml' => [
-                'method' => 'post',
-                'action' => 'addXml',
-                'path' => 'add-xml'
-            ],
             'randomActor' => [
                 'method' => 'get',
                 'action' => 'randomActor',
