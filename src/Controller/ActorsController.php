@@ -150,7 +150,7 @@ class ActorsController extends AppController
      * This is a custom endpoint, it returns a random actor
      *
      * @Swag\SwagResponseSchema(
-     *     refEntity="#/components/schemas/Actor", description="Actor", mimeType="application/json"
+     *     refEntity="#/components/schemas/Actor", description="Actor"
      * )
      */
     public function randomActor()
@@ -166,53 +166,10 @@ class ActorsController extends AppController
     }
 
     /**
-     * Add Actor (xml,json,form example)
-     *
-     * Same as Add Actor Form, but accepts XML
-     *
-     * @Swag\SwagRequestBodyContent(refEntity="#/components/schemas/Actor", mimeType="application/xml")
-     * @Swag\SwagResponseSchema(refEntity="#/components/schemas/Actor", mimeType="application/xml")
-     *
-     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
-     * @throws BadRequestException
-     * @throws Exception
-     */
-    public function addXml()
-    {
-        $this->request->allowMethod('post');
-
-        if ($this->request->is('json')) {
-            $arr = json_decode($this->request->input(), true);
-        } else if ($this->request->is('xml')) {
-            $arr = get_object_vars(simplexml_load_string($this->request->input()));
-        }
-
-        if (!isset($arr) || !is_array($arr)) {
-            throw new BadRequestException('Request could not be parsed. Must be valid XML or JSON.');
-        }
-
-        $actor = [
-            'actor' => $this->Actors->patchEntity($this->Actors->newEmptyEntity(), $arr)->toArray()
-        ];
-
-        $this->set(compact('actor'));
-        $this->viewBuilder()->setOption('serialize', 'actor');
-        /*
-        if ($this->Actors->save($actor)) {
-            $this->set(compact('actor'));
-            $this->viewBuilder()->setOption('serialize', 'actor');
-            return;
-        }
-        throw new Exception('Unable to save');
-        */
-    }
-
-    /**
      * Form Example
      *
      * @Swag\SwagForm(name="my_input", description="a custom input", required=true)
-     * @Swag\SwagResponseSchema(refEntity="", mimeType="application/json")
+     * @Swag\SwagResponseSchema(refEntity="")
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException
@@ -233,7 +190,6 @@ class ActorsController extends AppController
      * @Swag\SwagQuery(name="explode", explode=true)
      * @Swag\SwagQuery(name="example", allowReserved=true, example="example of example")
      * @Swag\SwagQuery(name="deprecated", deprecated=true, allowEmptyValue=true)
-     * @Swag\SwagResponseSchema(refEntity="", mimeType="application/json")
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException
@@ -253,7 +209,7 @@ class ActorsController extends AppController
      * your DTO. It works with any DTO as long as you can define the class attributes (properties) in your doc block.
      *
      * @Swag\SwagDto(class="\App\Dto\QueryData")
-     * @Swag\SwagResponseSchema(refEntity="", mimeType="application/json")
+     * @Swag\SwagResponseSchema(refEntity="")
      *
      * @see https://github.com/spatie/data-transfer-object
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
@@ -274,7 +230,6 @@ class ActorsController extends AppController
      * Header Example
      *
      * @Swag\SwagHeader(name="my_header", description="a custom header", required=true)
-     * @Swag\SwagResponseSchema(refEntity="", mimeType="application/json")
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException

@@ -113,7 +113,8 @@ class FilmsTable extends Table
 
         $validator
             ->scalar('rating')
-            ->maxLength('rating', 255)
+            ->inList('rating',['PG','PG-13','R','NC-17','NR'])
+            ->maxLength('rating', 5)
             ->allowEmptyString('rating');
 
         $validator

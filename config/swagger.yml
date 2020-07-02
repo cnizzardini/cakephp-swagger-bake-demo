@@ -89,6 +89,8 @@ components:
         message:
           type: string
           example: Internal Error
+      xml:
+        name: response
     OperationResult:
       type: object
       properties:
@@ -96,6 +98,8 @@ components:
           type: boolean
         message:
           type: string
+      xml:
+        name: response
     CityExtended:
       description: 'City with extended information including Country'
       type: object

@@ -14,8 +14,6 @@ use SwaggerBake\Lib\Annotation\SwagEntityAttribute;
  * @property string $last_name
  * @property \Cake\I18n\FrozenTime $modified
  * @property \App\Model\Entity\FilmActor[] $film_actors
- *
- * @SwagEntityAttribute(name="first_name", type="string", description="You can add a description here!", required=true)
  */
 class Actor extends Entity
 {

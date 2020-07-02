@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "50dae9923ca842be1eb1e05ca38dc0ea",
+    "content-hash": "96b87f496dd1ba95b899e3c167744e37",
     "packages": [
         {
             "name": "aura/intl",
@@ -407,17 +407,12 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "a3ca1d2c240df983652b6a6e965faa6b67cbcb15"
-            },
+            "version": "dev-feature/issue-58-schema-property-spec",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/a3ca1d2c240df983652b6a6e965faa6b67cbcb15",
-                "reference": "a3ca1d2c240df983652b6a6e965faa6b67cbcb15",
-                "shasum": ""
+                "type": "path",
+                "url": "/var/www/personal/cakephp-swagger-bake",
+                "reference": "724f8fd36db6e542d3c2daaeba5bb7160f17407d",
+                "shasum": null
             },
             "require": {
                 "cakephp/cakephp": "^4.0",
@@ -442,7 +437,13 @@
                     "SwaggerBake\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "SwaggerBake\\Test\\": "tests/",
+                    "SwaggerBakeTest\\App\\": "tests/test_app/src/",
+                    "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -459,7 +460,14 @@
                 "cakephp swagger",
                 "cakephp4 swagger"
             ],
-            "time": "2020-06-05T00:42:54+00:00"
+            "support": {
+                "issues": "https://github.com/cnizzardini/cakephp-swagger-bake/issues",
+                "wiki": "https://github.com/cnizzardini/cakephp-swagger-bake/wiki",
+                "source": "https://github.com/cnizzardini/cakephp-swagger-bake"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "composer/ca-bundle",
@@ -1055,16 +1063,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "7462d5f123dfc080dfdf26897032a6513644fc95"
+                "reference": "30441f2752e493c639526b215ed81d54f369d693"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/7462d5f123dfc080dfdf26897032a6513644fc95",
-                "reference": "7462d5f123dfc080dfdf26897032a6513644fc95",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/30441f2752e493c639526b215ed81d54f369d693",
+                "reference": "30441f2752e493c639526b215ed81d54f369d693",
                 "shasum": ""
             },
             "require": {
@@ -1078,7 +1086,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-1.x": "1.x-dev"
                 }
             },
             "autoload": {
@@ -1097,7 +1105,7 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "time": "2020-02-18T18:59:58+00:00"
+            "time": "2020-06-19T20:22:09+00:00"
         },
         {
             "name": "psr/container",
@@ -1872,16 +1880,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.17.0",
+            "version": "v1.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "e94c8b1bbe2bc77507a1056cdb06451c75b427f9"
+                "reference": "2edd75b8b35d62fd3eeabba73b26b8f1f60ce13d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e94c8b1bbe2bc77507a1056cdb06451c75b427f9",
-                "reference": "e94c8b1bbe2bc77507a1056cdb06451c75b427f9",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/2edd75b8b35d62fd3eeabba73b26b8f1f60ce13d",
+                "reference": "2edd75b8b35d62fd3eeabba73b26b8f1f60ce13d",
                 "shasum": ""
             },
             "require": {
@@ -1894,6 +1902,10 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.17-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -1926,7 +1938,7 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2020-05-12T16:14:59+00:00"
+            "time": "2020-06-06T08:46:27+00:00"
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
@@ -2361,7 +2373,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.1.0",
+            "version": "v5.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -2424,16 +2436,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
+                "reference": "9dc4f203e36f2b486149058bade43c851dd97451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
-                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/9dc4f203e36f2b486149058bade43c851dd97451",
+                "reference": "9dc4f203e36f2b486149058bade43c851dd97451",
                 "shasum": ""
             },
             "require": {
@@ -2441,6 +2453,7 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
+                "phpstan/phpstan": "<0.12.20",
                 "vimeo/psalm": "<3.9.1"
             },
             "require-dev": {
@@ -2468,7 +2481,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-04-18T12:12:48+00:00"
+            "time": "2020-06-16T10:16:42+00:00"
         }
     ],
     "packages-dev": [
