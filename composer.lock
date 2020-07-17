@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ac055c88b432a7cbcccfb935fdf31d9a",
+    "content-hash": "2d99ee3afaa81172cebd9af947237791",
     "packages": [
         {
             "name": "aura/intl",
@@ -409,16 +409,16 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v1.4.1",
+            "version": "v1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "38f824dda9ab2f856faca5ae94bb82b07598aa13"
+                "reference": "08c2c424c711a93ac2e4029244d4b5c751a93ab8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/38f824dda9ab2f856faca5ae94bb82b07598aa13",
-                "reference": "38f824dda9ab2f856faca5ae94bb82b07598aa13",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/08c2c424c711a93ac2e4029244d4b5c751a93ab8",
+                "reference": "08c2c424c711a93ac2e4029244d4b5c751a93ab8",
                 "shasum": ""
             },
             "require": {
@@ -461,7 +461,7 @@
                 "cakephp swagger",
                 "cakephp4 swagger"
             ],
-            "time": "2020-07-05T18:10:25+00:00"
+            "time": "2020-07-17T21:41:14+00:00"
         },
         {
             "name": "composer/ca-bundle",

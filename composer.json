@@ -13,7 +13,7 @@
         "cakephp/migrations": "^3.0",
         "cakephp/plugin-installer": "^1.2",
         "cnizzardini/cakephp-sakila-plugin": "^1.0",
-        "cnizzardini/cakephp-swagger-bake": "1.4.*",
+        "cnizzardini/cakephp-swagger-bake": "1.4.2",
         "friendsofcake/search": "^6.0",
         "mobiledetect/mobiledetectlib": "^2.8",
         "spatie/data-transfer-object": "^1.13"
