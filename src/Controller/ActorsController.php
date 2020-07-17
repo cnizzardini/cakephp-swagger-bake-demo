@@ -231,7 +231,6 @@ class ActorsController extends AppController
      * Header Example
      *
      * @Swag\SwagHeader(name="my_header", description="a custom header", required=true)
-     * @Swag\SwagResponseSchema(refEntity="", statusCode="200")
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException
      */
