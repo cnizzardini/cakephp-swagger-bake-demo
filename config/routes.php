@@ -87,11 +87,25 @@ $routes->scope('/', function (RouteBuilder $builder) {
 
     $builder->resources('Actors', [
         'map' => [
-            'randomActor' => [
-                'method' => 'get',
-                'action' => 'randomActor',
-                'path' => 'random-actor'
-            ],
+            'films' => [
+                'method' => 'GET',
+                'action' => 'films',
+                'path' => ':id/films'
+            ]
+        ]
+    ]);
+    $builder->resources('Cities');
+
+    $builder->resources('Examples', [
+        'only' => [
+            'formExample',
+            'queryExample',
+            'headerExample',
+            'dtoExample',
+            'apiKeyExample',
+            'optionsOrHead'
+        ],
+        'map' => [
             'formExample' => [
                 'method' => 'post',
                 'action' => 'formExample',
@@ -107,43 +121,29 @@ $routes->scope('/', function (RouteBuilder $builder) {
                 'action' => 'headerExample',
                 'path' => 'header-example'
             ],
-            'dto' => [
+            'dtoExample' => [
                 'method' => 'get',
-                'action' => 'dto',
-                'path' => 'dto'
+                'action' => 'dtoExample',
+                'path' => 'dto-example'
+            ],
+            'apiKeyExample' => [
+                'method' => 'get',
+                'action' => 'apiKeyExample',
+                'path' => 'api-key-example'
+            ],
+            'optionsOrHead' => [
+                'method' => ['options','head'],
+                'action' => 'optionsOrHead',
+                'path' => 'options-or-head'
             ]
         ]
     ]);
-    $builder->resources('Categories');
-    $builder->resources('Films', function (RouteBuilder $routes) {
-        $routes->resources('FilmCategories', ['only' => ['index']]);
-        $routes->resources('FilmTexts', ['only' => ['index']]);
-    });
-    $builder->resources('FilmActors', [
-        'path' => 'films/:film_id/actors',
-        'only' => ['index','create','delete'],
-        'map' => [
-            'index' => [
-                'method' => 'GET',
-                'action' => 'index',
-                'path' => '/'
-            ],
-            'create' => [
-                'method' => 'POST',
-                'action' => 'add',
-                'path' => '/'
-            ],
-            'delete' => [
-                'method' => 'DELETE',
-                'action' => 'delete',
-                'path' => '/:actor_id'
-            ],
-        ]
-    ]);
 
+    $builder->resources('FilmActors', [
+        'only' => ['create','delete']
+    ]);
+    $builder->resources('Films');
     $builder->resources('Languages');
-    $builder->resources('Cities');
-    $builder->resources('Employees', ['only' => ['index','view']]);
 });
 
 /*
