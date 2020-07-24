@@ -12,7 +12,6 @@ use SwaggerBake\Lib\Annotation as Swag;
  * @Swag\SwagEntity(isVisible=true)
  * @property int $id
  * @property string $name
- *
  * @property \App\Model\Entity\City[] $cities
  */
 class Country extends Entity

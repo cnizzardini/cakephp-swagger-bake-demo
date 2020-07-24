@@ -50,6 +50,10 @@ class ActorsTable extends Table
         $this->hasMany('FilmActors', [
             'foreignKey' => 'actor_id',
         ]);
+
+        $this->belongsToMany('Films', [
+            'through' => 'FilmActors',
+        ]);
     }
 
     /**

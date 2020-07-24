@@ -145,100 +145,25 @@ class ActorsController extends AppController
     }
 
     /**
-     * Random Actor
+     * Actor Films
      *
-     * This is a custom endpoint, it returns a random actor
+     * Example of a sub-resource using SwagResponseSchema schemaType and schemaItems to build an array of objects
      *
-     * @Swag\SwagResponseSchema(
-     *     refEntity="#/components/schemas/Actor", description="Actor"
-     * )
+     * @Swag\SwagResponseSchema(schemaItems={"$ref"="#/components/schemas/Film"})
+     *
+     * @param string|null $id Actor id.
+     * @return \Cake\Http\Response|null|void Redirects to index.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     * @throw MethodNotAllowedException
+     * @throw Exception
      */
-    public function randomActor()
+    public function films($id)
     {
-        $id = rand(1,200);
-
+        $this->request->allowMethod('get');
         $actor = $this->Actors->get($id, [
-            'contain' => ['FilmActors'],
+            'contain' => ['Films'],
         ]);
-
-        $this->set('actor', $actor);
-        $this->viewBuilder()->setOption('serialize', 'actor');
-    }
-
-    /**
-     * Form Example
-     *
-     * @Swag\SwagForm(name="my_input", description="a custom input", required=true)
-     * @Swag\SwagResponseSchema(refEntity="")
-     *
-     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
-     */
-    public function formExample()
-    {
-        $this->request->allowMethod('post');
-        $data = $this->getRequest()->getData('my_input');
-        $this->set(compact('data'));
-        $this->viewBuilder()->setOption('serialize', 'data');
-    }
-
-    /**
-     * Query Example
-     *
-     * @Swag\SwagQuery(name="my_enum", description="a description", required=true, enum={"a","b"})
-     * @Swag\SwagQuery(name="format_datetime", format="date-time")
-     * @Swag\SwagQuery(name="explode", explode=true)
-     * @Swag\SwagQuery(name="example", allowReserved=true, example="example of example")
-     * @Swag\SwagQuery(name="deprecated", deprecated=true, allowEmptyValue=true)
-     * @Swag\SwagResponseSchema(refEntity="", statusCode="200")
-     *
-     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
-     */
-    public function queryExample()
-    {
-        $this->request->allowMethod('get');
-        $data = 'just an example for SwagQuery';
-        $this->set(compact('data'));
-        $this->viewBuilder()->setOption('serialize', 'data');
-    }
-
-    /**
-     * Dto Example
-     *
-     * This is an example of a Data Transfer Object. This works for either GET or POST and parses the doc blocks of
-     * your DTO. It works with any DTO as long as you can define the class attributes (properties) in your doc block.
-     *
-     * @Swag\SwagDto(class="\App\Dto\QueryData")
-     * @Swag\SwagResponseSchema(refEntity="")
-     *
-     * @see https://github.com/spatie/data-transfer-object
-     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
-     */
-    public function dto()
-    {
-        $this->request->allowMethod('get');
-        $data = [
-            'firstName' => $this->getRequest()->getQuery('firstName'),
-            'lastName' => $this->getRequest()->getQuery('lastName'),
-        ];
-        $this->set(compact('data'));
-        $this->viewBuilder()->setOption('serialize', 'data');
-    }
-
-    /**
-     * Header Example
-     *
-     * @Swag\SwagHeader(name="my_header", description="a custom header", required=true)
-     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
-     */
-    public function headerExample()
-    {
-        $this->request->allowMethod('get');
-        $data = $this->getRequest()->getHeader('my_header');
-        $this->set(compact('data'));
-        $this->viewBuilder()->setOption('serialize', 'data');
+        $this->set('films', $actor->films);
+        $this->viewBuilder()->setOption('serialize', 'films');
     }
 }
