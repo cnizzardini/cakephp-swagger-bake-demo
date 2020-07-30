@@ -37,9 +37,6 @@ class FilmActorsController extends AppController
     /**
      * Add method
      *
-     * @Swag\SwagRequestBody(required=true, ignoreCakeSchema=true)
-     * @Swag\SwagForm(name="actor_id", required=true)
-     *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException
      * @throws Exception
