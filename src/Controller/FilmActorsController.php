@@ -55,6 +55,8 @@ class FilmActorsController extends AppController
     /**
      * Delete method
      *
+     * Deletes are disabled in this example
+     *
      * @return \Cake\Http\Response|null|void Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      * @throw MethodNotAllowedException

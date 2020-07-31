@@ -72,19 +72,16 @@ class ActorsController extends AppController
     public function add()
     {
         $this->request->allowMethod('post');
-        $actor = $this->Actors->newEmptyEntity();
-        $actor->id = 10001;
-        $actor = $this->Actors->patchEntity($actor, $this->request->getData());
-        $this->set(compact('actor'));
-        $this->viewBuilder()->setOption('serialize', 'actor');
-        /*
+        $actor = $this->Actors->patchEntity(
+            $this->Actors->newEmptyEntity(),
+            $this->request->getData()
+        );
         if ($this->Actors->save($actor)) {
             $this->set(compact('actor'));
             $this->viewBuilder()->setOption('serialize', 'actor');
             return;
         }
         throw new Exception('Unable to save');
-        */
     }
 
     /**
@@ -105,25 +102,18 @@ class ActorsController extends AppController
             'contain' => [],
         ]);
         $actor = $this->Actors->patchEntity($actor, $this->request->getData());
-        $this->set(compact('actor'));
-        $this->viewBuilder()->setOption('serialize', 'actor');
-        /*
-        $actor = $this->Actors->patchEntity($actor, $this->request->getData());
         if ($this->Actors->save($actor)) {
             $this->set(compact('actor'));
             $this->viewBuilder()->setOption('serialize', 'actor');
             return;
         }
         throw new Exception('Unable to save');
-        */
     }
 
     /**
      * Delete Actor
      *
-     * The path parameter was automatically added and these comments come direct from your DocBlock comments. This
-     * example uses `@SwagResponseSchema` to set a custom response type. If no 20x response types are defined by you
-     * then SwaggerBack will default to 200 with the routes model as its schema in the response example.
+     * Deletes are disabled in this example
      *
      * @param string|null $id Actor id.
      * @return \Cake\Http\Response|null|void Redirects to index.
@@ -133,8 +123,9 @@ class ActorsController extends AppController
      */
     public function delete($id = null)
     {
-        $this->request->allowMethod(['post', 'delete']);
-        return $this->response->withStatus(204);
+        $this->request->allowMethod(['delete']);
+        $response = $this->response->withHeader('_demo_mode_', 'DELETES ARE DISABLED IN DEMO MODE');
+        return $response->withStatus(422);
         /*
         $actor = $this->Actors->get($id);
         if ($this->Actors->delete($actor)) {

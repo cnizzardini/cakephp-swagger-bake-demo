@@ -94,7 +94,6 @@ $routes->scope('/', function (RouteBuilder $builder) {
             ]
         ]
     ]);
-    $builder->resources('Cities');
 
     $builder->resources('Examples', [
         'only' => [

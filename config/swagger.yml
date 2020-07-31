@@ -1,82 +1,76 @@
 openapi: "3.0.0"
 info:
-  version: 1.4.2
+  version: 1.5.0
   title: SwaggerBake Demo
+  description: |
+    This is a sample SwaggerBake demo server.
+    You can find more information at
+    [https://github.com/cnizzardini/cakephp-swagger-bake](https://github.com/cnizzardini/cakephp-swagger-bake).
+
+    **NOTE:** *The demo database gets refreshed once per day. Deletes are prevented.*
+
+    ### About
+    A delightfully tasty CakePHP plugin for generating OpenApi 3.0.0 schema. This plugin automatically
+    builds your Swagger UI and ReDoc from your existing code with no annotations or tooling required.
+
+    - Creates OpenApi paths and operations from your [RESTful](https://book.cakephp.org/4/en/development/rest.html)
+    routes and controllers.
+    - Creates OpenAPI Schema from your Entities and Tables.
+    - Integrates with:
+      [Paginator](https://book.cakephp.org/4/en/controllers/components/pagination.html),
+      [friendsofcake/search](https://github.com/FriendsOfCake/search),
+      [Authentication](https://book.cakephp.org/authentication/2/en/index.html),
+      [Validator](https://api.cakephp.org/4.0/class-Cake.Validation.Validator.html), and
+      [Bake](#bake-theme).
+    - Provides additional functionality through Annotations and Doc Blocks.
+
+    ### Documentation
+    - [Installation](https://github.com/cnizzardini/cakephp-swagger-bake#installation)
+    - [Setup](https://github.com/cnizzardini/cakephp-swagger-bake#setup)
+    - [Automatic Documentation](https://github.com/cnizzardini/cakephp-swagger-bake#automatic-documentation)
+    - [Doc Blocks](https://github.com/cnizzardini/cakephp-swagger-bake#doc-blocks)
+    - [Annotations for Extended Functionality](https://github.com/cnizzardini/cakephp-swagger-bake#annotations-for-extended-functionality)
+    - [Extending SwaggerBake](https://github.com/cnizzardini/cakephp-swagger-bake#extending-swaggerbake)
+    - [Console Commands](https://github.com/cnizzardini/cakephp-swagger-bake#console-commands)
+    - [Bake Theme](https://github.com/cnizzardini/cakephp-swagger-bake#bake-theme)
+    - [...](https://github.com/cnizzardini/cakephp-swagger-bake#details)
+
+    Scroll down to explore the demo.
+
   license:
-    name: MIT
+    name: MIT License
 servers:
   - url: /
 paths:
-  '/films/{film_id}/film-texts':
+  '/examples/':
     get:
       summary: Index method
       description: 'This shows using the definitions from YML instead of reading from your cake routes and models.
       YML definitions take precedence over cake routes and models.'
       tags:
-        - Film Texts
-      operationId: 'filmtexts:index'
-      parameters:
-        - name: film_id
-          in: path
-          required: true
-          schema:
-            description: ''
-            type: string
-          deprecated: false
-          allowEmptyValue: false
+        - Examples
+      operationId: 'examples:index'
       responses:
         '200':
           description: ''
           content:
-            application/json:
+            text/plain:
               schema:
-                $ref: '#/components/schemas/FilmTexts'
-        '500':
-          description: Unknown Error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Exception'
+                type: string
       deprecated: false
 components:
   securitySchemes:
     ApiKey:
+      description: See `/examples/api-key-example` for demo/example.
       type: apiKey
       in: header
       name: API-KEY
   schemas:
-    FilmTexts:
-      description: 'Model loaded from YML instead'
+    Films:
+      description: 'Note: Array from swagger.yml'
       type: array
       items:
-        $ref: '#/components/schemas/FilmText'
-    FilmText:
-      description: 'Model loaded from YML instead'
-      type: object
-      required:
-        - film_id
-        - title
-      properties:
-        uuid:
-          type: string
-          format: ''
-          readOnly: true
-          writeOnly: false
-        film_id:
-          type: integer
-          format: ''
-          readOnly: false
-          writeOnly: false
-        title:
-          type: string
-          format: ''
-          readOnly: false
-          writeOnly: false
-        description:
-          type: string
-          format: ''
-          readOnly: false
-          writeOnly: false
+        $ref: '#/components/schemas/Film'
     Exception:
       type: object
       properties:
@@ -100,13 +94,13 @@ components:
           type: string
       xml:
         name: response
-    CityExtended:
-      description: 'City with extended information including Country'
-      type: object
-      allOf:
-        - $ref: '#/components/schemas/City'
-        - type: object
-          properties:
-            country:
-              $ref: '#/components/schemas/Country'
+    #CityExtended:
+    #  description: 'City with extended information including Country'
+    #  type: object
+    #  allOf:
+    #    - $ref: '#/components/schemas/City'
+    #    - type: object
+    #      properties:
+    #        country:
+    #          $ref: '#/components/schemas/Country'
 

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+
 use SwaggerBake\Lib\Annotation as Swag;
 use SwaggerBake\Lib\Extension\CakeSearch\Annotation\SwagSearch;
 
@@ -24,15 +25,14 @@ class FilmsController extends AppController
     }
 
     /**
-     * Search plugin
+     * Search Example
      *
      * Support for the friendsofcake/search plugin
      *
+     * @SwagSearch(tableClass="\App\Model\Table\FilmsTable", collection="default")
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
      * @see https://github.com/FriendsOfCake/search friendsofcake/search extension
-     *
-     * @SwagSearch(tableClass="\App\Model\Table\FilmsTable", collection="default")
      */
     public function index()
     {
@@ -72,25 +72,22 @@ class FilmsController extends AppController
     /**
      * Add method
      *
-     * @return \Cake\Http\Response|null|void HTTP 200 on successful add, HTTP 422 on error
+     * @return \Cake\Http\Response|null|void HTTP 200 on successful add
      * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Exception When invalid method
      */
     public function add()
     {
         $this->request->allowMethod('post');
         $film = $this->Films->newEmptyEntity();
         $film = $this->Films->patchEntity($film, $this->request->getData());
-        $this->set(compact('film', 'languages'));
-        $this->viewBuilder()->setOption('serialize', 'film', 'languages');
-        /*
         if ($this->Films->save($film)) {
             $languages = $this->Films->Languages->find('list', ['limit' => 200]);
             $this->set(compact('film', 'languages'));
             $this->viewBuilder()->setOption('serialize', 'film', 'languages');
             return;
         }
-        return $this->response->withStatus(422);
-        */
+        throw new Exception('Unable to save');
     }
 
     /**
@@ -100,6 +97,7 @@ class FilmsController extends AppController
      * @return \Cake\Http\Response|null|void HTTP 200 on successful edit, HTTP 422 on error
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Exception When invalid method
      */
     public function edit($id = null)
     {
@@ -108,21 +106,19 @@ class FilmsController extends AppController
             'contain' => [],
         ]);
         $film = $this->Films->patchEntity($film, $this->request->getData());
-        $this->set(compact('film', 'languages'));
-        $this->viewBuilder()->setOption('serialize', 'film', 'languages');
-        /*
         if ($this->Films->save($film)) {
             $languages = $this->Films->Languages->find('list', ['limit' => 200]);
             $this->set(compact('film', 'languages'));
             $this->viewBuilder()->setOption('serialize', 'film', 'languages');
             return;
         }
-        return $this->response->withStatus(422);
-        */
+        throw new Exception('Unable to save');
     }
 
     /**
      * Delete method
+     *
+     * Deletes are disabled in this example
      *
      * @param string|null $id Film id.
      * @return \Cake\Http\Response|null|void HTTP 204 on success, HTTP 422 on error.
@@ -132,7 +128,8 @@ class FilmsController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['delete']);
-        return $this->response->withStatus(422);
+        $response = $this->response->withHeader('_demo_mode_', 'DELETES ARE DISABLED IN DEMO MODE');
+        return $response->withStatus(422);
         /*
         $film = $this->Films->get($id);
         if ($this->Films->delete($film)) {

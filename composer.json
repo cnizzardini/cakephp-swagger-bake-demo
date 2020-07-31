@@ -9,11 +9,11 @@
         "ext-json": "*",
         "ext-simplexml": "*",
         "cakephp/authentication": "^2.0",
-        "cakephp/cakephp": "^4.0",
-        "cakephp/migrations": "^3.0",
+        "cakephp/cakephp": "4.0.9",
         "cakephp/plugin-installer": "^1.2",
         "cnizzardini/cakephp-sakila-plugin": "^1.0",
-        "cnizzardini/cakephp-swagger-bake": "1.4.2",
+        "cnizzardini/cakephp-swagger-bake": "@dev",
+        "dereuromark/cakephp-setup": "^2.0",
         "friendsofcake/search": "^6.0",
         "mobiledetect/mobiledetectlib": "^2.8",
         "spatie/data-transfer-object": "^1.13"
@@ -71,5 +71,14 @@
             "role": "Developer"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/var/www/personal/cakephp-swagger-bake",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
 }

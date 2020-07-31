@@ -28,6 +28,7 @@ use Cake\Http\MiddlewareQueue;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
 use Psr\Http\Message\ServerRequestInterface;
+use Setup\Middleware\MaintenanceMiddleware;
 
 /**
  * Application setup class.
@@ -97,6 +98,8 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
             // Catch any exceptions in the lower layers,
             // and make an error page/response
             ->add(new ErrorHandlerMiddleware(Configure::read('Error')))
+            // https://github.com/dereuromark/cakephp-setup/blob/master/docs/Maintenance/Maintenance.md
+            ->add(MaintenanceMiddleware::class)
 
             // Handle plugin/theme assets like CakePHP normally does.
             ->add(new AssetMiddleware([
@@ -126,12 +129,14 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
     {
         try {
             $this->addPlugin('Bake');
+
         } catch (MissingPluginException $e) {
             // Do not halt if the plugin is missing
         }
 
         $this->addPlugin('Migrations');
         $this->addPlugin('Sakila');
+        $this->addPlugin('Setup');
 
         // Load more plugins here
     }
