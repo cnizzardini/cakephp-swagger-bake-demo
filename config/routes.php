@@ -95,6 +95,12 @@ $routes->scope('/', function (RouteBuilder $builder) {
         ]
     ]);
 
+    $builder->resources('Languages', ['path' => 'sub/languages', 'prefix' => 'Sub']);
+
+    $builder->resources('Countries', function(RouteBuilder $builder){
+        $builder->resources('Cities');
+    });
+
     $builder->resources('Examples', [
         'only' => [
             'formExample',
@@ -142,7 +148,6 @@ $routes->scope('/', function (RouteBuilder $builder) {
         'only' => ['create','delete']
     ]);
     $builder->resources('Films');
-    $builder->resources('Languages');
 });
 
 /*
