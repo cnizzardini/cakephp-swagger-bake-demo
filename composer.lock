@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9984f13f853559aa73ef071bc2a3f5d3",
+    "content-hash": "c1a8aa256b77860d4938538153c016a4",
     "packages": [
         {
             "name": "aura/intl",
@@ -408,16 +408,16 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "dev-master",
+            "version": "v1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "e38b8de66957e35d6f31ec143960470db41e308d"
+                "reference": "a51fe93f6f79436d5e21c1aab4aded25c18e7399"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/e38b8de66957e35d6f31ec143960470db41e308d",
-                "reference": "e38b8de66957e35d6f31ec143960470db41e308d",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/a51fe93f6f79436d5e21c1aab4aded25c18e7399",
+                "reference": "a51fe93f6f79436d5e21c1aab4aded25c18e7399",
                 "shasum": ""
             },
             "require": {
@@ -465,7 +465,7 @@
                 "cakephp swagger",
                 "cakephp4 swagger"
             ],
-            "time": "2020-08-07T01:32:40+00:00"
+            "time": "2020-08-09T13:20:37+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -5097,16 +5097,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.5",
+            "version": "3.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6"
+                "reference": "e97627871a7eab2f70e59166072a6b767d5834e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
-                "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/e97627871a7eab2f70e59166072a6b767d5834e0",
+                "reference": "e97627871a7eab2f70e59166072a6b767d5834e0",
                 "shasum": ""
             },
             "require": {
@@ -5144,7 +5144,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-04-17T01:09:41+00:00"
+            "time": "2020-08-10T04:50:15+00:00"
         },
         {
             "name": "symfony/finder",
@@ -5546,7 +5546,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "cnizzardini/cakephp-swagger-bake": 20,
         "cakephp/bake": 20,
         "psy/psysh": 0
     },

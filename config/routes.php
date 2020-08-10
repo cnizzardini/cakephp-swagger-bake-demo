@@ -98,7 +98,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->resources('Languages', ['path' => 'sub/languages', 'prefix' => 'Sub']);
 
     $builder->resources('Countries', function(RouteBuilder $builder){
-        $builder->resources('Cities');
+        $builder->resources('Cities', ['only' => ['index'], 'prefix' => 'Countries']);
     });
 
     $builder->resources('Examples', [

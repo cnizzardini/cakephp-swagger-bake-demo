@@ -65,6 +65,7 @@ class LanguagesController extends AppController
         $language = $this->Languages->newEmptyEntity();
         $language = $this->Languages->patchEntity($language, $this->request->getData());
         if ($this->Languages->save($language)) {
+            $this->set('language', $language);
             $this->viewBuilder()->setOption('serialize', 'language');
             return;
         }
@@ -88,6 +89,7 @@ class LanguagesController extends AppController
         ]);
         $language = $this->Languages->patchEntity($language, $this->request->getData());
         if ($this->Languages->save($language)) {
+            $this->set('language', $language);
             $this->viewBuilder()->setOption('serialize', 'language');
             return;
         }
@@ -106,10 +108,15 @@ class LanguagesController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['delete']);
+        $response = $this->response->withHeader('_demo_mode_', 'DELETES ARE DISABLED IN DEMO MODE');
+        return $response->withStatus(422);
+        /*
+        $this->request->allowMethod(['delete']);
         $language = $this->Languages->get($id);
         if ($this->Languages->delete($language)) {
             return $this->response->withStatus(204);
         }
         throw new \Exception("Record not deleted");
+        */
     }
 }
