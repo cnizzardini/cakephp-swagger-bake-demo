@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace App\Test\TestCase\Model\Table;
 
 use App\Model\Table\LanguagesTable;
-use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
@@ -37,8 +36,8 @@ class LanguagesTableTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Languages') ? [] : ['className' => LanguagesTable::class];
-        $this->Languages = TableRegistry::getTableLocator()->get('Languages', $config);
+        $config = $this->getTableLocator()->exists('Languages') ? [] : ['className' => LanguagesTable::class];
+        $this->Languages = $this->getTableLocator()->get('Languages', $config);
     }
 
     /**
