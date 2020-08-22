@@ -109,6 +109,7 @@ class ExamplesController extends AppController
      * Header Example
      *
      * @Swag\SwagHeader(name="my_header", description="a custom header", required=true)
+     * @Swag\SwagHeader(ref="#/x-demo/components/parameters/anotherHeader")
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException
      */

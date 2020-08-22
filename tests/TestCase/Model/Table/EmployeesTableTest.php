@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace App\Test\TestCase\Model\Table;
 
 use App\Model\Table\EmployeesTable;
-use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
@@ -40,8 +39,8 @@ class EmployeesTableTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Employees') ? [] : ['className' => EmployeesTable::class];
-        $this->Employees = TableRegistry::getTableLocator()->get('Employees', $config);
+        $config = $this->getTableLocator()->exists('Employees') ? [] : ['className' => EmployeesTable::class];
+        $this->Employees = $this->getTableLocator()->get('Employees', $config);
     }
 
     /**

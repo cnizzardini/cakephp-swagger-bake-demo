@@ -1,11 +1,11 @@
 openapi: "3.0.0"
 info:
-  version: 1.5.4
+  version: 1.5.5
   title: SwaggerBake Demo
   description: |
     This is a sample SwaggerBake demo server.
-    For documentation please review the project [README](https://github.com/cnizzardini/cakephp-swagger-bake) and for
-    other great API related packages checkout [MixerAPI](http://mixerapi.com).
+    You can find more information at
+    [https://github.com/cnizzardini/cakephp-swagger-bake](https://github.com/cnizzardini/cakephp-swagger-bake).
 
     **NOTE:** *The demo database gets refreshed once per day. Deletes are prevented.*
 
@@ -103,4 +103,12 @@ components:
     #      properties:
     #        country:
     #          $ref: '#/components/schemas/Country'
-
+x-demo:
+  components:
+    parameters:
+      anotherHeader:
+        name: x_demo_another_header
+        in: header
+        required: false
+        schema:
+          type: sctring

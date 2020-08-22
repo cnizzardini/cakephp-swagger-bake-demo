@@ -26,6 +26,7 @@ class Language extends Entity
      */
     protected $_accessible = [
         'name' => true,
+        'is_active' => true,
         'films' => true,
     ];
 }

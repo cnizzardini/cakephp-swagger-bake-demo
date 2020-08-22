@@ -60,6 +60,8 @@ class LanguagesTable extends Table
             ->nonNegativeInteger('id')
             ->allowEmptyString('id', null, 'create');
 
+        $validator->inList('is_active', [0,1]);
+
         $validator
             ->scalar('name')
             ->maxLength('name', 20)
