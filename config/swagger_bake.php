@@ -48,8 +48,15 @@ return [
         'json' => '/webroot/swagger.json',
         'webPath' => '/swagger.json',
         'hotReload' => \Cake\Core\Configure::read('debug'),
-        'requestAccepts' => ['application/x-www-form-urlencoded','application/json','application/xml'],
-        'responseContentTypes' => ['application/json','application/xml'],
+        'requestAccepts' => [
+            'application/x-www-form-urlencoded',
+            'application/json',
+            'application/xml'
+        ],
+        'responseContentTypes' => [
+            'application/json',
+            'application/xml',
+        ]
         /** optional configurations below:  **/
         /*
         'requestAccepts' => ['application/x-www-form-urlencoded'],
