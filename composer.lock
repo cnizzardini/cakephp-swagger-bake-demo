@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7e1b96fd45d69709ffbe386e57b6db1",
+    "content-hash": "14d8c2dcb4229188f32d51e94b6e0755",
     "packages": [
         {
             "name": "aura/intl",
@@ -408,17 +408,11 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v1.5.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "77767ee48be10254ea9c5c7653b44e3bf5a9d47d"
-            },
+            "version": "dev-bug/179-schema-overwrite",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/77767ee48be10254ea9c5c7653b44e3bf5a9d47d",
-                "reference": "77767ee48be10254ea9c5c7653b44e3bf5a9d47d",
-                "shasum": ""
+                "type": "path",
+                "url": "/var/www/personal/cakephp-swagger-bake",
+                "reference": "77767ee48be10254ea9c5c7653b44e3bf5a9d47d"
             },
             "require": {
                 "cakephp/cakephp": ">=4.0 <4.2",
@@ -448,7 +442,39 @@
                     "SwaggerBake\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "SwaggerBake\\Test\\": "tests/",
+                    "SwaggerBakeTest\\App\\": "tests/test_app/src/",
+                    "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
+                }
+            },
+            "scripts": {
+                "check": [
+                    "@test",
+                    "@cs-check",
+                    "@stan",
+                    "@md"
+                ],
+                "cs-check": [
+                    "phpcs --colors -p --standard=vendor/cakephp/cakephp-codesniffer/CakePHP src/"
+                ],
+                "cs-fix": [
+                    "phpcbf --colors --standard=vendor/cakephp/cakephp-codesniffer/CakePHP src/"
+                ],
+                "stan": [
+                    "phpstan analyse src/"
+                ],
+                "test": [
+                    "phpunit --colors=always"
+                ],
+                "md": [
+                    "phpmd src/ ansi phpmd.xml"
+                ],
+                "coverage": [
+                    "phpunit --coverage-html coverage-reports/"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -465,7 +491,15 @@
                 "cakephp swagger",
                 "cakephp4 swagger"
             ],
-            "time": "2020-08-22T16:06:39+00:00"
+            "support": {
+                "issues": "https://github.com/cnizzardini/cakephp-swagger-bake/issues",
+                "wiki": "https://github.com/cnizzardini/cakephp-swagger-bake/wiki",
+                "source": "https://github.com/cnizzardini/cakephp-swagger-bake"
+            },
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
         },
         {
             "name": "composer/ca-bundle",
@@ -2658,16 +2692,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.1.3",
+            "version": "v5.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "ea342353a3ef4f453809acc4ebc55382231d4d23"
+                "reference": "a44bd3a91bfbf8db12367fa6ffac9c3eb1a8804a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/ea342353a3ef4f453809acc4ebc55382231d4d23",
-                "reference": "ea342353a3ef4f453809acc4ebc55382231d4d23",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/a44bd3a91bfbf8db12367fa6ffac9c3eb1a8804a",
+                "reference": "a44bd3a91bfbf8db12367fa6ffac9c3eb1a8804a",
                 "shasum": ""
             },
             "require": {
@@ -2731,7 +2765,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-20T17:43:50+00:00"
+            "time": "2020-08-26T08:30:57+00:00"
         },
         {
             "name": "thecodingmachine/class-explorer",
@@ -5641,6 +5675,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "cnizzardini/cakephp-swagger-bake": 20,
         "cakephp/bake": 20,
         "psy/psysh": 0
     },
