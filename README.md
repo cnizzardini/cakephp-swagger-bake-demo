@@ -1,21 +1,36 @@
-# Demo Application for Swagger Bake
+# Swagger Bake Demo Application
 
-Demo Site: http://cakephpswaggerbake.cnizz.com/
+[Demo Site](http://cakephpswaggerbake.cnizz.com/) |
+[Project Home](https://github.com/cnizzardini/cakephp-swagger-bake)
 
-Project: https://github.com/cnizzardini/cakephp-swagger-bake
+Submit problems or requests for additional examples as github issues.
 
 ## Installation
 
-1. Clone repository `git clone git@github.com:cnizzardini/cakephp-swagger-bake-demo.git`
+Clone repository:
 
-2. Install via composer `composer install`
+```console
+git clone git@github.com:cnizzardini/cakephp-swagger-bake-demo.git
+```
 
-3. Configure the application for database access
+Install via composer:
 
-4. Run database migration `bin/cake migrations migrate -p Sakila`
+```console
+composer install
+```
 
-5. Import database seeds `bin/cake migrations seed -p Sakila`
+Configure the application for database access using `config/.env` or `config/app_local.php`, then run
+migrations to build/seed your database.
 
-6. Configure web server or run `bin/cake server`
+```console
+bin/cake migrations migrate -p Sakila
+bin/cake migrations seed -p Sakila
+```
 
-Done.
+Configure your web server or run the cake web server:
+
+```console
+bin/cake server
+```
+
+That's it, you're done!
