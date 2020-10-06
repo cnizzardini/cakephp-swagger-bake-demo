@@ -1,11 +1,12 @@
 openapi: "3.0.0"
 info:
-  version: 1.5.8
+  version: 1.5.9
   title: SwaggerBake Demo
   description: |
     This is a sample SwaggerBake demo server.
     You can find more information at
-    [https://github.com/cnizzardini/cakephp-swagger-bake](https://github.com/cnizzardini/cakephp-swagger-bake).
+    [https://github.com/cnizzardini/cakephp-swagger-bake](https://github.com/cnizzardini/cakephp-swagger-bake) and
+    at [MixerAPI.com](https://mixerapi.com).
 
     **NOTE:** *The demo database gets refreshed once per day. Deletes are prevented.*
 
