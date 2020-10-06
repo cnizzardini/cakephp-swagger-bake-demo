@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "14d8c2dcb4229188f32d51e94b6e0755",
+    "content-hash": "7ac49673c19a7d80da17b85ab77e58b3",
     "packages": [
         {
             "name": "aura/intl",
@@ -115,16 +115,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "4.0.9",
+            "version": "4.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "9cb11c941566cae80a825889a2c007e1860abbd3"
+                "reference": "3d409286a21a4b95106426ab383b89050d561585"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/9cb11c941566cae80a825889a2c007e1860abbd3",
-                "reference": "9cb11c941566cae80a825889a2c007e1860abbd3",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/3d409286a21a4b95106426ab383b89050d561585",
+                "reference": "3d409286a21a4b95106426ab383b89050d561585",
                 "shasum": ""
             },
             "require": {
@@ -181,6 +181,7 @@
                     "src/Core/functions.php",
                     "src/Collection/functions.php",
                     "src/I18n/functions.php",
+                    "src/Routing/functions.php",
                     "src/Utility/bootstrap.php"
                 ]
             },
@@ -207,7 +208,7 @@
                 "rapid-development",
                 "validation"
             ],
-            "time": "2020-06-23T01:38:09+00:00"
+            "time": "2020-10-05T01:00:40+00:00"
         },
         {
             "name": "cakephp/chronos",
@@ -3015,20 +3016,20 @@
         },
         {
             "name": "cakephp/debug_kit",
-            "version": "4.2.0",
+            "version": "4.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "940a0214947e85bbaa0724acfda852f64831f04f"
+                "reference": "7e0de3676c867318d76c1293ff7fa8fbf075e1fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/940a0214947e85bbaa0724acfda852f64831f04f",
-                "reference": "940a0214947e85bbaa0724acfda852f64831f04f",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/7e0de3676c867318d76c1293ff7fa8fbf075e1fc",
+                "reference": "7e0de3676c867318d76c1293ff7fa8fbf075e1fc",
                 "shasum": ""
             },
             "require": {
-                "cakephp/cakephp": "^4.0",
+                "cakephp/cakephp": "^4.1",
                 "cakephp/chronos": "^2.0",
                 "composer/composer": "^1.3",
                 "jdorn/sql-formatter": "^1.2",
@@ -3071,7 +3072,7 @@
                 "debug",
                 "kit"
             ],
-            "time": "2020-06-10T01:37:18+00:00"
+            "time": "2020-09-03T01:25:06+00:00"
         },
         {
             "name": "cakephp/twig-view",
@@ -5300,16 +5301,16 @@
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "6.4.0",
+            "version": "6.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "bf3a16a630d8245c350b459832a71afa55c02fd3"
+                "reference": "696dcca217d0c9da2c40d02731526c1e25b65346"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/bf3a16a630d8245c350b459832a71afa55c02fd3",
-                "reference": "bf3a16a630d8245c350b459832a71afa55c02fd3",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/696dcca217d0c9da2c40d02731526c1e25b65346",
+                "reference": "696dcca217d0c9da2c40d02731526c1e25b65346",
                 "shasum": ""
             },
             "require": {
@@ -5321,11 +5322,11 @@
             "require-dev": {
                 "phing/phing": "2.16.3",
                 "php-parallel-lint/php-parallel-lint": "1.2.0",
-                "phpstan/phpstan": "0.12.40",
+                "phpstan/phpstan": "0.12.48",
                 "phpstan/phpstan-deprecation-rules": "0.12.5",
                 "phpstan/phpstan-phpunit": "0.12.16",
                 "phpstan/phpstan-strict-rules": "0.12.5",
-                "phpunit/phpunit": "7.5.20|8.5.5|9.3.8"
+                "phpunit/phpunit": "7.5.20|8.5.5|9.4.0"
             },
             "type": "phpcodesniffer-standard",
             "extra": {
@@ -5353,7 +5354,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-08-31T07:02:52+00:00"
+            "time": "2020-10-05T12:39:37+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
