@@ -2,20 +2,19 @@
 
 namespace App\Dto;
 
-use Spatie\DataTransferObject\DataTransferObject;
 use SwaggerBake\Lib\Annotation as Swag;
 
-class QueryData extends DataTransferObject
+class QueryData
 {
-    /** @var string */
-    private $firstName;
-
     /**
-     * Last name required
-     * @var string
-     * @required
+     * @Swag\SwagDtoQuery(name="Last Name", type="string", description="Last name required", required=true)
      */
     private $lastName;
+
+    /**
+     * @Swag\SwagDtoQuery(name="First Name", type="string", description="first name required")
+     */
+    private $firstName;
 
     /**
      * @Swag\SwagDtoQuery(name="title", type="string", description="testing")
