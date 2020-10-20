@@ -4,7 +4,7 @@ namespace App\Dto;
 
 use SwaggerBake\Lib\Annotation as Swag;
 
-class QueryData
+class QueryDto
 {
     /**
      * @Swag\SwagDtoQuery(name="Last Name", type="string", description="Last name required", required=true)
@@ -44,9 +44,9 @@ class QueryData
 
     /**
      * @param string $firstName
-     * @return QueryData
+     * @return QueryDto
      */
-    public function setFirstName(string $firstName): QueryData
+    public function setFirstName(string $firstName): QueryDto
     {
         $this->firstName = $firstName;
         return $this;
@@ -62,9 +62,9 @@ class QueryData
 
     /**
      * @param string $lastName
-     * @return QueryData
+     * @return QueryDto
      */
-    public function setLastName(string $lastName): QueryData
+    public function setLastName(string $lastName): QueryDto
     {
         $this->lastName = $lastName;
         return $this;
@@ -80,9 +80,9 @@ class QueryData
 
     /**
      * @param mixed $title
-     * @return QueryData
+     * @return QueryDto
      */
-    public function setTitle($title): QueryData
+    public function setTitle($title): QueryDto
     {
         $this->title = $title;
         return $this;
@@ -98,9 +98,9 @@ class QueryData
 
     /**
      * @param mixed $age
-     * @return QueryData
+     * @return QueryDto
      */
-    public function setAge($age): QueryData
+    public function setAge($age): QueryDto
     {
         $this->age = $age;
         return $this;
@@ -116,9 +116,9 @@ class QueryData
 
     /**
      * @param mixed $date
-     * @return QueryData
+     * @return QueryDto
      */
-    public function setDate($date): QueryData
+    public function setDate($date): QueryDto
     {
         $this->date = $date;
         return $this;
