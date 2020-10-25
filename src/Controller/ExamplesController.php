@@ -27,7 +27,8 @@ class ExamplesController extends AppController
         $this->Authentication->allowUnauthenticated([
             'formExample',
             'queryExample',
-            'dtoExample',
+            'dtoQueryExample',
+            'dtoBodyExample',
             'headerExample',
             'optionsOrHead',
             'index',
@@ -82,19 +83,34 @@ class ExamplesController extends AppController
         $this->viewBuilder()->setOption('serialize', 'data');
     }
 
+
     /**
-     * Dto Example
+     * DTO Body Example
      *
-     * This is an example of a Data Transfer Object. This works for either GET or POST and parses the doc blocks of
-     * your DTO. It works with any DTO as long as you can define the class attributes (properties) in your doc block.
+     * @Swag\SwagDto(class="\App\Dto\RequestBodyDto")
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     * @throws MethodNotAllowedException
+     */
+    public function dtoBodyExample()
+    {
+        $this->request->allowMethod('post');
+        $data = [
+            'firstName' => $this->getRequest()->getQuery('firstName'),
+            'lastName' => $this->getRequest()->getQuery('lastName'),
+        ];
+        $this->set(compact('data'));
+        $this->viewBuilder()->setOption('serialize', 'data');
+    }
+
+    /**
+     * DTO Query Example
      *
-     * @Swag\SwagDto(class="\App\Dto\QueryData")
-     *
+     * @Swag\SwagDto(class="\App\Dto\QueryDto")
      * @see https://github.com/spatie/data-transfer-object
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws MethodNotAllowedException
      */
-    public function dtoExample()
+    public function dtoQueryExample()
     {
         $this->request->allowMethod('get');
         $data = [

@@ -106,7 +106,8 @@ $routes->scope('/', function (RouteBuilder $builder) {
             'formExample',
             'queryExample',
             'headerExample',
-            'dtoExample',
+            'dtoBodyExample',
+            'dtoQueryExample',
             'apiKeyExample',
             'optionsOrHead'
         ],
@@ -126,10 +127,15 @@ $routes->scope('/', function (RouteBuilder $builder) {
                 'action' => 'headerExample',
                 'path' => 'header-example'
             ],
-            'dtoExample' => [
+            'dtoBodyExample' => [
+                'method' => 'post',
+                'action' => 'dtoBodyExample',
+                'path' => 'dto-body-example'
+            ],
+            'dtoQueryExample' => [
                 'method' => 'get',
-                'action' => 'dtoExample',
-                'path' => 'dto-example'
+                'action' => 'dtoQueryExample',
+                'path' => 'dto-query-example'
             ],
             'apiKeyExample' => [
                 'method' => 'get',

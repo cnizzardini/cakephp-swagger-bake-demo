@@ -2,35 +2,36 @@
 
 namespace App\Dto;
 
-use Spatie\DataTransferObject\DataTransferObject;
 use SwaggerBake\Lib\Annotation as Swag;
 
-class QueryData extends DataTransferObject
+class RequestBodyDto
 {
-    /** @var string */
-    private $firstName;
-
     /**
-     * Last name required
+     * @Swag\SwagRequestBody(name="Last Name", type="string", description="Last name required", required=true)
      * @var string
-     * @required
      */
     private $lastName;
 
     /**
-     * @Swag\SwagDtoQuery(name="title", type="string", description="testing")
+     * @Swag\SwagRequestBody(name="First Name", type="string", description="first name required")
+     * @var string
+     */
+    private $firstName;
+
+    /**
+     * @Swag\SwagRequestBody(name="title", type="string", description="testing")
      * @var string
      */
     private $title;
 
     /**
-     * @Swag\SwagDtoQuery(name="age", type="integer", format="int32" description="testing")
+     * @Swag\SwagRequestBody(name="age", type="integer", format="int32" description="testing")
      * @var integer
      */
     private $age;
 
     /**
-     * @Swag\SwagDtoQuery(name="date", type="string", format="date", description="testing")
+     * @Swag\SwagRequestBody(name="date", type="string", format="date", description="testing")
      * @var string
      */
     private $date;
@@ -45,9 +46,9 @@ class QueryData extends DataTransferObject
 
     /**
      * @param string $firstName
-     * @return QueryData
+     * @return QueryDto
      */
-    public function setFirstName(string $firstName): QueryData
+    public function setFirstName(string $firstName): QueryDto
     {
         $this->firstName = $firstName;
         return $this;
@@ -63,9 +64,9 @@ class QueryData extends DataTransferObject
 
     /**
      * @param string $lastName
-     * @return QueryData
+     * @return QueryDto
      */
-    public function setLastName(string $lastName): QueryData
+    public function setLastName(string $lastName): QueryDto
     {
         $this->lastName = $lastName;
         return $this;
@@ -81,9 +82,9 @@ class QueryData extends DataTransferObject
 
     /**
      * @param mixed $title
-     * @return QueryData
+     * @return QueryDto
      */
-    public function setTitle($title): QueryData
+    public function setTitle($title): QueryDto
     {
         $this->title = $title;
         return $this;
@@ -99,9 +100,9 @@ class QueryData extends DataTransferObject
 
     /**
      * @param mixed $age
-     * @return QueryData
+     * @return QueryDto
      */
-    public function setAge($age): QueryData
+    public function setAge($age): QueryDto
     {
         $this->age = $age;
         return $this;
@@ -117,9 +118,9 @@ class QueryData extends DataTransferObject
 
     /**
      * @param mixed $date
-     * @return QueryData
+     * @return QueryDto
      */
-    public function setDate($date): QueryData
+    public function setDate($date): QueryDto
     {
         $this->date = $date;
         return $this;
