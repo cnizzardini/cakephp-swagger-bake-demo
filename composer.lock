@@ -450,11 +450,11 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "dev-task/modify-schema-properties",
+            "version": "dev-feature/224",
             "dist": {
                 "type": "path",
                 "url": "/var/www/personal/cakephp-swagger-bake",
-                "reference": "692c643ba1010956813bfeed752057b2eccc9dcf"
+                "reference": "f0a0a8d8b1097cfeacdecf2926d642dcbb070cce"
             },
             "require": {
                 "cakephp/cakephp": "~4.0",
@@ -471,6 +471,7 @@
                 "cakephp/bake": "^2.1",
                 "cakephp/cakephp-codesniffer": "^4.2",
                 "friendsofcake/search": "^6.0",
+                "php": "7.4.*",
                 "phpmd/phpmd": "^2.8",
                 "phpstan/phpstan": "^0.12.32",
                 "phpunit/phpunit": "^8.0"
@@ -1123,16 +1124,16 @@
         },
         {
             "name": "mixerapi/core",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mixerapi/core.git",
-                "reference": "a0aa5de1824a2fdffac7c5568f0594d00b893896"
+                "reference": "3ad455c011b8c207af672cfab13926b327c42689"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mixerapi/core/zipball/a0aa5de1824a2fdffac7c5568f0594d00b893896",
-                "reference": "a0aa5de1824a2fdffac7c5568f0594d00b893896",
+                "url": "https://api.github.com/repos/mixerapi/core/zipball/3ad455c011b8c207af672cfab13926b327c42689",
+                "reference": "3ad455c011b8c207af672cfab13926b327c42689",
                 "shasum": ""
             },
             "require": {
@@ -1171,7 +1172,7 @@
                 "issues": "https://github.com/mixerapi/core/issues",
                 "source": "https://github.com/mixerapi/core"
             },
-            "time": "2020-09-15T14:02:30+00:00"
+            "time": "2020-11-13T03:09:54+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -2899,16 +2900,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.1.8",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "f284e032c3cefefb9943792132251b79a6127ca6"
+                "reference": "290ea5e03b8cf9b42c783163123f54441fb06939"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/f284e032c3cefefb9943792132251b79a6127ca6",
-                "reference": "f284e032c3cefefb9943792132251b79a6127ca6",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/290ea5e03b8cf9b42c783163123f54441fb06939",
+                "reference": "290ea5e03b8cf9b42c783163123f54441fb06939",
                 "shasum": ""
             },
             "require": {
@@ -2954,7 +2955,7 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v5.1.8"
+                "source": "https://github.com/symfony/yaml/tree/v5.2.1"
             },
             "funding": [
                 {
@@ -2970,7 +2971,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-24T12:03:25+00:00"
+            "time": "2020-12-08T17:02:38+00:00"
         },
         {
             "name": "thecodingmachine/class-explorer",
