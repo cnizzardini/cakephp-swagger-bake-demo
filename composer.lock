@@ -450,23 +450,23 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v1.6.3",
+            "version": "v1.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "16bf5d0d56cd5c307c9e3e7e9d86b39e0368d187"
+                "reference": "00a373a37691cded9c29077113c4b321e5054669"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/16bf5d0d56cd5c307c9e3e7e9d86b39e0368d187",
-                "reference": "16bf5d0d56cd5c307c9e3e7e9d86b39e0368d187",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/00a373a37691cded9c29077113c4b321e5054669",
+                "reference": "00a373a37691cded9c29077113c4b321e5054669",
                 "shasum": ""
             },
             "require": {
                 "cakephp/cakephp": "~4.0",
                 "doctrine/annotations": "^1.10",
                 "ext-json": "*",
-                "mixerapi/core": "~1.0",
+                "mixerapi/core": "^0.2",
                 "php": ">=7.2",
                 "phpdocumentor/reflection-docblock": "^5.1",
                 "symfony/yaml": "^5.0",
@@ -513,7 +513,7 @@
                 "source": "https://github.com/cnizzardini/cakephp-swagger-bake",
                 "wiki": "https://github.com/cnizzardini/cakephp-swagger-bake/wiki"
             },
-            "time": "2020-12-06T15:31:27+00:00"
+            "time": "2020-12-19T23:12:01+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -1093,16 +1093,16 @@
         },
         {
             "name": "mixerapi/core",
-            "version": "v1.0.1",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mixerapi/core.git",
-                "reference": "3ad455c011b8c207af672cfab13926b327c42689"
+                "reference": "d56037489dd55f47b6e2f6aac6cbc6cc2155e66b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mixerapi/core/zipball/3ad455c011b8c207af672cfab13926b327c42689",
-                "reference": "3ad455c011b8c207af672cfab13926b327c42689",
+                "url": "https://api.github.com/repos/mixerapi/core/zipball/d56037489dd55f47b6e2f6aac6cbc6cc2155e66b",
+                "reference": "d56037489dd55f47b6e2f6aac6cbc6cc2155e66b",
                 "shasum": ""
             },
             "require": {
@@ -1141,7 +1141,7 @@
                 "issues": "https://github.com/mixerapi/core/issues",
                 "source": "https://github.com/mixerapi/core"
             },
-            "time": "2020-11-13T03:09:54+00:00"
+            "time": "2020-12-12T14:25:10+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -4166,16 +4166,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.10.3",
+            "version": "v4.10.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "dbe56d23de8fcb157bbc0cfb3ad7c7de0cfb0984"
+                "reference": "c6d052fc58cb876152f89f532b95a8d7907e7f0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/dbe56d23de8fcb157bbc0cfb3ad7c7de0cfb0984",
-                "reference": "dbe56d23de8fcb157bbc0cfb3ad7c7de0cfb0984",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/c6d052fc58cb876152f89f532b95a8d7907e7f0e",
+                "reference": "c6d052fc58cb876152f89f532b95a8d7907e7f0e",
                 "shasum": ""
             },
             "require": {
@@ -4216,9 +4216,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.3"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.4"
             },
-            "time": "2020-12-03T17:45:45+00:00"
+            "time": "2020-12-20T10:01:03+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -4333,16 +4333,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.12.1",
+            "version": "1.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "8ce87516be71aae9b956f81906aaf0338e0d8a2d"
+                "reference": "245710e971a030f42e08f4912863805570f23d39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/8ce87516be71aae9b956f81906aaf0338e0d8a2d",
-                "reference": "8ce87516be71aae9b956f81906aaf0338e0d8a2d",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/245710e971a030f42e08f4912863805570f23d39",
+                "reference": "245710e971a030f42e08f4912863805570f23d39",
                 "shasum": ""
             },
             "require": {
@@ -4354,7 +4354,7 @@
             },
             "require-dev": {
                 "phpspec/phpspec": "^6.0",
-                "phpunit/phpunit": "^8.0 || ^9.0 <9.3"
+                "phpunit/phpunit": "^8.0 || ^9.0"
             },
             "type": "library",
             "extra": {
@@ -4394,9 +4394,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpspec/prophecy/issues",
-                "source": "https://github.com/phpspec/prophecy/tree/1.12.1"
+                "source": "https://github.com/phpspec/prophecy/tree/1.12.2"
             },
-            "time": "2020-09-29T09:10:42+00:00"
+            "time": "2020-12-19T10:15:11+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
