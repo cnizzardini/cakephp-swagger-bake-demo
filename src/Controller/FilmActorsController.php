@@ -38,8 +38,8 @@ class FilmActorsController extends AppController
      * Add method
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
-     * @throws Exception
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
+     * @throws \Exception
      */
     public function add()
     {
@@ -59,8 +59,8 @@ class FilmActorsController extends AppController
      *
      * @return \Cake\Http\Response|null|void Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     * @throw MethodNotAllowedException
-     * @throw Exception
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
+     * @throws \Exception
      */
     public function delete()
     {

@@ -3,9 +3,6 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use Cake\Http\Exception\BadRequestException;
-use Cake\Http\Exception\MethodNotAllowedException;
-use Cake\Http\Exception\NotImplementedException;
 use Exception;
 use SwaggerBake\Lib\Annotation as Swag;
 
@@ -39,7 +36,7 @@ class ExamplesController extends AppController
      * Index
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
     public function index()
     {
@@ -53,7 +50,7 @@ class ExamplesController extends AppController
      * @Swag\SwagForm(name="my_input", description="a custom input", required=true)
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
     public function formExample()
     {
@@ -73,7 +70,7 @@ class ExamplesController extends AppController
      * @Swag\SwagQuery(name="deprecated", deprecated=true, allowEmptyValue=true)
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
     public function queryExample()
     {
@@ -89,7 +86,7 @@ class ExamplesController extends AppController
      *
      * @Swag\SwagDto(class="\App\Dto\RequestBodyDto")
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
     public function dtoBodyExample()
     {
@@ -108,7 +105,7 @@ class ExamplesController extends AppController
      * @Swag\SwagDto(class="\App\Dto\QueryDto")
      * @see https://github.com/spatie/data-transfer-object
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
     public function dtoQueryExample()
     {
@@ -127,7 +124,7 @@ class ExamplesController extends AppController
      * @Swag\SwagHeader(name="my_header", description="a custom header", required=true)
      * @Swag\SwagHeader(ref="#/x-demo/components/parameters/anotherHeader")
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
     public function headerExample()
     {
