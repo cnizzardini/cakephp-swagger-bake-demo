@@ -20,7 +20,7 @@ class LanguagesController extends AppController
      * Index method
      *
      * @return \Cake\Http\Response|null|void Renders view
-     * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @Swag\SwagPaginator()
      */
     public function index()
@@ -38,7 +38,7 @@ class LanguagesController extends AppController
      * @param string|null $id Language id.
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      */
     public function view($id = null)
     {
@@ -56,7 +56,7 @@ class LanguagesController extends AppController
      * Add method
      *
      * @return \Cake\Http\Response|null|void HTTP 200 on successful add
-     * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @throws \Exception
      */
     public function add()
@@ -78,7 +78,7 @@ class LanguagesController extends AppController
      * @param string|null $id Language id.
      * @return \Cake\Http\Response|null|void HTTP 200 on successful edit
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @throws \Exception
      */
     public function edit($id = null)
@@ -102,7 +102,7 @@ class LanguagesController extends AppController
      * @param string|null $id Language id.
      * @return \Cake\Http\Response|null|void HTTP 204 on success
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @throws \Exception
      */
     public function delete($id = null)

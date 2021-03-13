@@ -19,7 +19,7 @@ class FilmActorsController extends AppController
      * Index method
      *
      * @return \Cake\Http\Response|null|void Renders view
-     * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      */
     public function index()
     {

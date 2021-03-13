@@ -31,7 +31,7 @@ class FilmsController extends AppController
      *
      * @SwagSearch(tableClass="\App\Model\Table\FilmsTable", collection="default")
      * @return \Cake\Http\Response|null|void Renders view
-     * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @see https://github.com/FriendsOfCake/search friendsofcake/search extension
      */
     public function index()
@@ -55,7 +55,7 @@ class FilmsController extends AppController
      * @param string|null $id Film id.
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      */
     public function view($id = null)
     {
@@ -73,7 +73,7 @@ class FilmsController extends AppController
      * Add method
      *
      * @return \Cake\Http\Response|null|void HTTP 200 on successful add
-     * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @throws \Exception When invalid method
      */
     public function add()
@@ -96,7 +96,7 @@ class FilmsController extends AppController
      * @param string|null $id Film id.
      * @return \Cake\Http\Response|null|void HTTP 200 on successful edit, HTTP 422 on error
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @throws \Exception When invalid method
      */
     public function edit($id = null)
@@ -123,7 +123,7 @@ class FilmsController extends AppController
      * @param string|null $id Film id.
      * @return \Cake\Http\Response|null|void HTTP 204 on success, HTTP 422 on error.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      */
     public function delete($id = null)
     {

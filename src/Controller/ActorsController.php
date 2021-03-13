@@ -22,6 +22,7 @@ class ActorsController extends AppController
      * @Swag\SwagPaginator
      * @see https://github.com/cnizzardini/cakephp-swagger-bake#swagpaginator
      * @return \Cake\Http\Response|null|void Renders view
+     * @throws \App\Exception\MyCustomException MyCustomException - This is a custom exception
      */
     public function index()
     {
@@ -64,7 +65,7 @@ class ActorsController extends AppController
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws \Cake\Http\Exception\MethodNotAllowedException Method Not Allowed, use HTTP POST
-     * @throws Exception
+     * @throws \Exception
      */
     public function add()
     {
@@ -90,7 +91,7 @@ class ActorsController extends AppController
      * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      * @throws \Cake\Http\Exception\MethodNotAllowedException
-     * @throws Exception
+     * @throws \Exception
      */
     public function edit($id = null)
     {
@@ -114,9 +115,9 @@ class ActorsController extends AppController
      *
      * @param string|null $id Actor id.
      * @return \Cake\Http\Response|null|void Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException
-     * @throw \Cake\Http\Exception\MethodNotAllowedException
-     * @throw \Exception Just a Terrible No Good 500 Error
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
+     * @throws \Exception
      */
     public function delete($id = null)
     {
@@ -142,8 +143,8 @@ class ActorsController extends AppController
      * @param string|null $id Actor id.
      * @return \Cake\Http\Response|null|void Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     * @throw \Cake\Http\Exception\MethodNotAllowedException
-     * @throw \Exception hello world
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
+     * @throws \Exception
      */
     public function films($id)
     {
