@@ -23,7 +23,7 @@ class CitiesController extends AppController
      * @Swag\SwagPaginator()
      * @see https://book.cakephp.org/4/en/development/routing.html#creating-nested-resource-routes
      * @return \Cake\Http\Response|null|void Renders view
-     * @throws \Cake\Datasource\Exception\MethodNotAllowedException When invalid method
+     * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      */
     public function index()
     {

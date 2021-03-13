@@ -3,9 +3,6 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use Cake\Http\Exception\BadRequestException;
-use Cake\Http\Exception\MethodNotAllowedException;
-use Cake\Http\Exception\NotImplementedException;
 use Exception;
 use SwaggerBake\Lib\Annotation as Swag;
 
@@ -25,6 +22,7 @@ class ActorsController extends AppController
      * @Swag\SwagPaginator
      * @see https://github.com/cnizzardini/cakephp-swagger-bake#swagpaginator
      * @return \Cake\Http\Response|null|void Renders view
+     * @throws \App\Exception\MyCustomException MyCustomException - This is a custom exception
      */
     public function index()
     {
@@ -66,8 +64,8 @@ class ActorsController extends AppController
      * additional annotations! All batteries were included in this example.
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     * @throws MethodNotAllowedException Method Not Allowed, use HTTP POST
-     * @throws Exception
+     * @throws \Cake\Http\Exception\MethodNotAllowedException Method Not Allowed, use HTTP POST
+     * @throws \Exception
      */
     public function add()
     {
@@ -92,8 +90,8 @@ class ActorsController extends AppController
      * @param string|null $id Actor id.
      * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     * @throws MethodNotAllowedException
-     * @throws Exception
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
+     * @throws \Exception
      */
     public function edit($id = null)
     {
@@ -118,8 +116,8 @@ class ActorsController extends AppController
      * @param string|null $id Actor id.
      * @return \Cake\Http\Response|null|void Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     * @throw MethodNotAllowedException
-     * @throw Exception
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
+     * @throws \Exception
      */
     public function delete($id = null)
     {
@@ -145,8 +143,8 @@ class ActorsController extends AppController
      * @param string|null $id Actor id.
      * @return \Cake\Http\Response|null|void Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     * @throw MethodNotAllowedException
-     * @throw Exception
+     * @throws \Cake\Http\Exception\MethodNotAllowedException
+     * @throws \Exception
      */
     public function films($id)
     {
