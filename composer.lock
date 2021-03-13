@@ -399,16 +399,16 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v1.6.7",
+            "version": "1.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "d6e2552afad310119019cca0849dbc5540d9445e"
+                "reference": "5425bd7d6841b4a2d471265bcd0557aa45c7a329"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/d6e2552afad310119019cca0849dbc5540d9445e",
-                "reference": "d6e2552afad310119019cca0849dbc5540d9445e",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/5425bd7d6841b4a2d471265bcd0557aa45c7a329",
+                "reference": "5425bd7d6841b4a2d471265bcd0557aa45c7a329",
                 "shasum": ""
             },
             "require": {
@@ -426,6 +426,7 @@
                 "cakephp/bake": "^2.1",
                 "cakephp/cakephp-codesniffer": "^4.2",
                 "friendsofcake/search": "^6.0",
+                "php-coveralls/php-coveralls": "^2.4",
                 "phpmd/phpmd": "^2.8",
                 "phpstan/phpstan": "^0.12.32",
                 "phpunit/phpunit": "^8.0"
@@ -462,7 +463,7 @@
                 "source": "https://github.com/cnizzardini/cakephp-swagger-bake",
                 "wiki": "https://github.com/cnizzardini/cakephp-swagger-bake/wiki"
             },
-            "time": "2021-02-13T02:36:32+00:00"
+            "time": "2021-03-13T15:49:05+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -600,16 +601,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.11.1",
+            "version": "1.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "ce77a7ba1770462cd705a91a151b6c3746f9c6ad"
+                "reference": "b17c5014ef81d212ac539f07a1001832df1b6d3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/ce77a7ba1770462cd705a91a151b6c3746f9c6ad",
-                "reference": "ce77a7ba1770462cd705a91a151b6c3746f9c6ad",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/b17c5014ef81d212ac539f07a1001832df1b6d3b",
+                "reference": "b17c5014ef81d212ac539f07a1001832df1b6d3b",
                 "shasum": ""
             },
             "require": {
@@ -624,11 +625,6 @@
                 "phpunit/phpunit": "^7.5 || ^9.1.5"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.11.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\Annotations\\": "lib/Doctrine/Common/Annotations"
@@ -669,9 +665,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/1.11.1"
+                "source": "https://github.com/doctrine/annotations/tree/1.12.1"
             },
-            "time": "2020-10-26T10:28:16+00:00"
+            "time": "2021-02-21T21:00:45+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -1119,16 +1115,16 @@
         },
         {
             "name": "mixerapi/core",
-            "version": "v0.2.4",
+            "version": "v0.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mixerapi/core.git",
-                "reference": "7e9694ec481b1085210313e436c17ea50b72727a"
+                "reference": "7692c22712c9c31771c14bdc47fb857799dd0e0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mixerapi/core/zipball/7e9694ec481b1085210313e436c17ea50b72727a",
-                "reference": "7e9694ec481b1085210313e436c17ea50b72727a",
+                "url": "https://api.github.com/repos/mixerapi/core/zipball/7692c22712c9c31771c14bdc47fb857799dd0e0b",
+                "reference": "7692c22712c9c31771c14bdc47fb857799dd0e0b",
                 "shasum": ""
             },
             "require": {
@@ -1166,7 +1162,7 @@
             "support": {
                 "source": "https://github.com/mixerapi/core"
             },
-            "time": "2021-01-02T22:47:09+00:00"
+            "time": "2021-01-04T03:14:09+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -2900,16 +2896,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.2.3",
+            "version": "v5.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "338cddc6d74929f6adf19ca5682ac4b8e109cdb0"
+                "reference": "298a08ddda623485208506fcee08817807a251dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/338cddc6d74929f6adf19ca5682ac4b8e109cdb0",
-                "reference": "338cddc6d74929f6adf19ca5682ac4b8e109cdb0",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/298a08ddda623485208506fcee08817807a251dd",
+                "reference": "298a08ddda623485208506fcee08817807a251dd",
                 "shasum": ""
             },
             "require": {
@@ -2955,7 +2951,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v5.2.3"
+                "source": "https://github.com/symfony/yaml/tree/v5.2.5"
             },
             "funding": [
                 {
@@ -2971,7 +2967,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-03T04:42:09+00:00"
+            "time": "2021-03-06T07:59:01+00:00"
         },
         {
             "name": "thecodingmachine/class-explorer",
