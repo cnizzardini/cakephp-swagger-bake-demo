@@ -399,16 +399,16 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v1.7.0",
+            "version": "v1.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "0ac3b844c3f1be7cdefbdf81a3ca5b62f6095fb6"
+                "reference": "6e79bedc73cea3f24578fe7b212b3e7db4154cad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/0ac3b844c3f1be7cdefbdf81a3ca5b62f6095fb6",
-                "reference": "0ac3b844c3f1be7cdefbdf81a3ca5b62f6095fb6",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/6e79bedc73cea3f24578fe7b212b3e7db4154cad",
+                "reference": "6e79bedc73cea3f24578fe7b212b3e7db4154cad",
                 "shasum": ""
             },
             "require": {
@@ -427,7 +427,7 @@
                 "cakephp/cakephp-codesniffer": "^4.2",
                 "friendsofcake/search": "^6.0",
                 "php-coveralls/php-coveralls": "^2.4",
-                "phpmd/phpmd": "^2.8",
+                "phpmd/phpmd": "^2.10",
                 "phpstan/phpstan": "^0.12.32",
                 "phpunit/phpunit": "^8.0"
             },
@@ -463,7 +463,7 @@
                 "source": "https://github.com/cnizzardini/cakephp-swagger-bake",
                 "wiki": "https://github.com/cnizzardini/cakephp-swagger-bake/wiki"
             },
-            "time": "2021-04-11T00:12:45+00:00"
+            "time": "2021-05-01T20:07:01+00:00"
         },
         {
             "name": "composer/ca-bundle",
