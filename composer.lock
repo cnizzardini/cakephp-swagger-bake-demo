@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0440dc3ec7b91bf7b67693747022bc9",
+    "content-hash": "3061a0d674c6a21d226ff68e02450740",
     "packages": [
         {
             "name": "cakephp/authentication",
@@ -399,17 +399,11 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v1.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "0ac3b844c3f1be7cdefbdf81a3ca5b62f6095fb6"
-            },
+            "version": "dev-issue/233-phpmd",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/0ac3b844c3f1be7cdefbdf81a3ca5b62f6095fb6",
-                "reference": "0ac3b844c3f1be7cdefbdf81a3ca5b62f6095fb6",
-                "shasum": ""
+                "type": "path",
+                "url": "../cakephp-swagger-bake",
+                "reference": "f2dbf35896f46074bb398372e7b19d54ba64eee2"
             },
             "require": {
                 "cakephp/cakephp": "^4.0",
@@ -427,7 +421,7 @@
                 "cakephp/cakephp-codesniffer": "^4.2",
                 "friendsofcake/search": "^6.0",
                 "php-coveralls/php-coveralls": "^2.4",
-                "phpmd/phpmd": "^2.8",
+                "phpmd/phpmd": "^2.10",
                 "phpstan/phpstan": "^0.12.32",
                 "phpunit/phpunit": "^8.0"
             },
@@ -441,7 +435,39 @@
                     "SwaggerBake\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "SwaggerBake\\Test\\": "tests/",
+                    "SwaggerBakeTest\\App\\": "tests/test_app/src/",
+                    "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
+                }
+            },
+            "scripts": {
+                "analyze": [
+                    "@test",
+                    "@phpcs",
+                    "@phpstan",
+                    "@phpmd"
+                ],
+                "phpcs": [
+                    "phpcs --colors -p --standard=vendor/cakephp/cakephp-codesniffer/CakePHP src/"
+                ],
+                "phpcbf": [
+                    "phpcbf --colors --standard=vendor/cakephp/cakephp-codesniffer/CakePHP src/"
+                ],
+                "phpstan": [
+                    "phpstan analyse src/"
+                ],
+                "test": [
+                    "phpunit --colors=always"
+                ],
+                "phpmd": [
+                    "phpmd src/ ansi phpmd.xml"
+                ],
+                "coverage": [
+                    "phpunit --coverage-html coverage-reports/"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -460,10 +486,13 @@
             ],
             "support": {
                 "issues": "https://github.com/cnizzardini/cakephp-swagger-bake/issues",
-                "source": "https://github.com/cnizzardini/cakephp-swagger-bake",
-                "wiki": "https://github.com/cnizzardini/cakephp-swagger-bake/wiki"
+                "wiki": "https://github.com/cnizzardini/cakephp-swagger-bake/wiki",
+                "source": "https://github.com/cnizzardini/cakephp-swagger-bake"
             },
-            "time": "2021-04-11T00:12:45+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "composer/ca-bundle",
@@ -6137,6 +6166,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "cnizzardini/cakephp-swagger-bake": 20,
         "cakephp/bake": 20,
         "psy/psysh": 0
     },
