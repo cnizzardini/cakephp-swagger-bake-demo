@@ -19,6 +19,7 @@ class CountriesController extends AppController
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @Swag\SwagPaginator()
+     * @Swag\SwagResponseSchema(schemaItems={"#/components/schemas/Place"})
      */
     public function index()
     {
@@ -36,6 +37,7 @@ class CountriesController extends AppController
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
+     * @Swag\SwagResponseSchema(refEntity="#/components/schemas/Place")
      */
     public function view($id = null)
     {
@@ -55,6 +57,7 @@ class CountriesController extends AppController
      * @return \Cake\Http\Response|null|void HTTP 200 on successful add
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @throws \Exception
+     * @Swag\SwagResponseSchema(refEntity="#/components/schemas/Place")
      */
     public function add()
     {
@@ -75,7 +78,8 @@ class CountriesController extends AppController
      * @return \Cake\Http\Response|null|void HTTP 200 on successful edit
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
-     * @throws \Exception
+     * @throws \Exception\
+     * @Swag\SwagResponseSchema(refEntity="#/components/schemas/Place")
      */
     public function edit($id = null)
     {

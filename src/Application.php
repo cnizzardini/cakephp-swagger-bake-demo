@@ -30,6 +30,7 @@ use Cake\Http\MiddlewareQueue;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
 use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 use Setup\Middleware\MaintenanceMiddleware;
 
 /**
@@ -100,6 +101,19 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
     public function middleware(MiddlewareQueue $middlewareQueue): MiddlewareQueue
     {
         $middlewareQueue
+            ->add(function(ServerRequestInterface $request, RequestHandlerInterface $handler){
+
+                /**
+                 * Swagger does not send an accept header on delete requests. This sets delete requests to accept
+                 * application/json by default.
+                 */
+                $accept = $request->getHeader('accept');
+                if ($request->getMethod() === 'DELETE' && reset($accept) === '*/*') {
+                    $request = $request->withHeader('accept', 'application/json');
+                }
+
+                return $handler->handle($request);
+            })
             // Catch any exceptions in the lower layers,
             // and make an error page/response
             ->add(new ErrorHandlerMiddleware(Configure::read('Error')))
