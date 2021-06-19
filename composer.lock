@@ -399,11 +399,11 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "dev-issue/233-phpmd",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "../cakephp-swagger-bake",
-                "reference": "f2dbf35896f46074bb398372e7b19d54ba64eee2"
+                "reference": "9ea01db2182488e611219526bfe1d43bf1d4af0d"
             },
             "require": {
                 "cakephp/cakephp": "^4.0",

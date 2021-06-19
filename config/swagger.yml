@@ -92,15 +92,39 @@ components:
           type: string
       xml:
         name: response
-    #CityExtended:
-    #  description: 'City with extended information including Country'
-    #  type: object
-    #  allOf:
-    #    - $ref: '#/components/schemas/City'
-    #    - type: object
-    #      properties:
-    #        country:
-    #          $ref: '#/components/schemas/Country'
+    Place:
+      description: 'Country object'
+      type: object
+      properties:
+        id:
+          type: integer
+        type:
+          type: string
+          example: 'countries'
+        attributes:
+          type: object
+          properties:
+            yitzo_country_code:
+              type: string
+              example: 'ES'
+            is_active:
+              type: boolean
+              example: true
+        relationships:
+          type: object
+          properties:
+            description:
+              type: array
+              items:
+                $ref: '#/components/schemas/CountryDescription'
+    CountryDescription:
+      type: object
+      properties:
+        id:
+          type: integer
+        description:
+          type: string
+          example: 'a description'
 x-demo:
   components:
     parameters:
