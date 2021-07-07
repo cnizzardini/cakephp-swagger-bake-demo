@@ -1,6 +1,6 @@
 openapi: "3.0.0"
 info:
-  version: 1.7.4
+  version: 1.7.5
   title: SwaggerBake Demo
   description: |
     This is a sample SwaggerBake demo server.
