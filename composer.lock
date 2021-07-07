@@ -401,16 +401,16 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v1.7.3",
+            "version": "v1.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "58c1e14d1026f3d2ddcd92a998477e7927e277ed"
+                "reference": "a820a48f4430dda9315f75126a78a4efe3021acc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/58c1e14d1026f3d2ddcd92a998477e7927e277ed",
-                "reference": "58c1e14d1026f3d2ddcd92a998477e7927e277ed",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/a820a48f4430dda9315f75126a78a4efe3021acc",
+                "reference": "a820a48f4430dda9315f75126a78a4efe3021acc",
                 "shasum": ""
             },
             "require": {
@@ -465,7 +465,7 @@
                 "source": "https://github.com/cnizzardini/cakephp-swagger-bake",
                 "wiki": "https://github.com/cnizzardini/cakephp-swagger-bake/wiki"
             },
-            "time": "2021-06-30T18:06:57+00:00"
+            "time": "2021-07-07T14:15:09+00:00"
         },
         {
             "name": "composer/ca-bundle",
