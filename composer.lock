@@ -399,11 +399,11 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "dev-master",
+            "version": "dev-increase-test-coverage",
             "dist": {
                 "type": "path",
                 "url": "../cakephp-swagger-bake",
-                "reference": "9ea01db2182488e611219526bfe1d43bf1d4af0d"
+                "reference": "b84e7dd9fcd5989659694bf7a8492de25a5ccf7d"
             },
             "require": {
                 "cakephp/cakephp": "^4.0",
@@ -630,28 +630,30 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.12.1",
+            "version": "1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "b17c5014ef81d212ac539f07a1001832df1b6d3b"
+                "reference": "e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/b17c5014ef81d212ac539f07a1001832df1b6d3b",
-                "reference": "b17c5014ef81d212ac539f07a1001832df1b6d3b",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f",
+                "reference": "e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f",
                 "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "1.*",
                 "ext-tokenizer": "*",
-                "php": "^7.1 || ^8.0"
+                "php": "^7.1 || ^8.0",
+                "psr/cache": "^1 || ^2 || ^3"
             },
             "require-dev": {
-                "doctrine/cache": "1.*",
+                "doctrine/cache": "^1.11 || ^2.0",
                 "doctrine/coding-standard": "^6.0 || ^8.1",
                 "phpstan/phpstan": "^0.12.20",
-                "phpunit/phpunit": "^7.5 || ^9.1.5"
+                "phpunit/phpunit": "^7.5 || ^8.0 || ^9.1.5",
+                "symfony/cache": "^4.4 || ^5.2"
             },
             "type": "library",
             "autoload": {
@@ -694,9 +696,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/1.12.1"
+                "source": "https://github.com/doctrine/annotations/tree/1.13.1"
             },
-            "time": "2021-02-21T21:00:45+00:00"
+            "time": "2021-05-16T18:07:53+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -1144,29 +1146,22 @@
         },
         {
             "name": "mixerapi/core",
-            "version": "v0.2.5",
+            "version": "v0.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mixerapi/core.git",
-                "reference": "7692c22712c9c31771c14bdc47fb857799dd0e0b"
+                "reference": "03d0cc595c084ca30351042bc89e1ac1ffb62fc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mixerapi/core/zipball/7692c22712c9c31771c14bdc47fb857799dd0e0b",
-                "reference": "7692c22712c9c31771c14bdc47fb857799dd0e0b",
+                "url": "https://api.github.com/repos/mixerapi/core/zipball/03d0cc595c084ca30351042bc89e1ac1ffb62fc2",
+                "reference": "03d0cc595c084ca30351042bc89e1ac1ffb62fc2",
                 "shasum": ""
             },
             "require": {
                 "cakephp/cakephp": "^4.0",
                 "php": ">=7.2",
                 "thecodingmachine/class-explorer": "^1.1"
-            },
-            "require-dev": {
-                "cakephp/cakephp-codesniffer": "^4.2",
-                "ext-sqlite3": "*",
-                "phpmd/phpmd": "^2.8",
-                "phpstan/phpstan": "^0.12.32",
-                "phpunit/phpunit": "~8.5.0"
             },
             "type": "library",
             "autoload": {
@@ -1186,12 +1181,14 @@
             ],
             "description": "MixerAPI Core libraries",
             "keywords": [
+                "cakephp",
                 "mixerapi"
             ],
             "support": {
+                "issues": "https://github.com/mixerapi/mixerapi-dev/issues",
                 "source": "https://github.com/mixerapi/core"
             },
-            "time": "2021-01-04T03:14:09+00:00"
+            "time": "2021-06-26T17:24:19+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -1456,6 +1453,55 @@
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.4.0"
             },
             "time": "2020-09-17T18:55:26+00:00"
+        },
+        {
+            "name": "psr/cache",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
+                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for caching libraries",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr-6"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/cache/tree/master"
+            },
+            "time": "2016-08-06T20:24:11+00:00"
         },
         {
             "name": "psr/container",
@@ -2920,16 +2966,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.2.5",
+            "version": "v5.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "298a08ddda623485208506fcee08817807a251dd"
+                "reference": "485c83a2fb5893e2ff21bf4bfc7fdf48b4967229"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/298a08ddda623485208506fcee08817807a251dd",
-                "reference": "298a08ddda623485208506fcee08817807a251dd",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/485c83a2fb5893e2ff21bf4bfc7fdf48b4967229",
+                "reference": "485c83a2fb5893e2ff21bf4bfc7fdf48b4967229",
                 "shasum": ""
             },
             "require": {
@@ -2975,7 +3021,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v5.2.5"
+                "source": "https://github.com/symfony/yaml/tree/v5.3.3"
             },
             "funding": [
                 {
@@ -2991,7 +3037,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-06T07:59:01+00:00"
+            "time": "2021-06-24T08:13:00+00:00"
         },
         {
             "name": "thecodingmachine/class-explorer",
