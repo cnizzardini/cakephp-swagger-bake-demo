@@ -34,3 +34,28 @@ bin/cake server
 ```
 
 That's it, you're done!
+
+## Examples
+
+Here is a list of some examples. It's best to search `src/` for an exhaustive list of examples.
+
+| Feature | Example |
+| ------------- | ------------- |
+| SwaggerBake Events | [App\Event\SwaggerBakeListener](src/Event/SwaggerBakeListener.php) |
+| OpenApiDto | [App\Controller\ExamplesControllers](src/Controller/ExamplesController.php) |
+| OpenApiDtoQuery | [App\Dto\QueryDto](src/Dto/QueryDto.php) |
+| OpenApiDtoRequestBody | [App\Dto\RequestBodyDto](src/Dto/QueryDto.php) |
+| OpenApiForm | [App\Controller\ExamplesController::formExample](src/Controller/ExamplesControllers.php) |
+| OpenApiHeader | [App\Controller\ExamplesController::headerExample](src/Controller/ExamplesController.php) |
+| OpenApiOperation | [App\Controller\ActorsController::index](src/Controller/ActorsController.php) |
+| OpenApiPaginator | Most controller `index()` actions have this defined |
+| OpenApiPath | |
+| OpenApiPathParam | |
+| OpenApiQueryParam | [App\Controller\ExamplesController::headerExample](src/Controller/ExamplesController.php) |
+| OpenApiRequestBody | |
+| OpenApiResponse | [App\Controller\CountriesController](src/Controller/CountriesController.php) |
+| OpenApiResponse associations | [App\Controller\ActorsController::films](src/Controller/ActorsController.php) |
+| OpenApiSchema | [App\Model\Entity\Rental](src/Model/Entity.php) |
+| OpenApiSchemaProperty |  |
+| OpenApiSearch | [FilmsController::index](src/Controller/FilmsController) |
+| OpenApiSecurity |  |

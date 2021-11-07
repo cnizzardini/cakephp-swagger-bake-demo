@@ -1,39 +1,12 @@
 openapi: "3.0.0"
 info:
-  version: 1.7.0
+  version: 2.0.0
   title: SwaggerBake Demo
   description: |
-    This is a sample SwaggerBake demo server.
-    You can find more information at
+    This is a sample SwaggerBake demo server. You can find more information at
     [https://github.com/cnizzardini/cakephp-swagger-bake](https://github.com/cnizzardini/cakephp-swagger-bake).
 
     **NOTE:** *The demo database gets refreshed once per day. Deletes are prevented.*
-
-    ### About
-    A delightfully tasty CakePHP plugin for generating OpenApi 3.0.0 schema. This plugin automatically
-    builds your Swagger UI and ReDoc from your existing code with no annotations or tooling required.
-
-    - Creates OpenApi paths and operations from your [RESTful](https://book.cakephp.org/4/en/development/rest.html)
-    routes and controllers.
-    - Creates OpenAPI Schema from your Entities and Tables.
-    - Integrates with:
-      [Paginator](https://book.cakephp.org/4/en/controllers/components/pagination.html),
-      [friendsofcake/search](https://github.com/FriendsOfCake/search),
-      [Authentication](https://book.cakephp.org/authentication/2/en/index.html),
-      [Validator](https://api.cakephp.org/4.0/class-Cake.Validation.Validator.html), and
-      [Bake](#bake-theme).
-    - Provides additional functionality through Annotations and Doc Blocks.
-
-    ### Documentation
-    - [Installation](https://github.com/cnizzardini/cakephp-swagger-bake#installation)
-    - [Setup](https://github.com/cnizzardini/cakephp-swagger-bake#setup)
-    - [Automatic Documentation](https://github.com/cnizzardini/cakephp-swagger-bake#automatic-documentation)
-    - [Doc Blocks](https://github.com/cnizzardini/cakephp-swagger-bake#doc-blocks)
-    - [Annotations for Extended Functionality](https://github.com/cnizzardini/cakephp-swagger-bake#annotations-for-extended-functionality)
-    - [Extending SwaggerBake](https://github.com/cnizzardini/cakephp-swagger-bake#extending-swaggerbake)
-    - [Console Commands](https://github.com/cnizzardini/cakephp-swagger-bake#console-commands)
-    - [Bake Theme](https://github.com/cnizzardini/cakephp-swagger-bake#bake-theme)
-    - [...](https://github.com/cnizzardini/cakephp-swagger-bake#details)
 
     Scroll down to explore the demo.
 

@@ -42,7 +42,12 @@ class SwaggerBakeListener
         /** @var Schema $schema */
         $schema = $event->getSubject();
         if ($schema->getName() === 'Actor') {
-            $schema->setDescription('Actor Entity (modified by SwaggerBake.Schema.created event)');
+            $schema->setDescription(
+                sprintf(
+                    'This description was modified by a SwaggerBake.Schema.created event listener. See %s.',
+                    self::class . '::schemaCreated'
+                )
+            );
         }
 
         return $schema;
@@ -59,7 +64,10 @@ class SwaggerBakeListener
 
         if ($operation->getOperationId() === 'actors:add:post') {
             $operation->setDescription(
-                $operation->getDescription() . ' (modified by SwaggerBake.Operation.created event)'
+                sprintf(
+                    'This description was modified by a SwaggerBake.Operation.created event listener. See %s.',
+                    self::class . '::operationCreated'
+                )
             );
         }
 

@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Controller\Sub;
+namespace App\Controller\Admin;
 
 use App\Controller\AppController;
-use SwaggerBake\Lib\Annotation as Swag;
+use SwaggerBake\Lib\Attribute\OpenApiPaginator;
 
 /**
  * Languages Controller
  *
- * This is an example of using a prefix and scoped route
+ * This is an example of using a route prefix
  *
  * @property \App\Model\Table\LanguagesTable $Languages
  * @method \App\Model\Entity\Language[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
@@ -21,8 +21,8 @@ class LanguagesController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
-     * @Swag\SwagPaginator()
      */
+    #[OpenApiPaginator]
     public function index()
     {
         $this->request->allowMethod('get');

@@ -2,36 +2,23 @@
 
 namespace App\Dto;
 
-use SwaggerBake\Lib\Annotation as Swag;
+use SwaggerBake\Lib\Attribute\OpenApiDtoQuery;
 
 class QueryDto
 {
-    /**
-     * @Swag\SwagDtoQuery(name="Last Name", type="string", description="Last name required", required=true)
-     */
-    private $lastName;
+    #[OpenApiDtoQuery(name: 'last_name', description: "Last name required", isRequired: true)]
+    private string $lastName;
 
-    /**
-     * @Swag\SwagDtoQuery(name="First Name", type="string", description="first name required")
-     */
-    private $firstName;
+    #[OpenApiDtoQuery(name: 'first_name')]
+    private ?string $firstName;
 
-    /**
-     * @Swag\SwagDtoQuery(name="title", type="string", description="testing")
-     * @var string
-     */
+    #[OpenApiDtoQuery(name: "title")]
     private $title;
 
-    /**
-     * @Swag\SwagDtoQuery(name="age", type="integer", format="int32" description="testing")
-     * @var integer
-     */
-    private $age;
+    #[OpenApiDtoQuery(name: "age", type: "integer", format: "int32")]
+    private ?int $age;
 
-    /**
-     * @Swag\SwagDtoQuery(name="date", type="string", format="date", description="testing")
-     * @var string
-     */
+    #[OpenApiDtoQuery(name: "date", format: "date")]
     private $date;
 
     /**

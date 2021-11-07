@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use SwaggerBake\Lib\Attribute\OpenApiSchema;
 
 /**
  * Rental Entity
@@ -21,6 +22,10 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\Employee $employee
  * @property \App\Model\Entity\Payment[] $payments
  */
+#[OpenApiSchema(
+    visibility: OpenApiSchema::VISIBILE_HIDDEN,
+    description: 'Set to OpenApiSchema::VISIBILE_HIDDEN'
+)]
 class Rental extends Entity
 {
     /**

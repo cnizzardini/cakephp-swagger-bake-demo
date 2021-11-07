@@ -2,38 +2,23 @@
 
 namespace App\Dto;
 
-use SwaggerBake\Lib\Annotation as Swag;
+use SwaggerBake\Lib\Attribute\OpenApiDtoRequestBody;
 
 class RequestBodyDto
 {
-    /**
-     * @Swag\SwagRequestBody(name="Last Name", type="string", description="Last name required", required=true)
-     * @var string
-     */
-    private $lastName;
+    #[OpenApiDtoRequestBody(name: 'last_name', description: "Last name required", isRequired: true)]
+    private string $lastName;
 
-    /**
-     * @Swag\SwagRequestBody(name="First Name", type="string", description="first name required")
-     * @var string
-     */
-    private $firstName;
+    #[OpenApiDtoRequestBody(name: 'first_name')]
+    private ?string $firstName;
 
-    /**
-     * @Swag\SwagRequestBody(name="title", type="string", description="testing")
-     * @var string
-     */
+    #[OpenApiDtoRequestBody(name: "title")]
     private $title;
 
-    /**
-     * @Swag\SwagRequestBody(name="age", type="integer", format="int32" description="testing")
-     * @var integer
-     */
-    private $age;
+    #[OpenApiDtoRequestBody(name: "age", type: "integer", format: "int32")]
+    private ?int $age;
 
-    /**
-     * @Swag\SwagRequestBody(name="date", type="string", format="date", description="testing")
-     * @var string
-     */
+    #[OpenApiDtoRequestBody(name: "date", format: "date")]
     private $date;
 
     /**

@@ -3,9 +3,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-
-use SwaggerBake\Lib\Annotation as Swag;
-use SwaggerBake\Lib\Extension\CakeSearch\Annotation\SwagSearch;
+use SwaggerBake\Lib\Extension\CakeSearch\Attribute\OpenApiSearch;
 
 /**
  * Films Controller
@@ -29,11 +27,11 @@ class FilmsController extends AppController
      *
      * Support for the friendsofcake/search plugin
      *
-     * @SwagSearch(tableClass="\App\Model\Table\FilmsTable", collection="default")
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @see https://github.com/FriendsOfCake/search friendsofcake/search extension
      */
+    #[OpenApiSearch(tableClass: "\App\Model\Table\FilmsTable")]
     public function index()
     {
         $this->request->allowMethod('get');

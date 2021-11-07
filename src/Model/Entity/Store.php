@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use SwaggerBake\Lib\Attribute\OpenApiSchema;
 
 /**
  * Store Entity
@@ -19,6 +20,10 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\Employee[] $employees
  * @property \App\Model\Entity\Inventory[] $inventories
  */
+#[OpenApiSchema(
+    visibility: OpenApiSchema::VISIBILE_ALWAYS,
+    description: 'Set to OpenApiSchema::VISIBILE_ALWAYS'
+)]
 class Store extends Entity
 {
     /**
