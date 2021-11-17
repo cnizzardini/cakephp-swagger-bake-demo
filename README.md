@@ -1,7 +1,7 @@
 # Swagger Bake Demo Application
 
-[Demo Site](http://cakephpswaggerbake.cnizz.com/) |
-[Project Home](https://github.com/cnizzardini/cakephp-swagger-bake)
+[Demo Site](http://cakephpswaggerbake1.cnizz.com/) |
+[Project Home](https://github.com/cnizzardini/cakephp-swagger-bake/tree/1.next)
 
 Submit problems or requests for additional examples as github issues.
 
