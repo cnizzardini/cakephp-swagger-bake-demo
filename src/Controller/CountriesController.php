@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use SwaggerBake\Lib\Annotation as Swag;
+use SwaggerBake\Lib\Attribute\OpenApiPaginator;
+use SwaggerBake\Lib\Attribute\OpenApiResponse;
 
 /**
  * Countries Controller
@@ -16,11 +17,13 @@ class CountriesController extends AppController
     /**
      * Index method
      *
+     * Use a custom OpenApi schema from swagger.yaml
+     *
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
-     * @Swag\SwagPaginator()
-     * @Swag\SwagResponseSchema(schemaItems={"#/components/schemas/Place"})
      */
+    #[OpenApiPaginator]
+    #[OpenApiResponse(schemaType: "array", ref: "#/components/schemas/Place")]
     public function index()
     {
         $this->request->allowMethod('get');
@@ -33,12 +36,14 @@ class CountriesController extends AppController
     /**
      * View method
      *
+     * Use a custom OpenApi schema from swagger.yaml
+     *
      * @param string|null $id Country id.
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
-     * @Swag\SwagResponseSchema(refEntity="#/components/schemas/Place")
      */
+    #[OpenApiResponse(ref: "#/components/schemas/Place")]
     public function view($id = null)
     {
         $this->request->allowMethod('get');
@@ -54,11 +59,13 @@ class CountriesController extends AppController
     /**
      * Add method
      *
+     * Use a custom OpenApi schema from swagger.yaml
+     *
      * @return \Cake\Http\Response|null|void HTTP 200 on successful add
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @throws \Exception
-     * @Swag\SwagResponseSchema(refEntity="#/components/schemas/Place")
      */
+    #[OpenApiResponse(ref: "#/components/schemas/Place")]
     public function add()
     {
         $this->request->allowMethod('post');
@@ -74,12 +81,12 @@ class CountriesController extends AppController
     /**
      * Edit method
      *
+     * Use a custom OpenApi schema from swagger.yaml
+     *
      * @param string|null $id Country id.
      * @return \Cake\Http\Response|null|void HTTP 200 on successful edit
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
-     * @throws \Exception\
-     * @Swag\SwagResponseSchema(refEntity="#/components/schemas/Place")
      */
     public function edit($id = null)
     {

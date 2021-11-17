@@ -4,7 +4,9 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Exception;
-use SwaggerBake\Lib\Annotation as Swag;
+use SwaggerBake\Lib\Attribute\OpenApiOperation;
+use SwaggerBake\Lib\Attribute\OpenApiPaginator;
+use SwaggerBake\Lib\Attribute\OpenApiResponse;
 
 /**
  * Actors Controller
@@ -17,13 +19,18 @@ class ActorsController extends AppController
     /**
      * List Actors
      *
-     * This example uses the `@SwagPaginator` annotation to automatically add in page, limit, sort, and direction
+     * This example uses the `OpenApiPaginator` attribute to automatically add in page, limit, sort, and direction
      *
-     * @Swag\SwagPaginator
-     * @see https://github.com/cnizzardini/cakephp-swagger-bake#swagpaginator
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \App\Exception\MyCustomException MyCustomException - This is a custom exception
      */
+    #[OpenApiPaginator]
+    #[OpenApiOperation(
+        externalDocs: [
+            'url' => 'https://github.com/cnizzardini/cakephp-swagger-bake',
+            'description' => 'Check out the documentation'
+        ]
+    )]
     public function index()
     {
         $this->request->allowMethod('get');
@@ -136,9 +143,7 @@ class ActorsController extends AppController
     /**
      * Actor Films
      *
-     * Example of a sub-resource using SwagResponseSchema schemaType and schemaItems to build an array of objects
-     *
-     * @Swag\SwagResponseSchema(schemaItems={"$ref"="#/components/schemas/Film"})
+     * Example of using OpenApiResponse to show sample of associations.
      *
      * @param string|null $id Actor id.
      * @return \Cake\Http\Response|null|void Redirects to index.
@@ -146,6 +151,7 @@ class ActorsController extends AppController
      * @throws \Cake\Http\Exception\MethodNotAllowedException
      * @throws \Exception
      */
+    #[OpenApiResponse(associations: ["whiteList" => ["Films"]])]
     public function films($id)
     {
         $this->request->allowMethod('get');

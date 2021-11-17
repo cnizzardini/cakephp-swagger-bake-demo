@@ -4,16 +4,30 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Controller\ComponentRegistry;
+use Cake\Event\EventInterface;
+use Cake\Event\EventManagerInterface;
+use Cake\Http\Response;
+use Cake\Http\ServerRequest;
 use SwaggerBake\Lib\Attribute\OpenApiPaginator;
+use SwaggerBake\Lib\Attribute\OpenApiResponse;
 
 /**
  * Languages Controller
  *
+ * This is an example of loading a model on the controller
+ *
  * @property \App\Model\Table\LanguagesTable $Languages
  * @method \App\Model\Entity\Language[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class LanguagesController extends AppController
+class OtherLanguagesController extends AppController
 {
+    public function __construct(?ServerRequest $request = null, ?Response $response = null, ?string $name = null, ?EventManagerInterface $eventManager = null, ?ComponentRegistry $components = null)
+    {
+        parent::__construct($request, $response, $name, $eventManager, $components);
+        $this->loadModel('Payments');
+    }
+
     /**
      * Index method
      *

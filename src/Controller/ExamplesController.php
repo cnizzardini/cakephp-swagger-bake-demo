@@ -3,7 +3,10 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use SwaggerBake\Lib\Annotation as Swag;
+use SwaggerBake\Lib\Attribute\OpenApiDto;
+use SwaggerBake\Lib\Attribute\OpenApiForm;
+use SwaggerBake\Lib\Attribute\OpenApiHeader;
+use SwaggerBake\Lib\Attribute\OpenApiQueryParam;
 
 /**
  * Examples Controller
@@ -46,11 +49,10 @@ class ExamplesController extends AppController
     /**
      * Form Example
      *
-     * @Swag\SwagForm(name="my_input", description="a custom input", required=true)
-     *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
+    #[OpenApiForm(name: "my_input", description: "a custom input", isRequired: true)]
     public function formExample()
     {
         $this->request->allowMethod('post');
@@ -62,19 +64,17 @@ class ExamplesController extends AppController
     /**
      * Query Example
      *
-     * @Swag\SwagQuery(name="my_enum", description="a description", required=true, enum={"a","b"})
-     * @Swag\SwagQuery(name="format_datetime", format="date-time")
-     * @Swag\SwagQuery(name="explode", explode=true)
-     * @Swag\SwagQuery(name="example", allowReserved=true, example="example of example")
-     * @Swag\SwagQuery(name="deprecated", deprecated=true, allowEmptyValue=true)
-     *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
+    #[OpenApiQueryParam(name: "my_enum", description: "a description")]
+    #[OpenApiQueryParam(name: "format_datetime", format: "date-time")]
+    #[OpenApiQueryParam(name: "explode", explode: true)]
+    #[OpenApiQueryParam(name: "deprecated", isDeprecated: true, allowEmptyValue: true)]
     public function queryExample()
     {
         $this->request->allowMethod('get');
-        $data = 'just an example for SwagQuery';
+        $data = 'just an example for OpenApiQueryParam';
         $this->set(compact('data'));
         $this->viewBuilder()->setOption('serialize', 'data');
     }
@@ -83,10 +83,10 @@ class ExamplesController extends AppController
     /**
      * DTO Body Example
      *
-     * @Swag\SwagDto(class="\App\Dto\RequestBodyDto")
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
+    #[OpenApiDto(class: "\App\Dto\RequestBodyDto")]
     public function dtoBodyExample()
     {
         $this->request->allowMethod('post');
@@ -101,11 +101,11 @@ class ExamplesController extends AppController
     /**
      * DTO Query Example
      *
-     * @Swag\SwagDto(class="\App\Dto\QueryDto")
      * @see https://github.com/spatie/data-transfer-object
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
+    #[OpenApiDto(class: "\App\Dto\QueryDto")]
     public function dtoQueryExample()
     {
         $this->request->allowMethod('get');
@@ -120,11 +120,11 @@ class ExamplesController extends AppController
     /**
      * Header Example
      *
-     * @Swag\SwagHeader(name="my_header", description="a custom header", required=true)
-     * @Swag\SwagHeader(ref="#/x-demo/components/parameters/anotherHeader")
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
+    #[OpenApiHeader(name: "my_header", description: "a custom header", isRequired: true)]
+    #[OpenApiHeader(ref: "#/x-demo/components/parameters/anotherHeader")]
     public function headerExample()
     {
         $this->request->allowMethod('get');

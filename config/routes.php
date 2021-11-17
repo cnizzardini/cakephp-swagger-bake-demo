@@ -95,7 +95,13 @@ $routes->scope('/', function (RouteBuilder $builder) {
         ]
     ]);
 
-    $builder->resources('Languages', ['path' => 'sub/languages', 'prefix' => 'Sub']);
+    $builder->resources('Languages', ['path' => 'admin/languages', 'prefix' => 'Admin']);
+    $builder->resources('Languages', [
+        'only' => ['view','index']
+    ]);
+    $builder->resources('OtherLanguages', [
+        'only' => ['index']
+    ]);
 
     $builder->resources('Countries', function(RouteBuilder $builder){
         $builder->resources('Cities', ['only' => ['index'], 'prefix' => 'Countries']);
@@ -154,6 +160,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
         'only' => ['create','delete']
     ]);
     $builder->resources('Films');
+
 });
 
 /*

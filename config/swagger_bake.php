@@ -1,4 +1,7 @@
 <?php
+
+use Cake\Core\Configure;
+
 /**
  * ################################
  * # REQUIRED SETTINGS:
@@ -51,7 +54,7 @@ return [
         'yml' => '/config/swagger.yml',
         'json' => '/webroot/swagger.json',
         'webPath' => '/swagger.json',
-        'hotReload' => \Cake\Core\Configure::read('debug'),
+        'hotReload' => Configure::read('debug'),
         'requestAccepts' => [
             'application/x-www-form-urlencoded',
             'application/json',
@@ -63,7 +66,7 @@ return [
         ],
         /** optional configurations below:  **/
         /*
-        'jsonOptions' => JSON_PRETTY_PRINT,
+        'editActionMethods' => ['PATCH'],
         'requestAccepts' => ['application/x-www-form-urlencoded'],
         'responseContentTypes' => ['application/json'],
         'docType' => 'swagger',
