@@ -46,8 +46,7 @@ class ActorsController extends AppController
      * parsed from docblocks using "@see" for links and "@throws" for HTTP 40x and 50x responses. The path parameter
      * was automatically added and these comments come direct from your DocBlock comments.
      *
-     * @see https://github.com/cnizzardini/cakephp-swagger-bake#doc-blocks
-     * SwaggerBake parses your DocBlock comments, read more!
+     * @see https://github.com/cnizzardini/cakephp-swagger-bake#doc-blocks SwaggerBake parses your DocBlocks!
      * @param string|null $id Actor id.
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
@@ -67,8 +66,7 @@ class ActorsController extends AppController
     /**
      * Add Actor
      *
-     * Your Swagger forms are built automatically straight from your Cake Models and Routes, without the need for
-     * additional annotations! All batteries were included in this example.
+     * Your OpenApi request bodies are built automatically straight from your Cake Models and Routes.
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws \Cake\Http\Exception\MethodNotAllowedException Method Not Allowed, use HTTP POST
@@ -145,13 +143,15 @@ class ActorsController extends AppController
      *
      * Example of using OpenApiResponse to show sample of associations.
      *
+     * @see https://github.com/cnizzardini/cakephp-swagger-bake/blob/master/docs/attributes.md#OpenApiResponse Read
+     * more about OpenApiResponse associations.
      * @param string|null $id Actor id.
      * @return \Cake\Http\Response|null|void Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      * @throws \Cake\Http\Exception\MethodNotAllowedException
      * @throws \Exception
      */
-    #[OpenApiResponse(associations: ["whiteList" => ["Films"]])]
+    #[OpenApiResponse(associations: ['whiteList' => ['Films']])]
     public function films($id)
     {
         $this->request->allowMethod('get');
