@@ -133,7 +133,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
             // `new RoutingMiddleware($this, '_cake_routes_')`
             ->add(new RoutingMiddleware($this))
             ->add(new AuthenticationMiddleware($this))
-            ->add(new BodyParserMiddleware(['xml' => true, 'json' => true]));
+            ->add(new BodyParserMiddleware());
 
         return $middlewareQueue;
     }
