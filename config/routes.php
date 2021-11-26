@@ -90,7 +90,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
             'films' => [
                 'method' => 'GET',
                 'action' => 'films',
-                'path' => ':id/films'
+                'path' => '{id}/films'
             ]
         ]
     ]);
@@ -99,10 +99,6 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->resources('Languages', [
         'only' => ['view','index']
     ]);
-    $builder->resources('OtherLanguages', [
-        'only' => ['index']
-    ]);
-
     $builder->resources('Countries', function(RouteBuilder $builder){
         $builder->resources('Cities', ['only' => ['index'], 'prefix' => 'Countries']);
     });

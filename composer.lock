@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "006af0bda0f31908f9c87e6c7b9ce25d",
+    "content-hash": "3acd88dcec8c16e312786350439b0a00",
     "packages": [
         {
             "name": "cakephp/authentication",
-            "version": "2.7.0",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/authentication.git",
-                "reference": "6c6291bad56add2a947eaaf01a0d68d1c350f66e"
+                "reference": "e4c17b4ad3005a9c14a1c76e772e5d2006864d2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/authentication/zipball/6c6291bad56add2a947eaaf01a0d68d1c350f66e",
-                "reference": "6c6291bad56add2a947eaaf01a0d68d1c350f66e",
+                "url": "https://api.github.com/repos/cakephp/authentication/zipball/e4c17b4ad3005a9c14a1c76e772e5d2006864d2f",
+                "reference": "e4c17b4ad3005a9c14a1c76e772e5d2006864d2f",
                 "shasum": ""
             },
             "require": {
@@ -31,7 +31,7 @@
             "require-dev": {
                 "cakephp/cakephp": "^4.0",
                 "cakephp/cakephp-codesniffer": "^4.0",
-                "firebase/php-jwt": "^5.5",
+                "firebase/php-jwt": "^5.0",
                 "phpunit/phpunit": "^8.5 || ^9.3"
             },
             "suggest": {
@@ -72,20 +72,20 @@
                 "issues": "https://github.com/cakephp/authentication/issues",
                 "source": "https://github.com/cakephp/authentication"
             },
-            "time": "2021-11-25T18:06:07+00:00"
+            "time": "2021-04-23T14:31:23+00:00"
         },
         {
             "name": "cakephp/cakephp",
-            "version": "4.3.2",
+            "version": "4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "bc44fd0a383592c5bf52eab17b25fbd9d929b851"
+                "reference": "6b1cf0e74bbfbb73ecdb1e8a5d0fd36230930931"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/bc44fd0a383592c5bf52eab17b25fbd9d929b851",
-                "reference": "bc44fd0a383592c5bf52eab17b25fbd9d929b851",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/6b1cf0e74bbfbb73ecdb1e8a5d0fd36230930931",
+                "reference": "6b1cf0e74bbfbb73ecdb1e8a5d0fd36230930931",
                 "shasum": ""
             },
             "require": {
@@ -96,9 +96,9 @@
                 "ext-mbstring": "*",
                 "laminas/laminas-diactoros": "^2.2.2",
                 "laminas/laminas-httphandlerrunner": "^1.1",
-                "league/container": "^4.2.0",
+                "league/container": "^4.1.1",
                 "php": ">=7.2.0",
-                "psr/container": "^1.1 || ^2.0",
+                "psr/container": "^2.0",
                 "psr/http-client": "^1.0",
                 "psr/http-server-handler": "^1.0",
                 "psr/http-server-middleware": "^1.0",
@@ -176,7 +176,7 @@
                 "issues": "https://github.com/cakephp/cakephp/issues",
                 "source": "https://github.com/cakephp/cakephp"
             },
-            "time": "2021-11-26T19:47:23+00:00"
+            "time": "2021-11-06T15:39:56+00:00"
         },
         {
             "name": "cakephp/chronos",
@@ -402,11 +402,17 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "dev-master",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
+                "reference": "fb8f9e09a27e3148daf7015ea6f7f770178d645f"
+            },
             "dist": {
-                "type": "path",
-                "url": "../cakephp-swagger-bake",
-                "reference": "cd0ba9526899e2499c2aa48351e9f1e969b139c6"
+                "type": "zip",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/fb8f9e09a27e3148daf7015ea6f7f770178d645f",
+                "reference": "fb8f9e09a27e3148daf7015ea6f7f770178d645f",
+                "shasum": ""
             },
             "require": {
                 "cakephp/cakephp": "^4.2",
@@ -438,45 +444,7 @@
                     "SwaggerBake\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "SwaggerBake\\Test\\": "tests/",
-                    "SwaggerBakeTest\\App\\": "tests/test_app/src/",
-                    "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
-                }
-            },
-            "scripts": {
-                "analyze": [
-                    "@test",
-                    "@phpcs",
-                    "@phpstan",
-                    "@phpmd"
-                ],
-                "phpcs": [
-                    "phpcs --colors -p --standard=phpcs.xml src/"
-                ],
-                "phpcbf": [
-                    "phpcbf --colors --standard=phpcs.xml src/"
-                ],
-                "phpstan": [
-                    "phpstan analyse src/"
-                ],
-                "test": [
-                    "phpunit --colors=always"
-                ],
-                "phpmd": [
-                    "phpmd src/ ansi phpmd.xml"
-                ],
-                "coverage": [
-                    "phpunit --coverage-html coverage-reports/"
-                ],
-                "grumphp-init": [
-                    "grumphp git:init"
-                ],
-                "grumphp": [
-                    "grumphp"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -497,10 +465,7 @@
                 "issues": "https://github.com/cnizzardini/cakephp-swagger-bake/issues",
                 "source": "https://github.com/cnizzardini/cakephp-swagger-bake"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "time": "2021-11-24T20:01:44+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -6190,21 +6155,21 @@
         },
         {
             "name": "twig/markdown-extra",
-            "version": "v3.3.4",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/markdown-extra.git",
-                "reference": "c84c1fb75f0abb6e8477631b4ada59de770e83e6"
+                "reference": "725a4ef89d93bb80fc63c67cf261bf7512649290"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/markdown-extra/zipball/c84c1fb75f0abb6e8477631b4ada59de770e83e6",
-                "reference": "c84c1fb75f0abb6e8477631b4ada59de770e83e6",
+                "url": "https://api.github.com/repos/twigphp/markdown-extra/zipball/725a4ef89d93bb80fc63c67cf261bf7512649290",
+                "reference": "725a4ef89d93bb80fc63c67cf261bf7512649290",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.3",
-                "twig/twig": "^2.7|^3.0"
+                "twig/twig": "^2.4|^3.0"
             },
             "require-dev": {
                 "erusev/parsedown": "^1.7",
@@ -6247,7 +6212,7 @@
                 "twig"
             ],
             "support": {
-                "source": "https://github.com/twigphp/markdown-extra/tree/v3.3.4"
+                "source": "https://github.com/twigphp/markdown-extra/tree/v3.3.3"
             },
             "funding": [
                 {
@@ -6259,20 +6224,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-13T16:20:21+00:00"
+            "time": "2021-07-07T07:08:18+00:00"
         },
         {
             "name": "twig/twig",
-            "version": "v3.3.4",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "65cb6f0b956485e1664f13d023c55298a4bb59ca"
+                "reference": "a27fa056df8a6384316288ca8b0fa3a35fdeb569"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/65cb6f0b956485e1664f13d023c55298a4bb59ca",
-                "reference": "65cb6f0b956485e1664f13d023c55298a4bb59ca",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a27fa056df8a6384316288ca8b0fa3a35fdeb569",
+                "reference": "a27fa056df8a6384316288ca8b0fa3a35fdeb569",
                 "shasum": ""
             },
             "require": {
@@ -6323,7 +6288,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.3.4"
+                "source": "https://github.com/twigphp/Twig/tree/v3.3.3"
             },
             "funding": [
                 {
@@ -6335,13 +6300,12 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-25T13:46:55+00:00"
+            "time": "2021-09-17T08:44:23+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "cnizzardini/cakephp-swagger-bake": 20,
         "cakephp/bake": 20,
         "psy/psysh": 0
     },

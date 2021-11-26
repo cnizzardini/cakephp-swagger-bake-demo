@@ -56,9 +56,9 @@ return [
         'webPath' => '/swagger.json',
         'hotReload' => Configure::read('debug'),
         'requestAccepts' => [
-            'application/x-www-form-urlencoded',
             'application/json',
-            'application/xml'
+            'application/xml',
+            'application/x-www-form-urlencoded',
         ],
         'responseContentTypes' => [
             'application/json',
