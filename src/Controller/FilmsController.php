@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Exception;
+use SwaggerBake\Lib\Attribute\OpenApiPaginator;
 use SwaggerBake\Lib\Extension\CakeSearch\Attribute\OpenApiSearch;
 
 /**
@@ -32,6 +34,7 @@ class FilmsController extends AppController
      * @see https://github.com/FriendsOfCake/search friendsofcake/search extension
      */
     #[OpenApiSearch(tableClass: "\App\Model\Table\FilmsTable")]
+    #[OpenApiPaginator]
     public function index()
     {
         $this->request->allowMethod('get');

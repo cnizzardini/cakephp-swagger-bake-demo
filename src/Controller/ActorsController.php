@@ -56,7 +56,7 @@ class ActorsController extends AppController
         $this->request->allowMethod('get');
 
         $actor = $this->Actors->get($id, [
-            'contain' => ['FilmActors'],
+            'contain' => [],
         ]);
 
         $this->set('actor', $actor);
@@ -151,12 +151,12 @@ class ActorsController extends AppController
      * @throws \Cake\Http\Exception\MethodNotAllowedException
      * @throws \Exception
      */
-    #[OpenApiResponse(associations: ['whiteList' => ['Films']])]
+    #[OpenApiResponse(associations: ['whiteList' => ['Films.Languages']])]
     public function films($id)
     {
         $this->request->allowMethod('get');
         $actor = $this->Actors->get($id, [
-            'contain' => ['Films'],
+            'contain' => ['Films' => ['Languages']],
         ]);
         $this->set('films', $actor->films);
         $this->viewBuilder()->setOption('serialize', 'films');
