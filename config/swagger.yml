@@ -1,6 +1,6 @@
 openapi: "3.0.0"
 info:
-  version: 2.0.0
+  version: 2.1.*
   title: SwaggerBake Demo
   description: |
     This is a sample SwaggerBake demo server. You can find more information at
@@ -37,11 +37,6 @@ components:
       in: header
       name: API-KEY
   schemas:
-    Films:
-      description: 'Note: Array from swagger.yml'
-      type: array
-      items:
-        $ref: '#/components/schemas/Film'
     Exception:
       type: object
       properties:
