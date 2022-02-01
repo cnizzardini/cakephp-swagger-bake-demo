@@ -3,10 +3,13 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Dto\CustomErrorResponse;
+use App\Dto\CustomResponse;
 use SwaggerBake\Lib\Attribute\OpenApiDto;
 use SwaggerBake\Lib\Attribute\OpenApiForm;
 use SwaggerBake\Lib\Attribute\OpenApiHeader;
 use SwaggerBake\Lib\Attribute\OpenApiQueryParam;
+use SwaggerBake\Lib\Attribute\OpenApiResponse;
 
 /**
  * Examples Controller
@@ -31,6 +34,7 @@ class ExamplesController extends AppController
             'headerExample',
             'optionsOrHead',
             'index',
+            'customResponseSchema'
         ]);
     }
 
@@ -157,5 +161,20 @@ class ExamplesController extends AppController
         }
 
         return $this->response->withStatus(200);
+    }
+
+    /**
+     * Custom response schema sample using `#[OpenApiResponse(schema: CustomResponse::class)]`
+     *
+     * @return void
+     */
+    #[OpenApiResponse(schema: CustomResponse::class)]
+    #[OpenApiResponse(statusCode: '400', schema: CustomErrorResponse::class, description: 'Custom Error Response')]
+    public function customResponseSchema()
+    {
+        $this->request->allowMethod('get');
+        $data = new CustomResponse('Mr. Example', 32);
+        $this->set(compact('data'));
+        $this->viewBuilder()->setOption('serialize', 'data');
     }
 }

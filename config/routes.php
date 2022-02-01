@@ -111,7 +111,8 @@ $routes->scope('/', function (RouteBuilder $builder) {
             'dtoBodyExample',
             'dtoQueryExample',
             'apiKeyExample',
-            'optionsOrHead'
+            'optionsOrHead',
+            'customResponseSchema'
         ],
         'map' => [
             'formExample' => [
@@ -148,6 +149,11 @@ $routes->scope('/', function (RouteBuilder $builder) {
                 'method' => ['options','head'],
                 'action' => 'optionsOrHead',
                 'path' => 'options-or-head'
+            ],
+            'customResponseSchema' => [
+                'method' => ['get'],
+                'action' => 'customResponseSchema',
+                'path' => 'custom-response-schema'
             ]
         ]
     ]);
