@@ -164,7 +164,9 @@ class ExamplesController extends AppController
     }
 
     /**
-     * Custom response schema sample using `#[OpenApiResponse(schema: CustomResponse::class)]`
+     * Custom response schema sample
+     *
+     *  Using `#[OpenApiResponse(schema: CustomResponse::class)]` 
      *
      * @return void
      */
