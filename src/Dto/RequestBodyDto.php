@@ -2,24 +2,29 @@
 
 namespace App\Dto;
 
+use Cake\Http\ServerRequest;
 use SwaggerBake\Lib\Attribute\OpenApiDtoRequestBody;
+use SwaggerBake\Lib\Attribute\OpenApiSchema;
 
+#[OpenApiSchema]
 class RequestBodyDto
 {
-    #[OpenApiDtoRequestBody(name: 'last_name', description: "Last name required", isRequired: true)]
-    private string $lastName;
+    public function __construct(
+        #[OpenApiDtoRequestBody(name: 'last_name', description: "Last name required", isRequired: true)]
+        private string $lastName,
+        #[OpenApiDtoRequestBody(name: 'first_name')]
+        private ?string $firstName
+    ) {
 
-    #[OpenApiDtoRequestBody(name: 'first_name')]
-    private ?string $firstName;
+    }
 
-    #[OpenApiDtoRequestBody(name: "title")]
-    private $title;
-
-    #[OpenApiDtoRequestBody(name: "age", type: "integer", format: "int32")]
-    private ?int $age;
-
-    #[OpenApiDtoRequestBody(name: "date", format: "date")]
-    private $date;
+    public static function createFromRequest(ServerRequest $request)
+    {
+        return (new self(
+            $request->getData('last_name'),
+            $request->getData('first_name'),
+        ));
+    }
 
     /**
      * @return string
@@ -31,9 +36,9 @@ class RequestBodyDto
 
     /**
      * @param string $firstName
-     * @return QueryDto
+     * @return $this
      */
-    public function setFirstName(string $firstName): QueryDto
+    public function setFirstName(string $firstName)
     {
         $this->firstName = $firstName;
         return $this;
@@ -49,65 +54,11 @@ class RequestBodyDto
 
     /**
      * @param string $lastName
-     * @return QueryDto
+     * @return $this
      */
-    public function setLastName(string $lastName): QueryDto
+    public function setLastName(string $lastName)
     {
         $this->lastName = $lastName;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    /**
-     * @param mixed $title
-     * @return QueryDto
-     */
-    public function setTitle($title): QueryDto
-    {
-        $this->title = $title;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAge()
-    {
-        return $this->age;
-    }
-
-    /**
-     * @param mixed $age
-     * @return QueryDto
-     */
-    public function setAge($age): QueryDto
-    {
-        $this->age = $age;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-
-    /**
-     * @param mixed $date
-     * @return QueryDto
-     */
-    public function setDate($date): QueryDto
-    {
-        $this->date = $date;
         return $this;
     }
 }
