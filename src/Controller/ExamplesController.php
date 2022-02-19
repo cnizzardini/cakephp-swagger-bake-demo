@@ -3,10 +3,14 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Dto\QueryDto;
+use App\Dto\RequestBodyDto;
+use App\Dto\Response;
 use SwaggerBake\Lib\Attribute\OpenApiDto;
 use SwaggerBake\Lib\Attribute\OpenApiForm;
 use SwaggerBake\Lib\Attribute\OpenApiHeader;
 use SwaggerBake\Lib\Attribute\OpenApiQueryParam;
+use SwaggerBake\Lib\Attribute\OpenApiResponse;
 
 /**
  * Examples Controller
@@ -83,19 +87,20 @@ class ExamplesController extends AppController
     /**
      * DTO Body Example
      *
+     * This is an example of OpenApiDto and OpenApiResponse. This takes RequestBodyDto and returns it.
+     *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
-    #[OpenApiDto(class: "\App\Dto\RequestBodyDto")]
+    #[OpenApiDto(class: RequestBodyDto::class)]
+    #[OpenApiResponse(schema: Response::class)]
     public function dtoBodyExample()
     {
         $this->request->allowMethod('post');
-        $data = [
-            'firstName' => $this->getRequest()->getQuery('firstName'),
-            'lastName' => $this->getRequest()->getQuery('lastName'),
-        ];
-        $this->set(compact('data'));
-        $this->viewBuilder()->setOption('serialize', 'data');
+        $requestBodyDto = RequestBodyDto::createFromRequest($this->request);
+        $response = new Response($requestBodyDto->getLastName(), $requestBodyDto->getFirstName());
+        $this->set(compact('response'));
+        $this->viewBuilder()->setOption('serialize', 'response');
     }
 
     /**
@@ -105,7 +110,7 @@ class ExamplesController extends AppController
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
-    #[OpenApiDto(class: "\App\Dto\QueryDto")]
+    #[OpenApiDto(class: QueryDto::class)]
     public function dtoQueryExample()
     {
         $this->request->allowMethod('get');
