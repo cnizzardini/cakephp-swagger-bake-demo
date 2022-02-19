@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f7b3dbfd915e9a5f31a66bd6a7a52f49",
+    "content-hash": "c24c91581ade16193b65fa5a69be1583",
     "packages": [
         {
             "name": "cakephp/authentication",
@@ -402,16 +402,16 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v2.2.3",
+            "version": "v2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "c01fa4a1ced479829b13e3ae1e5e318bd6fc88fc"
+                "reference": "740642d8ff3e8ec1ee6f5171bde35248828677ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/c01fa4a1ced479829b13e3ae1e5e318bd6fc88fc",
-                "reference": "c01fa4a1ced479829b13e3ae1e5e318bd6fc88fc",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/740642d8ff3e8ec1ee6f5171bde35248828677ef",
+                "reference": "740642d8ff3e8ec1ee6f5171bde35248828677ef",
                 "shasum": ""
             },
             "require": {
@@ -463,7 +463,7 @@
                 "issues": "https://github.com/cnizzardini/cakephp-swagger-bake/issues",
                 "source": "https://github.com/cnizzardini/cakephp-swagger-bake"
             },
-            "time": "2022-02-19T00:03:33+00:00"
+            "time": "2022-02-19T00:29:43+00:00"
         },
         {
             "name": "composer/ca-bundle",
