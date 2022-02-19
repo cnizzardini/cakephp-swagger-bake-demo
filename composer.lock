@@ -402,11 +402,11 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "dev-feature/383-add-dto-schema",
+            "version": "dev-issue/384-change-dto",
             "dist": {
                 "type": "path",
                 "url": "../cakephp-swagger-bake",
-                "reference": "c68e53f0caa3472e299c2aaad2d1024b35dedeba"
+                "reference": "740642d8ff3e8ec1ee6f5171bde35248828677ef"
             },
             "require": {
                 "cakephp/cakephp": "^4.2",
