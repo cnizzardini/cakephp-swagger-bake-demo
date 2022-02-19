@@ -402,16 +402,16 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v2.2.4",
+            "version": "v2.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "740642d8ff3e8ec1ee6f5171bde35248828677ef"
+                "reference": "337d0fe4826f67d0d0904762d72ba5d537ba77a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/740642d8ff3e8ec1ee6f5171bde35248828677ef",
-                "reference": "740642d8ff3e8ec1ee6f5171bde35248828677ef",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/337d0fe4826f67d0d0904762d72ba5d537ba77a4",
+                "reference": "337d0fe4826f67d0d0904762d72ba5d537ba77a4",
                 "shasum": ""
             },
             "require": {
@@ -463,7 +463,7 @@
                 "issues": "https://github.com/cnizzardini/cakephp-swagger-bake/issues",
                 "source": "https://github.com/cnizzardini/cakephp-swagger-bake"
             },
-            "time": "2022-02-19T00:29:43+00:00"
+            "time": "2022-02-19T21:59:34+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -6046,5 +6046,5 @@
         "ext-simplexml": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.1.0"
 }
