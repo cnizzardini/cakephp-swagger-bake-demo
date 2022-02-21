@@ -2,29 +2,35 @@
 
 namespace App\Dto;
 
-use SwaggerBake\Lib\Attribute\OpenApiDtoQuery;
+use Cake\Http\ServerRequest;
+use SwaggerBake\Lib\Attribute\OpenApiQueryParam;
 
 class QueryDto
 {
-    #[OpenApiDtoQuery(name: 'last_name', description: "Last name required", isRequired: true)]
-    private string $lastName;
-
-    #[OpenApiDtoQuery(name: 'first_name')]
-    private ?string $firstName;
-
-    #[OpenApiDtoQuery(name: "title")]
-    private $title;
-
-    #[OpenApiDtoQuery(name: "age", type: "integer", format: "int32")]
-    private ?int $age;
-
-    #[OpenApiDtoQuery(name: "date", format: "date")]
-    private $date;
+    public function __construct(
+        #[OpenApiQueryParam(name: 'last_name', description: "Last name required", isRequired: true)]
+        private string $lastName,
+        #[OpenApiQueryParam(name: 'first_name')]
+        private ?string $firstName = null,
+    ) {
+    }
 
     /**
-     * @return string
+     * @param ServerRequest $request
+     * @return $this
      */
-    public function getFirstName(): string
+    public static function createFromRequest(ServerRequest $request)
+    {
+        return (new self(
+            $request->getQuery('last_name'),
+            $request->getQuery('first_name'),
+        ));
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getFirstName(): ?string
     {
         return $this->firstName;
     }
@@ -40,9 +46,9 @@ class QueryDto
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getLastName(): string
+    public function getLastName(): ?string
     {
         return $this->lastName;
     }
@@ -54,60 +60,6 @@ class QueryDto
     public function setLastName(string $lastName): QueryDto
     {
         $this->lastName = $lastName;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    /**
-     * @param mixed $title
-     * @return QueryDto
-     */
-    public function setTitle($title): QueryDto
-    {
-        $this->title = $title;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAge()
-    {
-        return $this->age;
-    }
-
-    /**
-     * @param mixed $age
-     * @return QueryDto
-     */
-    public function setAge($age): QueryDto
-    {
-        $this->age = $age;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-
-    /**
-     * @param mixed $date
-     * @return QueryDto
-     */
-    public function setDate($date): QueryDto
-    {
-        $this->date = $date;
         return $this;
     }
 }
