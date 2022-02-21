@@ -106,18 +106,19 @@ class ExamplesController extends AppController
     /**
      * DTO Query Example
      *
-     * This is an example of OpenApiDto and OpenApiResponse. This takes QueryDto and returns it.
+     * This is an example of OpenApiDto and OpenApiResponse. This takes QueryDto and returns it as a list.
      *
+     * @see https://github.com/spatie/data-transfer-object
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      * @throws \Cake\Http\Exception\MethodNotAllowedException
      */
     #[OpenApiDto(class: QueryDto::class)]
-    #[OpenApiResponse(schema: Response::class)]
+    #[OpenApiResponse(schemaType: 'array', schema: Response::class)]
     public function dtoQueryExample()
     {
         $this->request->allowMethod('get');
         $dto = QueryDto::createFromRequest($this->request);
-        $response = new Response($dto->getLastName(), $dto->getFirstName());
+        $response = [new Response($dto->getLastName(), $dto->getFirstName())];
         $this->set(compact('response'));
         $this->viewBuilder()->setOption('serialize', 'response');
     }

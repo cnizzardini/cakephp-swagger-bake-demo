@@ -402,16 +402,16 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v2.2.5",
+            "version": "v2.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "337d0fe4826f67d0d0904762d72ba5d537ba77a4"
+                "reference": "a50a6351263d26aed38093041c371b98f0715e01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/337d0fe4826f67d0d0904762d72ba5d537ba77a4",
-                "reference": "337d0fe4826f67d0d0904762d72ba5d537ba77a4",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/a50a6351263d26aed38093041c371b98f0715e01",
+                "reference": "a50a6351263d26aed38093041c371b98f0715e01",
                 "shasum": ""
             },
             "require": {
@@ -463,7 +463,7 @@
                 "issues": "https://github.com/cnizzardini/cakephp-swagger-bake/issues",
                 "source": "https://github.com/cnizzardini/cakephp-swagger-bake"
             },
-            "time": "2022-02-19T21:59:34+00:00"
+            "time": "2022-02-21T14:16:04+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -4121,16 +4121,16 @@
         },
         {
             "name": "phar-io/version",
-            "version": "3.1.1",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/version.git",
-                "reference": "15a90844ad40f127afd244c0cad228de2a80052a"
+                "reference": "4f7fd7836c6f332bb2933569e566a0d6c4cbed74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/version/zipball/15a90844ad40f127afd244c0cad228de2a80052a",
-                "reference": "15a90844ad40f127afd244c0cad228de2a80052a",
+                "url": "https://api.github.com/repos/phar-io/version/zipball/4f7fd7836c6f332bb2933569e566a0d6c4cbed74",
+                "reference": "4f7fd7836c6f332bb2933569e566a0d6c4cbed74",
                 "shasum": ""
             },
             "require": {
@@ -4166,9 +4166,9 @@
             "description": "Library for handling version information and constraints",
             "support": {
                 "issues": "https://github.com/phar-io/version/issues",
-                "source": "https://github.com/phar-io/version/tree/3.1.1"
+                "source": "https://github.com/phar-io/version/tree/3.2.1"
             },
-            "time": "2022-02-07T21:56:48+00:00"
+            "time": "2022-02-21T01:04:05+00:00"
         },
         {
             "name": "phpspec/prophecy",

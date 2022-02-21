@@ -3,30 +3,26 @@
 namespace App\Dto;
 
 use Cake\Http\ServerRequest;
-use SwaggerBake\Lib\Attribute\OpenApiSchemaProperty;
+use SwaggerBake\Lib\Attribute\OpenApiDtoRequestBody;
 use SwaggerBake\Lib\Attribute\OpenApiSchema;
 
 #[OpenApiSchema]
 class RequestBodyDto
 {
     public function __construct(
-        #[OpenApiSchemaProperty(name: 'last_name', description: "Last name required", isRequired: true)]
+        #[OpenApiDtoRequestBody(name: 'last_name', description: "Last name required", isRequired: true)]
         private string $lastName,
-        #[OpenApiSchemaProperty(name: 'first_name')]
+        #[OpenApiDtoRequestBody(name: 'first_name')]
         private ?string $firstName
     ) {
 
     }
 
-    /**
-     * @param ServerRequest $request
-     * @return RequestBodyDto
-     */
-    public static function createFromRequest(ServerRequest $request): RequestBodyDto
+    public static function createFromRequest(ServerRequest $request)
     {
         return (new self(
-            $request->getQuery('last_name'),
-            $request->getQuery('first_name'),
+            $request->getData('last_name'),
+            $request->getData('first_name'),
         ));
     }
 
@@ -39,10 +35,30 @@ class RequestBodyDto
     }
 
     /**
+     * @param string $firstName
+     * @return $this
+     */
+    public function setFirstName(string $firstName)
+    {
+        $this->firstName = $firstName;
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function getLastName(): string
     {
         return $this->lastName;
+    }
+
+    /**
+     * @param string $lastName
+     * @return $this
+     */
+    public function setLastName(string $lastName)
+    {
+        $this->lastName = $lastName;
+        return $this;
     }
 }
