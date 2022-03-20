@@ -124,7 +124,11 @@ $isCli = PHP_SAPI === 'cli';
 if ($isCli) {
     (new ConsoleErrorHandler(Configure::read('Error')))->register();
 } else {
-    (new ErrorHandler(Configure::read('Error')))->register();
+    if (class_exists('\Cake\Error\ErrorTrap')) {
+        (new \Cake\Error\ErrorTrap(Configure::read('Error')))->register();
+    } else {
+        (new ErrorHandler(Configure::read('Error')))->register();
+    }
 }
 
 /*
