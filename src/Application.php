@@ -86,6 +86,9 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
         }
 
         // Load more plugins here
+        $this->addPlugin('Demo');
+        $this->addPlugin('OtherDemo');
+        $this->addPlugin('OtherOpenApi');
         $this->addPlugin('SwaggerBake');
 
         // listen for swagger events
@@ -103,7 +106,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
         $middlewareQueue
             ->add(function(ServerRequestInterface $request, RequestHandlerInterface $handler){
 
-                /**
+                /*
                  * Swagger does not send an accept header on delete requests. This sets delete requests to accept
                  * application/json by default.
                  */

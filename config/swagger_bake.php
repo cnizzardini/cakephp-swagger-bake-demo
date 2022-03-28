@@ -64,6 +64,11 @@ return [
             'application/json',
             'application/xml',
         ],
+        'namespaces' => [
+            'controllers' => ['\App\\', '\OtherDemo\\', '\Demo\\', ],
+            'entities' => ['\App\\'],
+            'tables' => ['\App\\']
+        ]
         /** optional configurations below:  **/
         /*
         'editActionMethods' => ['PATCH'],
