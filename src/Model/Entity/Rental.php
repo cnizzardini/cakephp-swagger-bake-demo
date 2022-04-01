@@ -23,8 +23,8 @@ use SwaggerBake\Lib\Attribute\OpenApiSchema;
  * @property \App\Model\Entity\Payment[] $payments
  */
 #[OpenApiSchema(
-    visibility: OpenApiSchema::VISIBILE_HIDDEN,
-    description: 'Set to OpenApiSchema::VISIBILE_HIDDEN'
+    visibility: OpenApiSchema::VISIBLE_HIDDEN,
+    description: 'Set to OpenApiSchema::VISIBLE_HIDDEN'
 )]
 class Rental extends Entity
 {
