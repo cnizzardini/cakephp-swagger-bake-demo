@@ -13,7 +13,7 @@ use SwaggerBake\Lib\Attribute\OpenApiSchema;
  * @property string $name
  * @property \App\Model\Entity\City[] $cities
  */
-#[OpenApiSchema(visibility: OpenApiSchema::VISIBILE_HIDDEN)]
+#[OpenApiSchema(visibility: OpenApiSchema::VISIBLE_HIDDEN)]
 class Country extends Entity
 {
     /**

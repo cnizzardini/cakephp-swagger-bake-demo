@@ -21,8 +21,8 @@ use SwaggerBake\Lib\Attribute\OpenApiSchema;
  * @property \App\Model\Entity\Inventory[] $inventories
  */
 #[OpenApiSchema(
-    visibility: OpenApiSchema::VISIBILE_ALWAYS,
-    description: 'Set to OpenApiSchema::VISIBILE_ALWAYS'
+    visibility: OpenApiSchema::VISIBLE_ALWAYS,
+    description: 'Set to OpenApiSchema::VISIBLE_ALWAYS'
 )]
 class Store extends Entity
 {
