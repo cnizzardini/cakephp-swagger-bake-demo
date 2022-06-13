@@ -11,6 +11,7 @@ use SwaggerBake\Lib\Attribute\OpenApiForm;
 use SwaggerBake\Lib\Attribute\OpenApiHeader;
 use SwaggerBake\Lib\Attribute\OpenApiQueryParam;
 use SwaggerBake\Lib\Attribute\OpenApiResponse;
+use SwaggerBake\Lib\Attribute\OpenApiSecurity;
 
 /**
  * Examples Controller
@@ -141,11 +142,8 @@ class ExamplesController extends AppController
 
     /**
      * View (Security Example)
-     *
-     * Example showing integration with AuthenticationComponent. Use API-KEY: 123
-     *
-     * @see https://book.cakephp.org/authentication/2/en/index.html AuthenticationComponent
      */
+    #[OpenApiSecurity(name: 'ApiKey')]
     public function apiKeyExample()
     {
         $this->request->allowMethod('get');
