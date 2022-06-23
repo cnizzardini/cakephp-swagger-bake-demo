@@ -76,16 +76,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "4.4.0",
+            "version": "4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "f43b3f58680ae869fb2e9fa56e65406cd1250702"
+                "reference": "83b46efc5ad4cd9325743a4db4fb97f1fd2587b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/f43b3f58680ae869fb2e9fa56e65406cd1250702",
-                "reference": "f43b3f58680ae869fb2e9fa56e65406cd1250702",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/83b46efc5ad4cd9325743a4db4fb97f1fd2587b4",
+                "reference": "83b46efc5ad4cd9325743a4db4fb97f1fd2587b4",
                 "shasum": ""
             },
             "require": {
@@ -176,7 +176,7 @@
                 "issues": "https://github.com/cakephp/cakephp/issues",
                 "source": "https://github.com/cakephp/cakephp"
             },
-            "time": "2022-06-07T02:42:27+00:00"
+            "time": "2022-06-13T17:20:44+00:00"
         },
         {
             "name": "cakephp/chronos",
@@ -402,16 +402,16 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v2.3.0",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "201ea7e602f6ffafc76f4f2f096112c3a474729c"
+                "reference": "26c4e338ed09712a5d5c3613abbc9e3f5b673532"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/201ea7e602f6ffafc76f4f2f096112c3a474729c",
-                "reference": "201ea7e602f6ffafc76f4f2f096112c3a474729c",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/26c4e338ed09712a5d5c3613abbc9e3f5b673532",
+                "reference": "26c4e338ed09712a5d5c3613abbc9e3f5b673532",
                 "shasum": ""
             },
             "require": {
@@ -463,7 +463,7 @@
                 "issues": "https://github.com/cnizzardini/cakephp-swagger-bake/issues",
                 "source": "https://github.com/cnizzardini/cakephp-swagger-bake"
             },
-            "time": "2022-06-09T00:07:38+00:00"
+            "time": "2022-06-23T00:46:18+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -2878,16 +2878,16 @@
     "packages-dev": [
         {
             "name": "brick/varexporter",
-            "version": "0.3.5",
+            "version": "0.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/varexporter.git",
-                "reference": "05241f28dfcba2b51b11e2d750e296316ebbe518"
+                "reference": "3361a8a30e807c0841a7ca98e5c72b6bffc73463"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/varexporter/zipball/05241f28dfcba2b51b11e2d750e296316ebbe518",
-                "reference": "05241f28dfcba2b51b11e2d750e296316ebbe518",
+                "url": "https://api.github.com/repos/brick/varexporter/zipball/3361a8a30e807c0841a7ca98e5c72b6bffc73463",
+                "reference": "3361a8a30e807c0841a7ca98e5c72b6bffc73463",
                 "shasum": ""
             },
             "require": {
@@ -2897,7 +2897,7 @@
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.2",
                 "phpunit/phpunit": "^8.5 || ^9.0",
-                "vimeo/psalm": "4.4.1"
+                "vimeo/psalm": "4.23.0"
             },
             "type": "library",
             "autoload": {
@@ -2915,9 +2915,15 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/varexporter/issues",
-                "source": "https://github.com/brick/varexporter/tree/0.3.5"
+                "source": "https://github.com/brick/varexporter/tree/0.3.6"
             },
-            "time": "2021-02-10T13:53:07+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/BenMorel",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-06-15T23:51:29+00:00"
         },
         {
             "name": "cakephp/bake",
@@ -4550,16 +4556,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.5.26",
+            "version": "8.5.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ef117c59fc4c54a979021b26d08a3373e386606d"
+                "reference": "df70070f2711b8fe8dcca0797c1239ede8c94be6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ef117c59fc4c54a979021b26d08a3373e386606d",
-                "reference": "ef117c59fc4c54a979021b26d08a3373e386606d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/df70070f2711b8fe8dcca0797c1239ede8c94be6",
+                "reference": "df70070f2711b8fe8dcca0797c1239ede8c94be6",
                 "shasum": ""
             },
             "require": {
@@ -4588,9 +4594,6 @@
                 "sebastian/resource-operations": "^2.0.1",
                 "sebastian/type": "^1.1.3",
                 "sebastian/version": "^2.0.1"
-            },
-            "require-dev": {
-                "ext-pdo": "*"
             },
             "suggest": {
                 "ext-soap": "*",
@@ -4631,7 +4634,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/8.5.26"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/8.5.27"
             },
             "funding": [
                 {
@@ -4643,7 +4646,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-01T12:34:39+00:00"
+            "time": "2022-06-19T12:11:16+00:00"
         },
         {
             "name": "psy/psysh",
