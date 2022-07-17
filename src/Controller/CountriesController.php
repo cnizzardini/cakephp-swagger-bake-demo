@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use SwaggerBake\Lib\Attribute\OpenApiPaginator;
+use SwaggerBake\Lib\Attribute\OpenApiRequestBody;
 use SwaggerBake\Lib\Attribute\OpenApiResponse;
 
 /**
@@ -23,7 +24,7 @@ class CountriesController extends AppController
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      */
     #[OpenApiPaginator]
-    #[OpenApiResponse(schemaType: "array", ref: "#/components/schemas/Place")]
+    #[OpenApiResponse(schemaType: "", ref: "#/components/schemas/Places")]
     public function index()
     {
         $this->request->allowMethod('get');
@@ -65,6 +66,7 @@ class CountriesController extends AppController
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @throws \Exception
      */
+    #[OpenApiRequestBody(ref: "#/components/schemas/Place")]
     #[OpenApiResponse(ref: "#/components/schemas/Place")]
     public function add()
     {
@@ -88,6 +90,8 @@ class CountriesController extends AppController
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      */
+    #[OpenApiRequestBody(ref: "#/components/schemas/Place")]
+    #[OpenApiResponse(ref: "#/components/schemas/Place")]
     public function edit($id = null)
     {
         $this->request->allowMethod(['patch', 'post', 'put']);
