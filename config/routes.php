@@ -99,7 +99,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->resources('Languages', [
         'only' => ['view','index']
     ]);
-    $builder->resources('Countries', function(RouteBuilder $builder){
+    $builder->resources('Countries', ['only' => 'create'], function(RouteBuilder $builder){
         $builder->resources('Cities', ['only' => ['index'], 'prefix' => 'Countries']);
     });
 

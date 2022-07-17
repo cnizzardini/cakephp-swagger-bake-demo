@@ -60,12 +60,17 @@ components:
           type: string
       xml:
         name: response
+    Places:
+        type: array
+        items:
+            $ref: '#/components/schemas/Place'
     Place:
       description: 'Country object'
       type: object
       properties:
         id:
           type: integer
+          readOnly: true
         type:
           type: string
           example: 'countries'
@@ -90,6 +95,7 @@ components:
       properties:
         id:
           type: integer
+          readOnly: true
         description:
           type: string
           example: 'a description'
