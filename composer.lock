@@ -401,16 +401,16 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "v2.4.11",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
-                "reference": "95777e3f6a5dfc7a1a1a447c0400e677a7c4fbe7"
+                "reference": "d7c61b9c91c2a2b55471a2fbd9261e3d562b29a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/95777e3f6a5dfc7a1a1a447c0400e677a7c4fbe7",
-                "reference": "95777e3f6a5dfc7a1a1a447c0400e677a7c4fbe7",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/d7c61b9c91c2a2b55471a2fbd9261e3d562b29a2",
+                "reference": "d7c61b9c91c2a2b55471a2fbd9261e3d562b29a2",
                 "shasum": ""
             },
             "require": {
@@ -462,7 +462,7 @@
                 "issues": "https://github.com/cnizzardini/cakephp-swagger-bake/issues",
                 "source": "https://github.com/cnizzardini/cakephp-swagger-bake"
             },
-            "time": "2022-11-16T12:46:35+00:00"
+            "time": "2022-11-18T23:09:41+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -3303,16 +3303,16 @@
         },
         {
             "name": "composer/pcre",
-            "version": "3.0.2",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/pcre.git",
-                "reference": "4482b6409ca6bfc2af043a5711cd21ac3e7a8dfb"
+                "reference": "4bff79ddd77851fe3cdd11616ed3f92841ba5bd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/pcre/zipball/4482b6409ca6bfc2af043a5711cd21ac3e7a8dfb",
-                "reference": "4482b6409ca6bfc2af043a5711cd21ac3e7a8dfb",
+                "url": "https://api.github.com/repos/composer/pcre/zipball/4bff79ddd77851fe3cdd11616ed3f92841ba5bd2",
+                "reference": "4bff79ddd77851fe3cdd11616ed3f92841ba5bd2",
                 "shasum": ""
             },
             "require": {
@@ -3354,7 +3354,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/pcre/issues",
-                "source": "https://github.com/composer/pcre/tree/3.0.2"
+                "source": "https://github.com/composer/pcre/tree/3.1.0"
             },
             "funding": [
                 {
@@ -3370,7 +3370,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-03T20:24:16+00:00"
+            "time": "2022-11-17T09:50:14+00:00"
         },
         {
             "name": "composer/semver",
