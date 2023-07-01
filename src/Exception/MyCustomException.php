@@ -7,5 +7,5 @@ use Cake\Http\Exception\HttpException;
 
 class MyCustomException extends HttpException
 {
-    protected $_defaultCode = 403;
+    protected int $_defaultCode = 403;
 }

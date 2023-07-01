@@ -30,6 +30,7 @@ require __DIR__ . '/paths.php';
  * - Setting the default application paths.
  */
 require CORE_PATH . 'config' . DS . 'bootstrap.php';
+require CAKE . 'functions.php';
 
 use Cake\Cache\Cache;
 use Cake\Core\Configure;
@@ -61,7 +62,7 @@ use Cake\Utility\Security;
 if (!env('APP_NAME') && file_exists(CONFIG . '.env')) {
      $dotenv = new \josegonzalez\Dotenv\Loader([CONFIG . '.env']);
      $dotenv->parse()
-         ->putenv()
+         ->putenv(true)
          ->toEnv()
          ->toServer();
 }

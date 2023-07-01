@@ -33,7 +33,7 @@ class FilmsController extends AppController
      * @throws \Cake\Http\Exception\MethodNotAllowedException When invalid method
      * @see https://github.com/FriendsOfCake/search friendsofcake/search extension
      */
-    #[OpenApiSearch(tableClass: "\App\Model\Table\FilmsTable")]
+    #[OpenApiSearch(alias: "Films")]
     #[OpenApiPaginator]
     public function index()
     {
