@@ -99,7 +99,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->resources('Languages', [
         'only' => ['view','index']
     ]);
-    $builder->resources('Countries', function(RouteBuilder $builder){
+    $builder->resources('Countries', ['only' => 'create'], function(RouteBuilder $builder){
         $builder->resources('Cities', ['only' => ['index'], 'prefix' => 'Countries']);
     });
 
@@ -112,7 +112,8 @@ $routes->scope('/', function (RouteBuilder $builder) {
             'dtoQueryExample',
             'apiKeyExample',
             'optionsOrHead',
-            'customResponseSchema'
+            'customResponseSchema',
+            'modellessForm',
         ],
         'map' => [
             'formExample' => [
@@ -154,6 +155,11 @@ $routes->scope('/', function (RouteBuilder $builder) {
                 'method' => ['get'],
                 'action' => 'customResponseSchema',
                 'path' => 'custom-response-schema'
+            ],
+            'modellessForm' => [
+                'method' => ['post'],
+                'action' => 'modellessForm',
+                'path' => 'modelless-form'
             ]
         ]
     ]);

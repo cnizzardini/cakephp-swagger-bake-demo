@@ -6,6 +6,7 @@ namespace App\Controller;
 use App\Dto\QueryDto;
 use App\Dto\RequestBodyDto;
 use App\Dto\Response;
+use App\Form\ModellessForm;
 use SwaggerBake\Lib\Attribute\OpenApiDto;
 use SwaggerBake\Lib\Attribute\OpenApiForm;
 use SwaggerBake\Lib\Attribute\OpenApiHeader;
@@ -36,6 +37,7 @@ class ExamplesController extends AppController
             'headerExample',
             'optionsOrHead',
             'index',
+            'modellessForm',
         ]);
     }
 
@@ -161,5 +163,15 @@ class ExamplesController extends AppController
         }
 
         return $this->response->withStatus(200);
+    }
+
+    #[OpenApiDto(class: ModellessForm::class)]
+    public function modellessForm()
+    {
+        $form = new ModellessForm();
+        if ($form->execute($this->request->getData())) {
+            return $this->response->withStatus(200);
+        }
+        return $this->response->withStatus(400);
     }
 }
