@@ -10,7 +10,7 @@
         "cakephp/authentication": "^3.0",
         "cakephp/cakephp": "^5.0",
         "cakephp/plugin-installer": "^1.2",
-        "cnizzardini/cakephp-swagger-bake": "@dev",
+        "cnizzardini/cakephp-swagger-bake": "^3.0",
         "friendsofcake/search": "^7.0",
         "mobiledetect/mobiledetectlib": "^2.8"
     },
@@ -76,14 +76,5 @@
         }
     ],
     "prefer-stable": true,
-    "minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../cakephp-swagger-bake",
-            "options": {
-                "symlink": true
-            }
-        }
-    ]
+    "minimum-stability": "dev"
 }

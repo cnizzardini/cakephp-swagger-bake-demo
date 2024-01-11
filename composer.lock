@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "21115ff6957e674d429dceea122c942e",
+    "content-hash": "5181b48bf76383be04226cf0efd899cf",
     "packages": [
         {
             "name": "cakephp/authentication",
@@ -298,11 +298,17 @@
         },
         {
             "name": "cnizzardini/cakephp-swagger-bake",
-            "version": "3.0.0.x-dev",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cnizzardini/cakephp-swagger-bake.git",
+                "reference": "28de36b665ed6f14b7f2a0c256ef6a0db1d7e88d"
+            },
             "dist": {
-                "type": "path",
-                "url": "../cakephp-swagger-bake",
-                "reference": "bb68c3f6541e99bfd3b173632af16a5d60e0c309"
+                "type": "zip",
+                "url": "https://api.github.com/repos/cnizzardini/cakephp-swagger-bake/zipball/28de36b665ed6f14b7f2a0c256ef6a0db1d7e88d",
+                "reference": "28de36b665ed6f14b7f2a0c256ef6a0db1d7e88d",
+                "shasum": ""
             },
             "require": {
                 "cakephp/cakephp": "^5.0",
@@ -333,46 +339,7 @@
                     "SwaggerBake\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "SwaggerBake\\Test\\": "tests/",
-                    "SwaggerBakeTest\\App\\": "tests/test_app/src/",
-                    "Demo\\": "tests/test_app/plugins/Demo/src/",
-                    "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
-                }
-            },
-            "scripts": {
-                "analyze": [
-                    "@test",
-                    "@phpcs",
-                    "@phpstan",
-                    "@phpmd"
-                ],
-                "phpcs": [
-                    "phpcs --colors -p --standard=phpcs.xml src/"
-                ],
-                "phpcbf": [
-                    "phpcbf --colors --standard=phpcs.xml src/"
-                ],
-                "phpstan": [
-                    "phpstan analyse src/"
-                ],
-                "test": [
-                    "phpunit --colors=always"
-                ],
-                "phpmd": [
-                    "phpmd src/ ansi phpmd.xml"
-                ],
-                "coverage": [
-                    "phpunit --coverage-html coverage-reports/"
-                ],
-                "grumphp-init": [
-                    "grumphp git:init"
-                ],
-                "grumphp": [
-                    "grumphp"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -396,10 +363,7 @@
                 "issues": "https://github.com/cnizzardini/cakephp-swagger-bake/issues",
                 "source": "https://github.com/cnizzardini/cakephp-swagger-bake"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "time": "2024-01-11T02:06:41+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -6522,7 +6486,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "cnizzardini/cakephp-swagger-bake": 20,
         "psy/psysh": 0
     },
     "prefer-stable": true,
