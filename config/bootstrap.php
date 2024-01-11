@@ -15,6 +15,11 @@ declare(strict_types=1);
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
+/**
+ * php.ini settings
+ */
+ini_set('zend.assertions', 1);
+
 /*
  * Configure paths required to find CakePHP + general filepath constants
  */
@@ -30,6 +35,7 @@ require __DIR__ . '/paths.php';
  * - Setting the default application paths.
  */
 require CORE_PATH . 'config' . DS . 'bootstrap.php';
+require CAKE . 'functions.php';
 
 use Cake\Cache\Cache;
 use Cake\Core\Configure;

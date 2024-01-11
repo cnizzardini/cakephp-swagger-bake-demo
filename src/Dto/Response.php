@@ -21,8 +21,8 @@ class Response implements JsonSerializable
 
     /**
      * @inheritDoc
-     * @return array|mixed
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         $vars = [];
