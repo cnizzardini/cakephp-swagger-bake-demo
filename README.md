@@ -20,7 +20,7 @@ composer install
 ```
 
 Configure the application for database access using `config/.env` or `config/app_local.php`, then run
-migrations to build/seed your database.
+migrations to build/seed your database. The default in `config/app.php` will work with sqlite3.
 
 ```console
 bin/cake migrations migrate -p Sakila

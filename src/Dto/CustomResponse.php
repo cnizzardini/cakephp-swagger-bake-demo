@@ -3,6 +3,7 @@
 namespace App\Dto;
 
 use JsonSerializable;
+use ReturnTypeWillChange;
 use SwaggerBake\Lib\Attribute\OpenApiSchemaProperty;
 use SwaggerBake\Lib\OpenApi\CustomSchemaInterface;
 use SwaggerBake\Lib\OpenApi\Schema;
@@ -36,6 +37,7 @@ class CustomResponse implements CustomSchemaInterface, JsonSerializable
     /**
      * @inheritDoc
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return get_object_vars($this);

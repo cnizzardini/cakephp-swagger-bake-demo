@@ -15,6 +15,11 @@ declare(strict_types=1);
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
+/**
+ * php.ini settings
+ */
+ini_set('zend.assertions', 1);
+
 /*
  * Configure paths required to find CakePHP + general filepath constants
  */
